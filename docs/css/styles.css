@@ -11318,7 +11318,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 /* Dimensione del logo */
 #mainNav .navbar-brand img,
 #mainNav.navbar-shrink .navbar-brand img {
-  height: 70px;
+  height: 90px;
   width: auto;
   display: block;
 }
@@ -11327,6 +11327,6 @@ section#contact form#contactForm :-ms-input-placeholder {
 @media (max-width: 991px) {
   #mainNav .navbar-brand img,
   #mainNav.navbar-shrink .navbar-brand img {
-    height: 55px;
+    height: 70px;
   }
 }
