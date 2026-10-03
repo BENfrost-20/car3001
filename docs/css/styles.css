@@ -11330,3 +11330,25 @@ section#contact form#contactForm :-ms-input-placeholder {
     height: 70px;
   }
 }
+
+/* Palette mobile coerente con la navigazione desktop */
+@media (max-width: 991.98px) {
+  #mainNav {
+    background-color: transparent;
+  }
+
+  #mainNav.navbar-shrink {
+    background-color: #b8b8b8;
+  }
+
+  #mainNav .navbar-toggler {
+    color: #fff;
+    background-color: #006400;
+    border-color: #006400;
+  }
+
+  #mainNav #navbarResponsive.show,
+  #mainNav #navbarResponsive.collapsing {
+    background-color: #b8b8b8;
+  }
+}
