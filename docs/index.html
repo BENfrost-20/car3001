@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<!--
+DIMENSIONI CONSIGLIATE DELLE IMMAGINI (larghezza x altezza, in pixel)
+- Servizi, anteprime in home: JPEG/WebP 1200 x 900 (rapporto 4:3).
+  La prima foto di ogni servizio e usata anche nella scheda aperta.
+- Foto aggiuntive dei caroselli: 1400 x 650, oppure 1200 x 900 se vuoi
+  riutilizzarle anche come anteprime. Usa lo stesso formato per la stessa galleria.
+  I riquadri delle schede sono panoramici e cambiano proporzioni su mobile:
+  object-fit: cover riempie il riquadro senza deformare, ritagliando i bordi.
+  Tieni il soggetto al centro ed evita scritte o dettagli importanti ai margini.
+- Collage Chi siamo: foto principale 1600 x 1000; altre due 1200 x 900.
+  Anche queste vengono ritagliate: mantieni il soggetto nella zona centrale.
+- Foto di copertina: 1920 x 1080; soggetto al centro, con spazio per il titolo.
+- Logo carrozzeria: SVG oppure PNG trasparente, largo almeno 600 px,
+  mantenendo le proporzioni originali. Visualizzato alto 90 px desktop / 70 px mobile.
+- Loghi prodotti e assicurazioni: SVG oppure PNG trasparente 600 x 200,
+  senza deformare il logo (aggiungi margini trasparenti se necessario).
+  Visualizzati alti 40 px e adattati alla larghezza disponibile.
+Mantieni le estensioni dei file uguali a quelle nei percorsi src dell'HTML;
+se cambi formato, aggiorna anche src. Non serve creare foto diverse per mobile.
+-->
 <html lang="it">
 <head>
   <meta charset="utf-8" />
@@ -17,7 +37,7 @@
     <a class="navbar-brand" href="#page-top"><img src="assets/img/logo_car3001.png" alt="NUOVA CAR 3001" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Apri o chiudi il menu">Menu <i class="fas fa-bars ms-1" aria-hidden="true"></i></button>
     <div class="collapse navbar-collapse" id="navbarResponsive"><ul class="navbar-nav text-uppercase ms-auto">
-      <li class="nav-item"><a class="nav-link" href="#services">Punti di forza</a></li><li class="nav-item"><a class="nav-link" href="#portfolio">Servizi</a></li><li class="nav-item"><a class="nav-link" href="#about">Chi siamo</a></li><li class="nav-item"><a class="nav-link" href="#contact">Contattaci</a></li>
+      <li class="nav-item"><a class="nav-link" href="#services">Punti di forza</a></li><li class="nav-item"><a class="nav-link" href="#portfolio">Servizi</a></li><li class="nav-item"><a class="nav-link" href="#insurance">Partners</a></li><li class="nav-item"><a class="nav-link" href="#about">Chi siamo</a></li><li class="nav-item"><a class="nav-link" href="#contact">Contattaci</a></li>
     </ul></div>
   </div></nav>
   <header class="masthead"><div class="container"><h1 class="masthead-heading text-uppercase">Benvenuti!</h1><a class="btn btn-primary btn-xl text-uppercase" href="#services">Conosciamoci meglio</a></div></header>
