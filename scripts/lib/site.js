@@ -21,11 +21,18 @@ function escape(value) {
   return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]));
 }
 
-const origin = new URL(site.url);
-if (origin.protocol !== 'https:' || origin.pathname !== '/' || origin.search || origin.hash || origin.username || origin.password) {
-  throw new Error('site.url deve essere un dominio HTTPS assoluto senza percorso, credenziali, query o frammenti.');
+const origin = new URL(process.env.SITE_URL || site.url);
+if (origin.protocol !== 'https:' || origin.search || origin.hash || origin.username || origin.password) {
+  throw new Error('site.url / SITE_URL deve essere un URL HTTPS assoluto senza credenziali, query o frammenti. È consentita una sottocartella.');
 }
-site.url = origin.origin;
+const basePath = origin.pathname.replace(/\/+$/,'');
+site.url = origin.origin + basePath;
+const sitePath = route => basePath + route;
+function relativeSitePath(pathname) {
+  if (pathname === basePath) return '/';
+  if (!pathname.startsWith(basePath + '/')) throw new Error(`URL esterno al percorso del sito: ${pathname}`);
+  return pathname.slice(basePath.length);
+}
 if (typeof site.pricing.enabled !== 'boolean') throw new Error('pricing.enabled deve essere booleano.');
 if (!/^[A-Z]{3}$/.test(site.pricing.currency)) throw new Error('Valuta non valida.');
 if (new Set(site.services.map(service=>service.slug)).size !== site.services.length) throw new Error('Slug dei servizi duplicati.');
@@ -37,7 +44,7 @@ for (const service of site.services) {
 for (const profile of site.socialProfiles) {
   if (!profile.name || new URL(profile.url).protocol !== 'https:' || /NOME_|example\./i.test(profile.url)) throw new Error('Profilo ufficiale non valido.');
 }
-const url = route => new URL(route, site.url).href;
+const url = route => new URL(sitePath(route), origin.origin).href;
 const ref = id => ({'@id': id});
 const businessId = url('/#organization');
 const websiteId = url('/#website');
@@ -124,4 +131,4 @@ function pages() {
   ].map(page=>({...page,...(page.service ? {title:page.service.title,description:page.service.description} : site.pageMetadata[page.kind])}));
 }
 
-module.exports = {root,site,images,escape,url,ref,businessId,websiteId,servicePath,priceVisible,priceLabel,mapsUrl,faqItems,schema,pages};
+module.exports = {root,site,basePath,sitePath,relativeSitePath,images,escape,url,ref,businessId,websiteId,servicePath,priceVisible,priceLabel,mapsUrl,faqItems,schema,pages};

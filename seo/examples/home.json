@@ -6,9 +6,9 @@
         "Organization",
         "AutoBodyShop"
       ],
-      "@id": "https://car3001.it/#organization",
+      "@id": "https://benfrost-20.github.io/car3001/#organization",
       "name": "Nuova Car 3001",
-      "url": "https://car3001.it/",
+      "url": "https://benfrost-20.github.io/car3001/",
       "telephone": "+390299200616",
       "email": "car3001@car3001.it",
       "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
@@ -22,47 +22,47 @@
       },
       "logo": {
         "@type": "ImageObject",
-        "url": "https://car3001.it/assets/img/logo.webp",
+        "url": "https://benfrost-20.github.io/car3001/assets/img/logo.webp",
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/header.webp"
+      "image": "https://benfrost-20.github.io/car3001/assets/img/header.webp"
     },
     {
       "@type": "WebSite",
-      "@id": "https://car3001.it/#website",
-      "url": "https://car3001.it/",
+      "@id": "https://benfrost-20.github.io/car3001/#website",
+      "url": "https://benfrost-20.github.io/car3001/",
       "name": "Nuova Car 3001",
       "inLanguage": "it",
       "publisher": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       }
     },
     {
       "@type": "WebPage",
-      "@id": "https://car3001.it/#webpage",
-      "url": "https://car3001.it/",
+      "@id": "https://benfrost-20.github.io/car3001/#webpage",
+      "url": "https://benfrost-20.github.io/car3001/",
       "name": "Carrozzeria a Cologno Monzese | Nuova Car 3001",
       "description": "Nuova Car 3001 a Cologno Monzese: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto.",
       "inLanguage": "it",
       "isPartOf": {
-        "@id": "https://car3001.it/#website"
+        "@id": "https://benfrost-20.github.io/car3001/#website"
       },
       "about": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
-      "dateModified": "2026-10-15T08:34:06.659Z"
+      "dateModified": "2026-10-15T09:09:51.234Z"
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#service",
       "name": "Cambio gomme e cerchi",
       "serviceType": "Cambio gomme e cerchi",
       "description": "Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a Cologno Monzese, in Via G. Rossini 38. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.",
-      "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
-      "image": "https://car3001.it/assets/img/gomma.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/gomma.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",
@@ -71,14 +71,14 @@
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/tagliandi-auto/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/tagliandi-auto/#service",
       "name": "Tagliandi auto",
       "serviceType": "Tagliandi auto",
       "description": "Nuova Car 3001 propone tagliandi auto con controllo diagnostico OBD incluso a Cologno Monzese. L'OBD è il sistema di diagnostica di bordo del veicolo. Per conoscere le lavorazioni previste per la tua auto e ricevere un preventivo, contatta la carrozzeria in Via G. Rossini 38 prima dell'intervento.",
-      "url": "https://car3001.it/servizi/tagliandi-auto/",
-      "image": "https://car3001.it/assets/img/carrozzeria.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/tagliandi-auto/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/carrozzeria.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",
@@ -87,14 +87,14 @@
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/lucidatura-fari/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/lucidatura-fari/#service",
       "name": "Verniciatura e lucidatura fari",
       "serviceType": "Verniciatura e lucidatura fari",
       "description": "Il trattamento fari di Nuova Car 3001 prevede verniciatura e/o lucidatura dei fari anteriori o dei fanali per intervenire su piccoli graffi e ingiallimento delle plastiche. Il servizio è disponibile a Cologno Monzese. Contatta la carrozzeria per valutare lo stato dei fari e concordare lavorazione e preventivo.",
-      "url": "https://car3001.it/servizi/lucidatura-fari/",
-      "image": "https://car3001.it/assets/img/fanale.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/lucidatura-fari/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/fanale.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",
@@ -103,14 +103,14 @@
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/pulizia-lucidatura-auto/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/pulizia-lucidatura-auto/#service",
       "name": "Pulizia e lucidatura auto",
       "serviceType": "Pulizia e lucidatura auto",
       "description": "Nuova Car 3001 propone lavaggio e aspirazione interna tramite un partner di fiducia, con igienizzazione su richiesta, e lucidatura professionale dell'auto. La carrozzeria si trova a Cologno Monzese. Contattaci per specificare se ti interessa la pulizia degli interni, il lavaggio o la lucidatura e richiedere il relativo preventivo.",
-      "url": "https://car3001.it/servizi/pulizia-lucidatura-auto/",
-      "image": "https://car3001.it/assets/img/pulizia.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/pulizia-lucidatura-auto/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/pulizia.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",
@@ -119,14 +119,14 @@
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/levabolli/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/levabolli/#service",
       "name": "Levabolli",
       "serviceType": "Levabolli",
       "description": "Il servizio levabolli di Nuova Car 3001 riguarda danni da grandine e piccole ammaccature che non richiedono verniciatura. La possibilità di intervenire dipende dal danno da valutare. Per una valutazione della carrozzeria e un preventivo, contatta l'officina di Via G. Rossini 38 a Cologno Monzese.",
-      "url": "https://car3001.it/servizi/levabolli/",
-      "image": "https://car3001.it/assets/img/bolli.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/levabolli/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/bolli.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",
@@ -135,14 +135,14 @@
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/elettrauto/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/elettrauto/#service",
       "name": "Elettrauto",
       "serviceType": "Elettrauto",
       "description": "Il servizio elettrauto di Nuova Car 3001 comprende riparazione dei sensori di parcheggio, installazione di dash cam e installazione di luci LED interne all'abitacolo. La carrozzeria opera a Cologno Monzese. Descrivi il componente o l'accessorio che ti interessa per concordare la valutazione del veicolo e richiedere un preventivo.",
-      "url": "https://car3001.it/servizi/elettrauto/",
-      "image": "https://car3001.it/assets/img/elettrauto.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/elettrauto/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/elettrauto.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",
@@ -151,49 +151,49 @@
     },
     {
       "@type": "ItemList",
-      "@id": "https://car3001.it/#services",
+      "@id": "https://benfrost-20.github.io/car3001/#services",
       "name": "Servizi di Nuova Car 3001",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service"
+            "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://car3001.it/servizi/tagliandi-auto/#service"
+            "@id": "https://benfrost-20.github.io/car3001/servizi/tagliandi-auto/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://car3001.it/servizi/lucidatura-fari/#service"
+            "@id": "https://benfrost-20.github.io/car3001/servizi/lucidatura-fari/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@id": "https://car3001.it/servizi/pulizia-lucidatura-auto/#service"
+            "@id": "https://benfrost-20.github.io/car3001/servizi/pulizia-lucidatura-auto/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 5,
           "item": {
-            "@id": "https://car3001.it/servizi/levabolli/#service"
+            "@id": "https://benfrost-20.github.io/car3001/servizi/levabolli/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 6,
           "item": {
-            "@id": "https://car3001.it/servizi/elettrauto/#service"
+            "@id": "https://benfrost-20.github.io/car3001/servizi/elettrauto/#service"
           }
         }
       ]

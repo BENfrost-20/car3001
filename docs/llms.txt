@@ -10,22 +10,22 @@ Le risorse seguenti sono versioni Markdown delle pagine pubbliche, generate dagl
 
 ## Pagine principali
 
-- [Nuova Car 3001](https://car3001.it/index.md): Nuova Car 3001 a Cologno Monzese: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto.
-- [Servizi](https://car3001.it/servizi/index.md): I servizi di Nuova Car 3001 a Cologno Monzese: pneumatici, tagliandi OBD, fari, pulizia, levabolli ed elettrauto. Leggi i dettagli e chiedi un preventivo.
-- [Chi siamo](https://car3001.it/chi-siamo/index.md): Conosci Nuova Car 3001, carrozzeria a Cologno Monzese in Via G. Rossini 38. Esperienza nel settore auto, servizi e contatti per informazioni e preventivi.
-- [Contatti](https://car3001.it/contatti/index.md): Contatta Nuova Car 3001: telefono, email e indicazioni per Via G. Rossini 38 a Cologno Monzese. Richiedi informazioni e un preventivo per i servizi auto.
-- [Domande frequenti](https://car3001.it/faq/index.md): Sede, servizi, cambio gomme, tagliandi OBD, pulizia auto e preventivi di Nuova Car 3001 a Cologno Monzese. Consulta le FAQ e contatta la carrozzeria.
+- [Nuova Car 3001](https://benfrost-20.github.io/car3001/index.md): Nuova Car 3001 a Cologno Monzese: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto.
+- [Servizi](https://benfrost-20.github.io/car3001/servizi/index.md): I servizi di Nuova Car 3001 a Cologno Monzese: pneumatici, tagliandi OBD, fari, pulizia, levabolli ed elettrauto. Leggi i dettagli e chiedi un preventivo.
+- [Chi siamo](https://benfrost-20.github.io/car3001/chi-siamo/index.md): Conosci Nuova Car 3001, carrozzeria a Cologno Monzese in Via G. Rossini 38. Esperienza nel settore auto, servizi e contatti per informazioni e preventivi.
+- [Contatti](https://benfrost-20.github.io/car3001/contatti/index.md): Contatta Nuova Car 3001: telefono, email e indicazioni per Via G. Rossini 38 a Cologno Monzese. Richiedi informazioni e un preventivo per i servizi auto.
+- [Domande frequenti](https://benfrost-20.github.io/car3001/faq/index.md): Sede, servizi, cambio gomme, tagliandi OBD, pulizia auto e preventivi di Nuova Car 3001 a Cologno Monzese. Consulta le FAQ e contatta la carrozzeria.
 
 ## Servizi
 
-- [Cambio gomme e cerchi](https://car3001.it/servizi/cambio-gomme-cerchi/index.md): Cambio gomme e cerchi con equilibratura da Nuova Car 3001 a Cologno Monzese. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.
-- [Tagliandi auto](https://car3001.it/servizi/tagliandi-auto/index.md): Tagliandi auto con controllo diagnostico OBD incluso da Nuova Car 3001 a Cologno Monzese. Contattaci per informazioni e un preventivo per il tuo veicolo.
-- [Verniciatura e lucidatura fari](https://car3001.it/servizi/lucidatura-fari/index.md): Verniciatura e lucidatura fari a Cologno Monzese con Nuova Car 3001. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.
-- [Pulizia e lucidatura auto](https://car3001.it/servizi/pulizia-lucidatura-auto/index.md): Pulizia auto a Cologno Monzese: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta Nuova Car 3001.
-- [Levabolli](https://car3001.it/servizi/levabolli/index.md): Levabolli a Cologno Monzese per grandine e piccole ammaccature che non richiedono verniciatura. Contatta Nuova Car 3001 per valutazione e preventivo.
-- [Elettrauto](https://car3001.it/servizi/elettrauto/index.md): Elettrauto a Cologno Monzese: sensori di parcheggio, installazione dash cam e luci interne LED. Contatta Nuova Car 3001 per informazioni e preventivi.
+- [Cambio gomme e cerchi](https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/index.md): Cambio gomme e cerchi con equilibratura da Nuova Car 3001 a Cologno Monzese. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.
+- [Tagliandi auto](https://benfrost-20.github.io/car3001/servizi/tagliandi-auto/index.md): Tagliandi auto con controllo diagnostico OBD incluso da Nuova Car 3001 a Cologno Monzese. Contattaci per informazioni e un preventivo per il tuo veicolo.
+- [Verniciatura e lucidatura fari](https://benfrost-20.github.io/car3001/servizi/lucidatura-fari/index.md): Verniciatura e lucidatura fari a Cologno Monzese con Nuova Car 3001. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.
+- [Pulizia e lucidatura auto](https://benfrost-20.github.io/car3001/servizi/pulizia-lucidatura-auto/index.md): Pulizia auto a Cologno Monzese: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta Nuova Car 3001.
+- [Levabolli](https://benfrost-20.github.io/car3001/servizi/levabolli/index.md): Levabolli a Cologno Monzese per grandine e piccole ammaccature che non richiedono verniciatura. Contatta Nuova Car 3001 per valutazione e preventivo.
+- [Elettrauto](https://benfrost-20.github.io/car3001/servizi/elettrauto/index.md): Elettrauto a Cologno Monzese: sensori di parcheggio, installazione dash cam e luci interne LED. Contatta Nuova Car 3001 per informazioni e preventivi.
 
 ## Optional
 
-- [Contenuto completo in un file](https://car3001.it/llms-full.txt): raccolta delle versioni Markdown delle pagine.
-- [Mappa del sito](https://car3001.it/sitemap.xml): indice degli URL HTML canonici.
+- [Contenuto completo in un file](https://benfrost-20.github.io/car3001/llms-full.txt): raccolta delle versioni Markdown delle pagine.
+- [Mappa del sito](https://benfrost-20.github.io/car3001/sitemap.xml): indice degli URL HTML canonici.

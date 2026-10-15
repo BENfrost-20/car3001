@@ -8,7 +8,7 @@ Il file da mantenere è **`src/data/site.json`**:
 
 | Campo | Contenuto |
 | --- | --- |
-| `url` | Dominio HTTPS canonico, senza percorso. Attualmente `https://car3001.it`, ricavato dal repository e da confermare. |
+| `url` | URL HTTPS del sito, compresa l'eventuale sottocartella. Attualmente `https://benfrost-20.github.io/car3001`. Per un dominio proprio usare, ad esempio, `https://car3001.it`. |
 | `name`, `telephone`, `telephoneLabel`, `email`, `address` | Identità, numero per i collegamenti, numero formattato, email e sede. |
 | `pricing.enabled` | `false`: mostra “Preventivo su richiesta” e omette le offerte con prezzo. Impostare `true` dopo aver confermato il listino. |
 | `services[].startingPrice` | Prezzo di partenza numerico; `null` per servizi solo su preventivo. Gli importi 40/90/70/20 sono conservati come provvisori. |
@@ -33,7 +33,9 @@ npm test
 npm start
 ```
 
-`npm start` genera il sito e avvia l'anteprima su `http://127.0.0.1:4173`. Dopo una modifica ai sorgenti, eseguire nuovamente la build e ricaricare la pagina. La variabile `PORT` permette di scegliere un'altra porta.
+`npm start` genera il sito e avvia l'anteprima su `http://127.0.0.1:4173/car3001/` con la configurazione attuale. Il server locale riproduce la sottocartella della pubblicazione, così risorse e navigazione vengono verificate nello stesso contesto. Dopo una modifica ai sorgenti, eseguire nuovamente la build e ricaricare la pagina. La variabile `PORT` permette di scegliere un'altra porta.
+
+La variabile di ambiente `SITE_URL` può sostituire l'URL configurato per una build, senza modificare i dati aziendali. Esempio per verificare un dominio proprio: `SITE_URL=https://car3001.it npm start`. Usare lo stesso valore per build, controlli e server locale. URL di risorse, link interni, canonical, Open Graph, JSON-LD, sitemap e Markdown vengono generati coerentemente per il percorso scelto.
 
 - `src/data/`: configurazione e dimensioni delle immagini.
 - `src/templates/site.js`: layout e componenti semantici condivisi.
@@ -58,9 +60,15 @@ Per sostituire le foto: aggiornare gli originali in `src/assets/`, eseguire `pyt
 
 ## Pubblicazione e dati da completare
 
-Pubblicare il contenuto di `docs/` oppure `dist/` alla radice del dominio configurato. Prima della pubblicazione confermare dominio, listino, marchi/collaborazioni, contatti e testo sull'esperienza dei soci. Aggiungere i profili social ufficiali, gli orari verificati, i dati societari e le pagine informative legali con i testi corretti. Servono ancora fotografie reali dedicate al team e alle lavorazioni; i vecchi riferimenti a foto inesistenti sono stati rimossi.
+Pubblicare il contenuto di `docs/` oppure `dist/` all'URL configurato, che può includere una sottocartella. I file generati rimangono direttamente nell'output: non creare un'altra directory `car3001` dentro `docs/` o `dist/`.
 
-Sul servizio di hosting verificare HTTPS, redirect della variante www al dominio canonico, redirect di `/index.html` a `/`, risposte HTTP 200 per gli URL pubblici e 404 per quelli inesistenti, accesso dei bot consentito anche da CDN/WAF e corretti tipi MIME. Se le versioni Markdown vengono proposte come risultati duplicati, si può configurare `X-Robots-Tag: noindex` per `.md` mantenendole accessibili ai crawler. Inviare poi `/sitemap.xml` a Google Search Console e Bing Webmaster Tools. Queste operazioni dipendono dagli account e dalla configurazione di hosting e non sono state eseguite.
+Il workflow `.github/workflows/pages.yml` genera, controlla e pubblica `dist/` a ogni push su `master` o `main`. Nelle impostazioni del repository scegliere **Settings → Pages → Build and deployment → Source: GitHub Actions**. Il workflow ricava l'URL effettivo dall'azione ufficiale `configure-pages`: il prefisso `/car3001` e un eventuale dominio personalizzato vengono gestiti automaticamente. In alternativa, pubblicando dalla branch, selezionare la cartella `/docs` e ricostruirla prima del push.
+
+Prima della pubblicazione confermare listino, marchi/collaborazioni, contatti e testo sull'esperienza dei soci. Aggiungere i profili social ufficiali, gli orari verificati, i dati societari e le pagine informative legali con i testi corretti. Servono ancora fotografie reali dedicate al team e alle lavorazioni; i vecchi riferimenti a foto inesistenti sono stati rimossi.
+
+Sul servizio di hosting verificare HTTPS, redirect della variante www quando si usa un dominio proprio, gestione di `index.html`, risposte HTTP 200 per gli URL pubblici e 404 per quelli inesistenti, accesso dei bot consentito anche da CDN/WAF e corretti tipi MIME. Se le versioni Markdown vengono proposte come risultati duplicati, si può configurare `X-Robots-Tag: noindex` per `.md` mantenendole accessibili ai crawler. Inviare poi la sitemap all'indirizzo effettivo: con GitHub Pages è `https://benfrost-20.github.io/car3001/sitemap.xml`. Queste operazioni dipendono dagli account e dalla configurazione di hosting.
+
+Su un sito GitHub Pages di progetto il file `robots.txt` è pubblicato in `/car3001/robots.txt`; i crawler cercano le direttive robots alla radice del dominio, quindi non considerarlo un controllo del crawling dell'host `benfrost-20.github.io`. Le regole diventano operative alla radice quando si usa un dominio dedicato, oppure gestendo il robots del sito principale dell'account.
 
 Per audit iniziale, interventi, codice generato e limiti delle verifiche, consultare **`SEO-AUDIT.md`**.
 

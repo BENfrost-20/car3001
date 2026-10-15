@@ -2,7 +2,7 @@
 
 Il trattamento fari di Nuova Car 3001 prevede verniciatura e/o lucidatura dei fari anteriori o dei fanali per intervenire su piccoli graffi e ingiallimento delle plastiche. Il servizio è disponibile a Cologno Monzese. Contatta la carrozzeria per valutare lo stato dei fari e concordare lavorazione e preventivo.
 
-Fonte: https://car3001.it/servizi/lucidatura-fari/
+Fonte: https://benfrost-20.github.io/car3001/servizi/lucidatura-fari/
 
 ## Cosa comprende il servizio
 

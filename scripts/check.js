@@ -3,7 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const {root,site,url,pages,faqItems,escape} = require('./lib/site');
+const {root,site,url,sitePath,relativeSitePath,pages,faqItems,escape} = require('./lib/site');
 
 function check(output = path.join(root,'docs')) {
   const routes = pages();
@@ -47,14 +47,18 @@ function check(output = path.join(root,'docs')) {
       const target = new URL(match[1].replace(/&amp;/g,'&'),url(page.path));
       if (target.origin!==new URL(site.url).origin) continue;
       links++;
-      const targetFile = path.join(output,target.pathname,target.pathname.endsWith('/')?'index.html':'');
+      const localPath = relativeSitePath(target.pathname);
+      const targetFile = path.join(output,localPath,localPath.endsWith('/')?'index.html':'');
       assert.ok(fs.existsSync(targetFile),`${page.path}: collegamento locale mancante ${target.href}`);
       if (target.hash) {
         const targetHtml = fs.readFileSync(targetFile,'utf8');
         assert.ok(targetHtml.includes(`id="${decodeURIComponent(target.hash.slice(1))}"`),`${page.path}: frammento mancante ${target.href}`);
       }
     }
-    for (const match of html.matchAll(/\bsrcset="([^"]+)"/g)) for (const candidate of match[1].split(',')) assert.ok(fs.existsSync(path.join(output,candidate.trim().split(/\s+/)[0])));
+    for (const match of html.matchAll(/\bsrcset="([^"]+)"/g)) for (const candidate of match[1].split(',')) {
+      const pathname = new URL(candidate.trim().split(/\s+/)[0],url(page.path)).pathname;
+      assert.ok(fs.existsSync(path.join(output,relativeSitePath(pathname))));
+    }
     const ld = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
     assert.equal(ld['@context'],'https://schema.org');
     const business = ld['@graph'].find(node=>Array.isArray(node['@type']) && node['@type'].includes('AutoBodyShop'));
@@ -86,13 +90,13 @@ function check(output = path.join(root,'docs')) {
   for (const match of sitemap.matchAll(/<lastmod>(.*?)<\/lastmod>/g)) assert.ok(Number.isFinite(Date.parse(match[1])) && Date.parse(match[1])<=Date.now());
   const robots = fs.readFileSync(path.join(output,'robots.txt'),'utf8');
   for (const bot of ['*','Googlebot','Bingbot','GPTBot','OAI-SearchBot','PerplexityBot','ClaudeBot','CCBot']) assert.ok(robots.includes(`User-agent: ${bot}\n`));
-  for (const blocked of ['/api/','/admin/','/private/']) assert.ok(robots.includes(`Disallow: ${blocked}\n`));
+  for (const blocked of ['/api/','/admin/','/private/']) assert.ok(robots.includes(`Disallow: ${sitePath(blocked)}\n`));
   assert.ok(robots.includes(`Sitemap: ${url('/sitemap.xml')}`));
   const llms = fs.readFileSync(path.join(output,'llms.txt'),'utf8');
   assert.ok(llms.startsWith(`# ${site.name}\n\n> `));
   for (const match of llms.matchAll(/\]\((https:[^)]+)\)/g)) {
     const target = new URL(match[1]);
-    assert.ok(fs.existsSync(path.join(output,target.pathname)));
+    assert.ok(fs.existsSync(path.join(output,relativeSitePath(target.pathname))));
   }
   for (const file of ['styles.css','seo.css']) {
     const cssPath = path.join(output,'css',file);

@@ -2,6 +2,18 @@
 
 Verifica del 15 ottobre 2026. Repository: `car3001`, branch iniziale `master`, nessuna modifica locale preesistente rilevata. Interventi locali; nessuna pubblicazione o modifica DNS effettuata.
 
+## Correzione della pubblicazione su GitHub Pages
+
+Dopo la pubblicazione all'indirizzo `https://benfrost-20.github.io/car3001/` è stato riscontrato un errore introdotto nella prima implementazione: risorse e link interni iniziavano con `/`, saltando la sottocartella `/car3001`. Il browser cercava quindi CSS, immagini e pagine alla radice dell'account GitHub. I metadati puntavano inoltre al dominio provvisorio car3001.it.
+
+La correzione supporta URL di pubblicazione con o senza sottocartella. Il valore predefinito in `src/data/site.json` è ora `https://benfrost-20.github.io/car3001`. La variabile `SITE_URL` può sostituirlo durante la build. Un unico percorso base viene applicato a risorse, srcset, navigazione, breadcrumb, canonical, Open Graph, JSON-LD, sitemap, robots e risorse Markdown. Gli output restano direttamente in `docs/` e `dist/`.
+
+Il server locale riproduce il percorso `/car3001/`; non serve più soltanto la radice `/`, che aveva nascosto il difetto nella prima verifica. Aggiunti test per GitHub Pages, dominio proprio, sottocartella multipla e rilevamento dei link che escono dal percorso del sito. Cinque test superati; 42 URL locali verificati via HTTP con risposta 200, tipi MIME corretti, redirect e 404 verificati. Il browser locale mostra nuovamente logo, copertina, stili e navigazione funzionanti sotto `/car3001/`.
+
+Aggiunto `.github/workflows/pages.yml`, che legge `base_url` dall'azione ufficiale `configure-pages`, genera e controlla il sito e pubblica l'artefatto `dist`. Per usarlo selezionare **Settings → Pages → Build and deployment → Source: GitHub Actions**. In alternativa, il contenuto aggiornato di `docs/` resta pubblicabile dalla branch. La correzione è locale e richiede un nuovo push/pubblicazione per aggiornare il sito pubblico. [Workflow GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [output base_url ufficiale](https://github.com/actions/configure-pages/blob/v5/action.yml).
+
+Il file robots del progetto si trova in `/car3001/robots.txt`: i crawler consultano il robots alla radice dell'host, quindi per controllare il crawling su GitHub Pages occorre gestire il sito principale dell'account o usare un dominio dedicato. La sitemap del progetto può essere inviata direttamente ai motori di ricerca.
+
 ## Audit prima delle modifiche
 
 | Area | Stato rilevato | Conseguenza |
@@ -48,7 +60,7 @@ La gerarchia iniziale era `/` → punti di forza (`#services`), servizi (`#portf
 | `/contatti/` | Contatti e indicazioni; ContactPage. |
 | `/faq/` | Sei domande e risposte; FAQPage. |
 
-Tutte le pagine interne hanno BreadcrumbList. Ogni rotta ha una versione `index.md`; le pagine HTML sono gli URL canonici inseriti nella sitemap.
+Le rotte della tabella sono logiche: su GitHub Pages sono precedute da `/car3001`. Tutte le pagine interne hanno BreadcrumbList. Ogni rotta ha una versione `index.md`; le pagine HTML sono gli URL canonici inseriti nella sitemap.
 
 ## Scelte sui dati strutturati e sulle aspettative
 
@@ -64,16 +76,16 @@ Le priorità nella sitemap sono incluse come richiesto, ma Google le ignora. Le 
 
 - `npm run build`: completata, 11 pagine in entrambi gli output.
 - `npm run check`: completato, 11 pagine e 277 riferimenti locali verificati; heading, metadati, immagini, frammenti, JSON-LD, FAQ, sitemap, robots e Markdown.
-- `npm test`: tre test superati. Verificati stabilità lastmod, aggiornamento selettivo dei contenuti, prezzi abilitati/disabilitati, propagazione di dominio/telefono/email/social.
+- `npm test`: cinque test superati. Verificati stabilità lastmod, aggiornamento selettivo dei contenuti, prezzi abilitati/disabilitati, propagazione di dominio/telefono/email/social, URL con sottocartella e rilevamento di link fuori dal percorso del sito.
 - Parsing indipendente con HTMLParser e XML ElementTree: pagine e sitemap coerenti; namespace, priorità e date validi.
 - Controllo browser locale: home, navigazione mobile, indice servizi e pagina cambio gomme; menu desktop verificato e nessun errore nella console osservata.
 - Il codice JSON-LD è stato verificato sintatticamente e rispetto ai dati visibili. Non è stata eseguita una validazione esterna tramite Rich Results Test o Schema Markup Validator; questi strumenti vanno usati anche sugli URL realmente pubblicati.
 - Non sono stati misurati dati reali di Core Web Vitals, ranking o citazioni. Il risparmio riportato riguarda i file immagine, non un punteggio Lighthouse.
-- La consultazione del dominio live non ha restituito una pagina verificabile tramite lo strumento di navigazione; dominio, redirect, DNS e risposte dell'hosting restano da confermare. Il dominio attuale deriva dal repository.
+- La pagina GitHub Pages pubblicata è stata ispezionata e ha confermato il difetto dei percorsi. La correzione è stata verificata localmente sotto lo stesso prefisso; il sito pubblico richiede un nuovo deploy.
 
 ## Informazioni e materiali da completare
 
-1. Confermare il dominio canonico `https://car3001.it` e il comportamento della variante www. Il valore si cambia solo in `src/data/site.json` prima della build.
+1. Il sito attuale usa `https://benfrost-20.github.io/car3001`. Per passare a un dominio dedicato confermare dominio, DNS e redirect; cambiare `url` in `site.json` oppure lasciare che il workflow legga l'URL configurato in GitHub Pages.
 2. Confermare i prezzi provvisori e cosa comprendono, eventuali condizioni e trattamento IVA; in particolare il prezzo di partenza della pulizia non va attribuito automaticamente alla lucidatura. Poi attivare `pricing.enabled`.
 3. Confermare contatti, marchi Standox/3M, collaborazioni Unipol/Sara/Generali e la dichiarazione di oltre 50 anni di esperienza dei soci; derivano dai testi esistenti.
 4. Inserire URL ufficiali dei profili social, orari verificati, ragione sociale e dati identificativi aziendali. Non sono stati dedotti da directory non ufficiali.
@@ -99,25 +111,25 @@ Le risorse seguenti sono versioni Markdown delle pagine pubbliche, generate dagl
 
 ## Pagine principali
 
-- [Nuova Car 3001](https://car3001.it/index.md): Nuova Car 3001 a Cologno Monzese: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto.
-- [Servizi](https://car3001.it/servizi/index.md): I servizi di Nuova Car 3001 a Cologno Monzese: pneumatici, tagliandi OBD, fari, pulizia, levabolli ed elettrauto. Leggi i dettagli e chiedi un preventivo.
-- [Chi siamo](https://car3001.it/chi-siamo/index.md): Conosci Nuova Car 3001, carrozzeria a Cologno Monzese in Via G. Rossini 38. Esperienza nel settore auto, servizi e contatti per informazioni e preventivi.
-- [Contatti](https://car3001.it/contatti/index.md): Contatta Nuova Car 3001: telefono, email e indicazioni per Via G. Rossini 38 a Cologno Monzese. Richiedi informazioni e un preventivo per i servizi auto.
-- [Domande frequenti](https://car3001.it/faq/index.md): Sede, servizi, cambio gomme, tagliandi OBD, pulizia auto e preventivi di Nuova Car 3001 a Cologno Monzese. Consulta le FAQ e contatta la carrozzeria.
+- [Nuova Car 3001](https://benfrost-20.github.io/car3001/index.md): Nuova Car 3001 a Cologno Monzese: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto.
+- [Servizi](https://benfrost-20.github.io/car3001/servizi/index.md): I servizi di Nuova Car 3001 a Cologno Monzese: pneumatici, tagliandi OBD, fari, pulizia, levabolli ed elettrauto. Leggi i dettagli e chiedi un preventivo.
+- [Chi siamo](https://benfrost-20.github.io/car3001/chi-siamo/index.md): Conosci Nuova Car 3001, carrozzeria a Cologno Monzese in Via G. Rossini 38. Esperienza nel settore auto, servizi e contatti per informazioni e preventivi.
+- [Contatti](https://benfrost-20.github.io/car3001/contatti/index.md): Contatta Nuova Car 3001: telefono, email e indicazioni per Via G. Rossini 38 a Cologno Monzese. Richiedi informazioni e un preventivo per i servizi auto.
+- [Domande frequenti](https://benfrost-20.github.io/car3001/faq/index.md): Sede, servizi, cambio gomme, tagliandi OBD, pulizia auto e preventivi di Nuova Car 3001 a Cologno Monzese. Consulta le FAQ e contatta la carrozzeria.
 
 ## Servizi
 
-- [Cambio gomme e cerchi](https://car3001.it/servizi/cambio-gomme-cerchi/index.md): Cambio gomme e cerchi con equilibratura da Nuova Car 3001 a Cologno Monzese. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.
-- [Tagliandi auto](https://car3001.it/servizi/tagliandi-auto/index.md): Tagliandi auto con controllo diagnostico OBD incluso da Nuova Car 3001 a Cologno Monzese. Contattaci per informazioni e un preventivo per il tuo veicolo.
-- [Verniciatura e lucidatura fari](https://car3001.it/servizi/lucidatura-fari/index.md): Verniciatura e lucidatura fari a Cologno Monzese con Nuova Car 3001. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.
-- [Pulizia e lucidatura auto](https://car3001.it/servizi/pulizia-lucidatura-auto/index.md): Pulizia auto a Cologno Monzese: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta Nuova Car 3001.
-- [Levabolli](https://car3001.it/servizi/levabolli/index.md): Levabolli a Cologno Monzese per grandine e piccole ammaccature che non richiedono verniciatura. Contatta Nuova Car 3001 per valutazione e preventivo.
-- [Elettrauto](https://car3001.it/servizi/elettrauto/index.md): Elettrauto a Cologno Monzese: sensori di parcheggio, installazione dash cam e luci interne LED. Contatta Nuova Car 3001 per informazioni e preventivi.
+- [Cambio gomme e cerchi](https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/index.md): Cambio gomme e cerchi con equilibratura da Nuova Car 3001 a Cologno Monzese. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.
+- [Tagliandi auto](https://benfrost-20.github.io/car3001/servizi/tagliandi-auto/index.md): Tagliandi auto con controllo diagnostico OBD incluso da Nuova Car 3001 a Cologno Monzese. Contattaci per informazioni e un preventivo per il tuo veicolo.
+- [Verniciatura e lucidatura fari](https://benfrost-20.github.io/car3001/servizi/lucidatura-fari/index.md): Verniciatura e lucidatura fari a Cologno Monzese con Nuova Car 3001. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.
+- [Pulizia e lucidatura auto](https://benfrost-20.github.io/car3001/servizi/pulizia-lucidatura-auto/index.md): Pulizia auto a Cologno Monzese: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta Nuova Car 3001.
+- [Levabolli](https://benfrost-20.github.io/car3001/servizi/levabolli/index.md): Levabolli a Cologno Monzese per grandine e piccole ammaccature che non richiedono verniciatura. Contatta Nuova Car 3001 per valutazione e preventivo.
+- [Elettrauto](https://benfrost-20.github.io/car3001/servizi/elettrauto/index.md): Elettrauto a Cologno Monzese: sensori di parcheggio, installazione dash cam e luci interne LED. Contatta Nuova Car 3001 per informazioni e preventivi.
 
 ## Optional
 
-- [Contenuto completo in un file](https://car3001.it/llms-full.txt): raccolta delle versioni Markdown delle pagine.
-- [Mappa del sito](https://car3001.it/sitemap.xml): indice degli URL HTML canonici.
+- [Contenuto completo in un file](https://benfrost-20.github.io/car3001/llms-full.txt): raccolta delle versioni Markdown delle pagine.
+- [Mappa del sito](https://benfrost-20.github.io/car3001/sitemap.xml): indice degli URL HTML canonici.
 ```
 
 ## Codice generato: robots.txt
@@ -139,12 +151,12 @@ User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: CCBot
 User-agent: Google-Extended
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
+Allow: /car3001/
+Disallow: /car3001/api/
+Disallow: /car3001/admin/
+Disallow: /car3001/private/
 
-Sitemap: https://car3001.it/sitemap.xml
+Sitemap: https://benfrost-20.github.io/car3001/sitemap.xml
 ```
 
 ## JSON-LD di riferimento: attività e sito
@@ -160,9 +172,9 @@ Estratto dal grafo effettivo della home. I grafi completi sono in `seo/examples/
         "Organization",
         "AutoBodyShop"
       ],
-      "@id": "https://car3001.it/#organization",
+      "@id": "https://benfrost-20.github.io/car3001/#organization",
       "name": "Nuova Car 3001",
-      "url": "https://car3001.it/",
+      "url": "https://benfrost-20.github.io/car3001/",
       "telephone": "+390299200616",
       "email": "car3001@car3001.it",
       "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
@@ -176,20 +188,20 @@ Estratto dal grafo effettivo della home. I grafi completi sono in `seo/examples/
       },
       "logo": {
         "@type": "ImageObject",
-        "url": "https://car3001.it/assets/img/logo.webp",
+        "url": "https://benfrost-20.github.io/car3001/assets/img/logo.webp",
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/header.webp"
+      "image": "https://benfrost-20.github.io/car3001/assets/img/header.webp"
     },
     {
       "@type": "WebSite",
-      "@id": "https://car3001.it/#website",
-      "url": "https://car3001.it/",
+      "@id": "https://benfrost-20.github.io/car3001/#website",
+      "url": "https://benfrost-20.github.io/car3001/",
       "name": "Nuova Car 3001",
       "inLanguage": "it",
       "publisher": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       }
     }
   ]
@@ -206,38 +218,38 @@ Estratto dalla pagina cambio gomme. In assenza di prezzi confermati il servizio 
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#breadcrumb",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://car3001.it/"
+          "item": "https://benfrost-20.github.io/car3001/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Servizi",
-          "item": "https://car3001.it/servizi/"
+          "item": "https://benfrost-20.github.io/car3001/servizi/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Cambio gomme e cerchi",
-          "item": "https://car3001.it/servizi/cambio-gomme-cerchi/"
+          "item": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/"
         }
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#service",
       "name": "Cambio gomme e cerchi",
       "serviceType": "Cambio gomme e cerchi",
       "description": "Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a Cologno Monzese, in Via G. Rossini 38. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.",
-      "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
-      "image": "https://car3001.it/assets/img/gomma.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/gomma.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",
@@ -260,20 +272,20 @@ Le domande e le risposte derivano dalla stessa funzione che produce il contenuto
   "@graph": [
     {
       "@type": "FAQPage",
-      "@id": "https://car3001.it/faq/#webpage",
-      "url": "https://car3001.it/faq/",
+      "@id": "https://benfrost-20.github.io/car3001/faq/#webpage",
+      "url": "https://benfrost-20.github.io/car3001/faq/",
       "name": "Domande frequenti sui servizi auto | Nuova Car 3001",
       "description": "Sede, servizi, cambio gomme, tagliandi OBD, pulizia auto e preventivi di Nuova Car 3001 a Cologno Monzese. Consulta le FAQ e contatta la carrozzeria.",
       "inLanguage": "it",
       "isPartOf": {
-        "@id": "https://car3001.it/#website"
+        "@id": "https://benfrost-20.github.io/car3001/#website"
       },
       "about": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
-      "dateModified": "2026-10-15T08:34:06.663Z",
+      "dateModified": "2026-10-15T09:09:51.240Z",
       "breadcrumb": {
-        "@id": "https://car3001.it/faq/#breadcrumb"
+        "@id": "https://benfrost-20.github.io/car3001/faq/#breadcrumb"
       },
       "mainEntity": [
         {

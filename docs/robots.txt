@@ -12,9 +12,9 @@ User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: CCBot
 User-agent: Google-Extended
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
+Allow: /car3001/
+Disallow: /car3001/api/
+Disallow: /car3001/admin/
+Disallow: /car3001/private/
 
-Sitemap: https://car3001.it/sitemap.xml
+Sitemap: https://benfrost-20.github.io/car3001/sitemap.xml

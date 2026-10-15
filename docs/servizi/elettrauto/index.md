@@ -2,7 +2,7 @@
 
 Il servizio elettrauto di Nuova Car 3001 comprende riparazione dei sensori di parcheggio, installazione di dash cam e installazione di luci LED interne all'abitacolo. La carrozzeria opera a Cologno Monzese. Descrivi il componente o l'accessorio che ti interessa per concordare la valutazione del veicolo e richiedere un preventivo.
 
-Fonte: https://car3001.it/servizi/elettrauto/
+Fonte: https://benfrost-20.github.io/car3001/servizi/elettrauto/
 
 ## Cosa comprende il servizio
 

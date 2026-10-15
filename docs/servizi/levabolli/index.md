@@ -2,7 +2,7 @@
 
 Il servizio levabolli di Nuova Car 3001 riguarda danni da grandine e piccole ammaccature che non richiedono verniciatura. La possibilità di intervenire dipende dal danno da valutare. Per una valutazione della carrozzeria e un preventivo, contatta l'officina di Via G. Rossini 38 a Cologno Monzese.
 
-Fonte: https://car3001.it/servizi/levabolli/
+Fonte: https://benfrost-20.github.io/car3001/servizi/levabolli/
 
 ## Cosa comprende il servizio
 

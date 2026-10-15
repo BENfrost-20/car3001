@@ -2,7 +2,7 @@
 
 Nuova Car 3001 propone tagliandi auto con controllo diagnostico OBD incluso a Cologno Monzese. L'OBD è il sistema di diagnostica di bordo del veicolo. Per conoscere le lavorazioni previste per la tua auto e ricevere un preventivo, contatta la carrozzeria in Via G. Rossini 38 prima dell'intervento.
 
-Fonte: https://car3001.it/servizi/tagliandi-auto/
+Fonte: https://benfrost-20.github.io/car3001/servizi/tagliandi-auto/
 
 ## Cosa comprende il servizio
 

@@ -3,7 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const {root,site,url,pages,priceLabel,servicePath,faqItems,escape} = require('./lib/site');
+const {root,site,url,sitePath,relativeSitePath,pages,priceLabel,servicePath,faqItems,escape} = require('./lib/site');
 const {layout} = require('../src/templates/site');
 
 function write(file, value) {
@@ -64,9 +64,11 @@ for (const page of routes) {
   // Ignore generated dateModified: rebuilding unchanged content must not advance lastmod.
   const html = layout(page,'');
   const assetHash = crypto.createHash('sha256');
-  for (const match of html.matchAll(/(?:src|content)="(\/?assets\/img\/[^\"]+|https:[^\"]+\/assets\/img\/[^\"]+)"/g)) {
+  for (const match of html.matchAll(/(?:src|content)="([^\"]+)"/g)) {
     const assetPath = new URL(match[1],site.url).pathname;
-    assetHash.update(fs.readFileSync(path.join(root,'public',assetPath)));
+    if (assetPath.startsWith(sitePath('/assets/img/'))) {
+      assetHash.update(fs.readFileSync(path.join(root,'public',relativeSitePath(assetPath))));
+    }
   }
   const fingerprint = crypto.createHash('sha256').update(html).update(assetHash.digest()).digest('hex');
   const prior = previous[page.path];
@@ -90,10 +92,10 @@ User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: CCBot
 User-agent: Google-Extended
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
+Allow: ${sitePath('/')}
+Disallow: ${sitePath('/api/')}
+Disallow: ${sitePath('/admin/')}
+Disallow: ${sitePath('/private/')}
 
 Sitemap: ${url('/sitemap.xml')}
 `);

@@ -1,6 +1,6 @@
 'use strict';
 
-const {site,images,escape:e,url,servicePath,priceLabel,priceVisible,mapsUrl,faqItems,schema} = require('../../scripts/lib/site');
+const {site,images,escape:e,url,sitePath,servicePath,priceLabel,priceVisible,mapsUrl,faqItems,schema} = require('../../scripts/lib/site');
 
 function image(key, alt, {className='',eager=false,priority=eager,sizes='(min-width: 992px) 400px, 92vw'} = {}) {
   const img = images[key];
@@ -111,7 +111,11 @@ function layout(page, lastmod) {
   <footer class="footer py-4"><div class="container"><p>© ${e(site.name)} · ${e(site.address.streetAddress)}, ${e(site.address.addressLocality)}</p><nav aria-label="Navigazione a piè di pagina"><ul class="footer-links"><li><a href="/servizi/">Servizi</a></li><li><a href="/contatti/">Contatti</a></li><li><a href="/faq/">Domande frequenti</a></li>${site.socialProfiles.map(profile=>`<li><a href="${e(profile.url)}" target="_blank" rel="noopener noreferrer">${e(profile.name)}</a></li>`).join('')}</ul></nav></div></footer>
 </body>
 </html>
-`;
+`.replace(/\b(href|src)="(\/(?!\/)[^"]*)"/g,(_,attribute,value)=>`${attribute}="${sitePath(value)}"`)
+ .replace(/\bsrcset="([^"]+)"/g,(_,value)=>`srcset="${value.split(',').map(candidate=>{
+   const [source,width] = candidate.trim().split(/\s+/);
+   return `${source.startsWith('/') && !source.startsWith('//') ? sitePath(source) : source} ${width}`;
+ }).join(', ')}"`);
 }
 
 module.exports = {layout,content};

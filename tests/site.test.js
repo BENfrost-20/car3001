@@ -14,7 +14,7 @@ function fixture(t) {
   t.after(()=>fs.rmSync(directory,{recursive:true,force:true}));
   return directory;
 }
-const run = (directory,script) => execFileSync(process.execPath,[script],{cwd:directory,encoding:'utf8'});
+const run = (directory,script,environment={}) => execFileSync(process.execPath,[script],{cwd:directory,encoding:'utf8',env:{...process.env,SITE_URL:'',...environment},stdio:['ignore','pipe','pipe']});
 function update(directory,modify) {
   const file = path.join(directory,'src/data/site.json');
   const data = JSON.parse(fs.readFileSync(file,'utf8'));
@@ -76,4 +76,37 @@ test('Dominio, contatti e social si propagano da una sola configurazione',t=>{
   }
   assert.ok(fs.readFileSync(path.join(directory,'docs/robots.txt'),'utf8').includes('https://car3001.example.org/sitemap.xml'));
   assert.deepEqual(graph(directory,'')['@graph'][0].sameAs,['https://www.instagram.com/car3001_ufficiale/']);
+});
+
+test('GitHub Pages e dominio proprio generano risorse, link e metadati nel percorso effettivo',t=>{
+  const directory=fixture(t);
+  update(directory,data=>{data.url='https://car3001.it';});
+  for (const [base,prefix] of [
+    ['https://benfrost-20.github.io/car3001','/car3001'],
+    ['https://car3001.it',''],
+    ['https://example.org/anteprime/car3001/','/anteprime/car3001']
+  ]) {
+    const environment={SITE_URL:base};
+    run(directory,'scripts/build.js',environment);
+    run(directory,'scripts/check.js',environment);
+    const html=fs.readFileSync(path.join(directory,'docs/index.html'),'utf8');
+    const normalized=base.replace(/\/$/,'');
+    assert.ok(html.includes(`href="${prefix}/css/styles.css"`));
+    assert.ok(html.includes(`href="${prefix}/servizi/"`));
+    assert.ok(html.includes(`src="${prefix}/assets/img/logo.webp"`));
+    assert.ok(html.includes(`srcset="${prefix}/assets/img/header-960.webp 960w`));
+    assert.ok(html.includes(`rel="canonical" href="${normalized}/"`));
+    assert.equal(graph(directory,'')['@graph'][0].url,normalized+'/');
+    assert.ok(fs.readFileSync(path.join(directory,'docs/llms.txt'),'utf8').includes(`${normalized}/servizi/index.md`));
+    assert.ok(fs.readFileSync(path.join(directory,'docs/sitemap.xml'),'utf8').includes(`<loc>${normalized}/servizi/</loc>`));
+  }
+});
+
+test('Il controllo rileva i collegamenti che escono dalla sottocartella GitHub Pages',t=>{
+  const directory=fixture(t);
+  const environment={SITE_URL:'https://benfrost-20.github.io/car3001'};
+  run(directory,'scripts/build.js',environment);
+  const file=path.join(directory,'docs/index.html');
+  fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('href="/car3001/css/styles.css"','href="/css/styles.css"'));
+  assert.throws(()=>run(directory,'scripts/check.js',environment),/URL esterno al percorso del sito/);
 });

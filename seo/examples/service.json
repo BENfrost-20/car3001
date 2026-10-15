@@ -6,9 +6,9 @@
         "Organization",
         "AutoBodyShop"
       ],
-      "@id": "https://car3001.it/#organization",
+      "@id": "https://benfrost-20.github.io/car3001/#organization",
       "name": "Nuova Car 3001",
-      "url": "https://car3001.it/",
+      "url": "https://benfrost-20.github.io/car3001/",
       "telephone": "+390299200616",
       "email": "car3001@car3001.it",
       "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
@@ -22,77 +22,77 @@
       },
       "logo": {
         "@type": "ImageObject",
-        "url": "https://car3001.it/assets/img/logo.webp",
+        "url": "https://benfrost-20.github.io/car3001/assets/img/logo.webp",
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/header.webp"
+      "image": "https://benfrost-20.github.io/car3001/assets/img/header.webp"
     },
     {
       "@type": "WebSite",
-      "@id": "https://car3001.it/#website",
-      "url": "https://car3001.it/",
+      "@id": "https://benfrost-20.github.io/car3001/#website",
+      "url": "https://benfrost-20.github.io/car3001/",
       "name": "Nuova Car 3001",
       "inLanguage": "it",
       "publisher": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       }
     },
     {
       "@type": "WebPage",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#webpage",
-      "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#webpage",
+      "url": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/",
       "name": "Cambio gomme a Cologno Monzese | Nuova Car 3001",
       "description": "Cambio gomme e cerchi con equilibratura da Nuova Car 3001 a Cologno Monzese. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.",
       "inLanguage": "it",
       "isPartOf": {
-        "@id": "https://car3001.it/#website"
+        "@id": "https://benfrost-20.github.io/car3001/#website"
       },
       "about": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
-      "dateModified": "2026-10-15T08:34:06.660Z",
+      "dateModified": "2026-10-15T09:09:51.236Z",
       "breadcrumb": {
-        "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#breadcrumb"
+        "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service"
+        "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#service"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#breadcrumb",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://car3001.it/"
+          "item": "https://benfrost-20.github.io/car3001/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Servizi",
-          "item": "https://car3001.it/servizi/"
+          "item": "https://benfrost-20.github.io/car3001/servizi/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Cambio gomme e cerchi",
-          "item": "https://car3001.it/servizi/cambio-gomme-cerchi/"
+          "item": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/"
         }
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service",
+      "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#service",
       "name": "Cambio gomme e cerchi",
       "serviceType": "Cambio gomme e cerchi",
       "description": "Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a Cologno Monzese, in Via G. Rossini 38. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.",
-      "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
-      "image": "https://car3001.it/assets/img/gomma.webp",
+      "url": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/",
+      "image": "https://benfrost-20.github.io/car3001/assets/img/gomma.webp",
       "provider": {
-        "@id": "https://car3001.it/#organization"
+        "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
       "areaServed": {
         "@type": "City",

@@ -2,7 +2,7 @@
 
 Le domande frequenti di Nuova Car 3001 raccolgono informazioni su sede, servizi e richieste di preventivo. Puoi verificare cosa comprende il cambio gomme, quale controllo diagnostico è previsto nel tagliando e come viene proposta la pulizia dell’auto. Per concordare lavorazioni e costi, contatta direttamente la carrozzeria a Cologno Monzese.
 
-Fonte: https://car3001.it/faq/
+Fonte: https://benfrost-20.github.io/car3001/faq/
 
 ## Dove si trova Nuova Car 3001?
 

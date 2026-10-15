@@ -2,7 +2,7 @@
 
 Nuova Car 3001 propone lavaggio e aspirazione interna tramite un partner di fiducia, con igienizzazione su richiesta, e lucidatura professionale dell'auto. La carrozzeria si trova a Cologno Monzese. Contattaci per specificare se ti interessa la pulizia degli interni, il lavaggio o la lucidatura e richiedere il relativo preventivo.
 
-Fonte: https://car3001.it/servizi/pulizia-lucidatura-auto/
+Fonte: https://benfrost-20.github.io/car3001/servizi/pulizia-lucidatura-auto/
 
 ## Cosa comprende il servizio
 
