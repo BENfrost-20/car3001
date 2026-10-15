@@ -18,6 +18,8 @@ Il file da mantenere è **`src/data/site.json`**:
 | `summary`, `aboutSummary`, `contactSummary`, `serviceSummary` | Introduzioni sintetiche condivise. |
 | `services` | Slug, nome, metadati, immagini, introduzione, descrizione dettagliata ed elenco delle lavorazioni. |
 | `pageMetadata` | Title e description delle pagine generali. |
+| `presentation` | Testi brevi della home: copertina, presentazione, punti di forza, servizi e contatti. |
+| `services[].displayName`, `services[].cardDescription` | Nome breve e descrizione sintetica delle schede fotografiche. Il nome completo e i metadati SEO restano nei campi dedicati. |
 | `faq` | Domande e risposte visibili, riutilizzate nello schema FAQPage. Sede, elenco servizi e contatti vengono derivati dai campi condivisi. |
 
 I testi possono usare `{{name}}`, `{{city}}`, `{{streetAddress}}`, `{{postalCode}}`, `{{telephoneLabel}}` e `{{email}}`: la build sostituisce questi riferimenti automaticamente, evitando copie da aggiornare separatamente. Usare JSON valido, senza commenti o virgole finali. Non rinominare gli slug già pubblicati senza predisporre redirect sul servizio di hosting.
@@ -72,4 +74,6 @@ Su un sito GitHub Pages di progetto il file `robots.txt` è pubblicato in `/car3
 
 Per audit iniziale, interventi, codice generato e limiti delle verifiche, consultare **`SEO-AUDIT.md`**.
 
-Layout derivato da Start Bootstrap Agency (MIT); licenza originale conservata in `LICENSE`.
+La grafica usa CSS dedicato, una sola famiglia di caratteri esterna e il piccolo script del menu. Le schede della home sono sintetiche; i dettagli sono nelle pagine dei servizi. FAQ, informazioni aggiuntive e tabella di confronto si aprono con elementi HTML `details`, funzionanti anche senza JavaScript. Bootstrap CSS e Roboto Slab non sono più caricati.
+
+Layout inizialmente derivato da Start Bootstrap Agency (MIT); licenza originale conservata in `LICENSE`.

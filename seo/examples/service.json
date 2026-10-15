@@ -51,7 +51,7 @@
       "about": {
         "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
-      "dateModified": "2026-10-15T09:09:51.236Z",
+      "dateModified": "2026-10-15T11:23:32.878Z",
       "breadcrumb": {
         "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#breadcrumb"
       },
@@ -88,7 +88,7 @@
       "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#service",
       "name": "Cambio gomme e cerchi",
       "serviceType": "Cambio gomme e cerchi",
-      "description": "Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a Cologno Monzese, in Via G. Rossini 38. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.",
+      "description": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
       "url": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/",
       "image": "https://benfrost-20.github.io/car3001/assets/img/gomma.webp",
       "provider": {

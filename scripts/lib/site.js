@@ -75,10 +75,10 @@ function offer(service) {
   };
 }
 
-function serviceSchema(service) {
+function serviceSchema(service, description = service.summary) {
   return {
     '@type':'Service','@id':url(`${servicePath(service)}#service`),
-    name:service.name, serviceType:service.name, description:service.summary,
+    name:service.name, serviceType:service.name, description,
     url:url(servicePath(service)), image:url(images[service.image].src),
     provider:ref(businessId), areaServed:{'@type':'City',name:site.address.addressLocality},
     ...(offer(service) ? {offers:offer(service)} : {})
@@ -110,9 +110,9 @@ function schema(page, lastmod) {
     '@type':'BreadcrumbList','@id':url(`${page.path}#breadcrumb`),
     itemListElement:page.crumbs.map((crumb,index)=>({'@type':'ListItem',position:index+1,name:crumb.name,item:url(crumb.path)}))
   });
-  if (page.service) graph.push(serviceSchema(page.service));
+  if (page.service) graph.push(serviceSchema(page.service, page.service.detailSummary));
   if (page.kind === 'home' || page.kind === 'services') {
-    graph.push(...site.services.map(serviceSchema));
+    graph.push(...site.services.map(service=>serviceSchema(service, service.cardDescription)));
     graph.push({'@type':'ItemList','@id':url(`${page.path}#services`),name:`Servizi di ${site.name}`,itemListElement:site.services.map((service,index)=>({'@type':'ListItem',position:index+1,item:ref(url(`${servicePath(service)}#service`))}))});
   }
   return {'@context':'https://schema.org','@graph':graph};

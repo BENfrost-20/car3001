@@ -47,7 +47,9 @@
         "Sostituzione dei cerchi secondo l'intervento concordato.",
         "Equilibratura inclusa nel servizio presentato."
       ],
-      "detailSummary": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi."
+      "detailSummary": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
+      "cardDescription": "Pneumatici e cerchi, con equilibratura inclusa.",
+      "displayName": "Cambio gomme e cerchi"
     },
     {
       "slug": "tagliandi-auto",
@@ -64,7 +66,9 @@
         "Controllo diagnostico OBD incluso.",
         "Lavorazioni e costo da concordare con la carrozzeria."
       ],
-      "detailSummary": "Il tagliando presentato include un controllo diagnostico OBD, cioè della diagnostica di bordo del veicolo. Le altre lavorazioni previste per l'auto vanno concordate con la carrozzeria. Per conoscere cosa comprenderà il tuo tagliando e ricevere un preventivo, comunica il veicolo interessato e le esigenze di manutenzione."
+      "detailSummary": "Il tagliando presentato include un controllo diagnostico OBD, cioè della diagnostica di bordo del veicolo. Le altre lavorazioni previste per l'auto vanno concordate con la carrozzeria. Per conoscere cosa comprenderà il tuo tagliando e ricevere un preventivo, comunica il veicolo interessato e le esigenze di manutenzione.",
+      "cardDescription": "Manutenzione dell’auto con controllo diagnostico OBD.",
+      "displayName": "Tagliandi auto"
     },
     {
       "slug": "lucidatura-fari",
@@ -81,7 +85,9 @@
         "Trattamento di piccoli graffi e ingiallimento delle plastiche.",
         "Valutazione dello stato dei fari prima di concordare l'intervento."
       ],
-      "detailSummary": "La scheda riguarda piccoli graffi e ingiallimento delle plastiche di fari anteriori o fanali. Il trattamento può prevedere verniciatura, lucidatura o entrambe, secondo la lavorazione concordata. Una valutazione dello stato dei fari permette alla carrozzeria di definire l'intervento da proporre e il relativo preventivo per il veicolo."
+      "detailSummary": "La scheda riguarda piccoli graffi e ingiallimento delle plastiche di fari anteriori o fanali. Il trattamento può prevedere verniciatura, lucidatura o entrambe, secondo la lavorazione concordata. Una valutazione dello stato dei fari permette alla carrozzeria di definire l'intervento da proporre e il relativo preventivo per il veicolo.",
+      "cardDescription": "Trattamento di piccoli graffi e ingiallimento dei fari.",
+      "displayName": "Cura dei fari"
     },
     {
       "slug": "pulizia-lucidatura-auto",
@@ -98,7 +104,9 @@
         "Igienizzazione su richiesta.",
         "Lucidatura professionale da concordare e preventivare separatamente."
       ],
-      "detailSummary": "Lavaggio e aspirazione interna vengono proposti tramite un partner di fiducia; l'igienizzazione va richiesta espressamente. La lucidatura professionale è una lavorazione da concordare in base alla richiesta. Quando contatti la carrozzeria, specifica quale di questi interventi ti interessa per ricevere le informazioni e il relativo preventivo."
+      "detailSummary": "Lavaggio e aspirazione interna vengono proposti tramite un partner di fiducia; l'igienizzazione va richiesta espressamente. La lucidatura professionale è una lavorazione da concordare in base alla richiesta. Quando contatti la carrozzeria, specifica quale di questi interventi ti interessa per ricevere le informazioni e il relativo preventivo.",
+      "cardDescription": "Lavaggio, cura degli interni e lucidatura professionale.",
+      "displayName": "Pulizia e lucidatura"
     },
     {
       "slug": "levabolli",
@@ -115,7 +123,9 @@
         "Ripristino di piccole ammaccature che non richiedono verniciatura.",
         "Intervento e costo definiti su preventivo."
       ],
-      "detailSummary": "La lavorazione levabolli è presentata per danni da grandine e piccole ammaccature che non richiedono verniciatura. Il danno deve essere valutato prima di concordare l'intervento. Descrivi alla carrozzeria le parti interessate dell'auto per richiedere informazioni sulla possibilità di ripristino e ottenere un preventivo relativo al tuo caso."
+      "detailSummary": "La lavorazione levabolli è presentata per danni da grandine e piccole ammaccature che non richiedono verniciatura. Il danno deve essere valutato prima di concordare l'intervento. Descrivi alla carrozzeria le parti interessate dell'auto per richiedere informazioni sulla possibilità di ripristino e ottenere un preventivo relativo al tuo caso.",
+      "cardDescription": "Grandine e piccole ammaccature senza verniciatura.",
+      "displayName": "Levabolli"
     },
     {
       "slug": "elettrauto",
@@ -132,7 +142,9 @@
         "Installazione di dash cam.",
         "Installazione di luci LED interne all'abitacolo."
       ],
-      "detailSummary": "Gli interventi elettrauto elencati comprendono la riparazione dei sensori di parcheggio e l'installazione di accessori quali dash cam e luci LED interne all'abitacolo. Quando richiedi informazioni, specifica il componente da riparare oppure l'accessorio da installare, insieme al veicolo interessato, per concordare la valutazione e ricevere un preventivo."
+      "detailSummary": "Gli interventi elettrauto elencati comprendono la riparazione dei sensori di parcheggio e l'installazione di accessori quali dash cam e luci LED interne all'abitacolo. Quando richiedi informazioni, specifica il componente da riparare oppure l'accessorio da installare, insieme al veicolo interessato, per concordare la valutazione e ricevere un preventivo.",
+      "cardDescription": "Sensori di parcheggio, dash cam e luci interne LED.",
+      "displayName": "Elettrauto"
     }
   ],
   "faq": [
@@ -188,5 +200,33 @@
       "title": "Domande frequenti sui servizi auto | {{name}}",
       "description": "Sede, servizi, cambio gomme, tagliandi OBD, pulizia auto e preventivi di {{name}} a {{city}}. Consulta le FAQ e contatta la carrozzeria."
     }
+  },
+  "presentation": {
+    "heroTitle": "La tua carrozzeria,",
+    "heroTitleEnd": "a {{city}}.",
+    "heroLead": "Manutenzione, riparazioni e cura dell’auto. Con esperienza, attenzione e un contatto diretto.",
+    "servicesTitle": "Di cosa ha bisogno la tua auto?",
+    "servicesLead": "Dagli pneumatici ai piccoli dettagli. Scegli il servizio e scopri come possiamo aiutarti.",
+    "aboutTitle": "Conosciamoci meglio.",
+    "aboutLead": "Siamo a {{city}}, in {{streetAddress}}. I nostri soci hanno oltre 50 anni di esperienza nel settore automobilistico.",
+    "contactTitle": "Parliamo della tua auto.",
+    "contactLead": "Chiamaci, scrivici o vieni a trovarci. Partiamo da quello di cui hai bisogno.",
+    "strengths": [
+      {
+        "icon": "tools",
+        "title": "Esperienza",
+        "text": "Oltre 50 anni nel settore automobilistico, con l’esperienza dei nostri soci."
+      },
+      {
+        "icon": "car",
+        "title": "Cura dell’auto",
+        "text": "Dalla manutenzione ai dettagli della carrozzeria, in un unico posto."
+      },
+      {
+        "icon": "phone",
+        "title": "Contatto diretto",
+        "text": "Parliamone insieme, per scegliere l’intervento e concordare il preventivo."
+      }
+    ]
   }
 }

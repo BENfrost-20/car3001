@@ -2,6 +2,18 @@
 
 Verifica del 15 ottobre 2026. Repository: `car3001`, branch iniziale `master`, nessuna modifica locale preesistente rilevata. Interventi locali; nessuna pubblicazione o modifica DNS effettuata.
 
+## Revisione grafica e leggibilità
+
+Su richiesta dell'utente la presentazione è stata alleggerita, recuperando il carattere fotografico e minimale del sito precedente. La home usa ora una copertina con titolo e descrizione brevi, navigazione alle sezioni, sei schede fotografiche sintetiche, presentazione con foto della carrozzeria, marchi compatti, FAQ apribili e tre collegamenti evidenti per telefono, email e indicazioni.
+
+Le pagine interne hanno tipografia, spaziature e componenti coerenti. I servizi mostrano subito foto e sintesi, poi lavorazioni e richiesta di preventivo; l'approfondimento si apre senza JavaScript. Le FAQ e la tabella di confronto usano `details` nativi. Sono state rimosse ripetizioni e introduzioni lunghe dalle sezioni di presentazione, senza aggiungere testo nascosto destinato ai crawler.
+
+I nuovi testi brevi sono in `src/data/site.json`: `presentation`, `services[].displayName` e `services[].cardDescription`. Descrizioni approfondite, dati aziendali e metadati restano negli stessi sorgenti condivisi. I grafi Service usano descrizioni coerenti con le schede sintetiche o il dettaglio visibile nella pagina dedicata.
+
+La base tecnica resta attiva: undici pagine statiche, un H1 per pagina, heading coerenti, canonical, metadati social, breadcrumb, sitemap, JSON-LD e risorse Markdown. I percorsi GitHub Pages restano supportati. La grafica usa CSS dedicato; rimossi Bootstrap CSS e Roboto Slab dalle richieste del browser, mantenendo Montserrat e i caratteri di sistema.
+
+Verificati menu e collegamenti alle sezioni, pagina servizio, apertura delle FAQ e contatti da telefono a 390 px, senza scorrimento orizzontale. Build, controlli su undici pagine/280 riferimenti locali e cinque test automatici completati. Le anteprime sono in `seo/preview-desktop.jpg`, `seo/preview-services.jpg` e `seo/preview-mobile.jpg`. Il sito pubblico richiede un nuovo push/deploy per ricevere queste modifiche.
+
 ## Correzione della pubblicazione su GitHub Pages
 
 Dopo la pubblicazione all'indirizzo `https://benfrost-20.github.io/car3001/` è stato riscontrato un errore introdotto nella prima implementazione: risorse e link interni iniziavano con `/`, saltando la sottocartella `/car3001`. Il browser cercava quindi CSS, immagini e pagine alla radice dell'account GitHub. I metadati puntavano inoltre al dominio provvisorio car3001.it.
@@ -37,12 +49,12 @@ La gerarchia iniziale era `/` → punti di forza (`#services`), servizi (`#portf
 4. Create 11 pagine statiche, con navigazione tramite link HTML e breadcrumb nelle pagine interne. I precedenti frammenti principali della home restano disponibili; i sei ID delle vecchie modali identificano ora le schede visibili. I dettagli si aprono su pagine autonome. Rimossi caroselli di immagini mancanti e social segnaposto.
 5. Aggiunti un H1 descrittivo per pagina, gerarchia senza salti, sezioni denominate, articoli per le schede dei servizi, address, figure/figcaption, tabelle con caption e scope, elenchi e collegamento per saltare al contenuto. I div residui servono alla griglia e all'impaginazione.
 6. Generati title unici (massimo 60 caratteri), description uniche (140–155 caratteri), canonical assoluti, Open Graph e Twitter Card completi. Le immagini social hanno URL assoluto, alt e dimensioni.
-7. Aggiunti paragrafi introduttivi di 40–60 parole sotto i titoli principali e delle sezioni di servizio, descrizioni specifiche delle lavorazioni, una tabella di confronto e FAQ realmente visibili. Le risposte brevi delle FAQ restano concise quando sufficienti.
+7. Nella prima revisione erano stati aggiunti paragrafi introduttivi di 40–60 parole. La successiva richiesta dell'utente privilegia una presentazione minimale: home e schede usano sintesi brevi, mentre le descrizioni specifiche delle lavorazioni restano nelle pagine dei servizi e negli approfondimenti apribili. Tabella di confronto e FAQ sono accessibili senza JavaScript.
 8. Implementati Organization/AutoBodyShop, WebSite, WebPage, Service, BreadcrumbList, FAQPage, AboutPage, ContactPage, CollectionPage e ItemList. Offer/PriceSpecification vengono emessi solo per prezzi abilitati. `sameAs` appare soltanto con profili ufficiali configurati.
 9. Generata sitemap XML dalle rotte, con priorità e lastmod basato sull'impronta dell'HTML e delle immagini collegate. Il registro `seo/page-history.json` conserva le date quando i contenuti non cambiano. Il valore iniziale registra questa revisione, senza retrodatare nuove pagine.
 10. Aggiunti robots, llms, llms-full, versioni Markdown per ciascuna pagina e relazioni HTML `alternate` e `describedby`. Gli elenchi llms puntano alle risorse Markdown, secondo la proposta attuale di llmstxt.org.
 11. Convertiti gli asset fotografici e il logo in WebP con varianti responsive, alt contestuali, width/height, caricamento differito sotto la prima schermata e priorità per le immagini principali. Le versioni principali passano da **4.061.856 a 461.292 byte: −88,6%**, esclusi varianti aggiuntive e JPEG social. Il JPEG 1200×630 per la condivisione è mantenuto per compatibilità.
-12. Rimossi Font Awesome e il JavaScript Bootstrap non più necessario. Il piccolo script locale gestisce solo il menu mobile, che resta accessibile senza JavaScript. L'iframe Google Maps è sostituito dal link alle indicazioni. Rimangono Bootstrap CSS e Google Fonts come risorse esterne già utilizzate dal sito.
+12. Rimossi Font Awesome e il JavaScript Bootstrap non più necessario. Il piccolo script locale gestisce solo il menu mobile, che resta accessibile senza JavaScript. L'iframe Google Maps è sostituito dal link alle indicazioni. Dopo la revisione grafica rimane soltanto Montserrat da Google Fonts; il layout usa CSS dedicato.
 
 ## Mappa finale
 
@@ -75,7 +87,7 @@ Le priorità nella sitemap sono incluse come richiesto, ma Google le ignora. Le 
 ## Verifiche e limiti
 
 - `npm run build`: completata, 11 pagine in entrambi gli output.
-- `npm run check`: completato, 11 pagine e 277 riferimenti locali verificati; heading, metadati, immagini, frammenti, JSON-LD, FAQ, sitemap, robots e Markdown.
+- `npm run check`: completato, 11 pagine e 280 riferimenti locali verificati; heading, metadati, immagini, frammenti, JSON-LD, FAQ, sitemap, robots e Markdown.
 - `npm test`: cinque test superati. Verificati stabilità lastmod, aggiornamento selettivo dei contenuti, prezzi abilitati/disabilitati, propagazione di dominio/telefono/email/social, URL con sottocartella e rilevamento di link fuori dal percorso del sito.
 - Parsing indipendente con HTMLParser e XML ElementTree: pagine e sitemap coerenti; namespace, priorità e date validi.
 - Controllo browser locale: home, navigazione mobile, indice servizi e pagina cambio gomme; menu desktop verificato e nessun errore nella console osservata.
@@ -245,7 +257,7 @@ Estratto dalla pagina cambio gomme. In assenza di prezzi confermati il servizio 
       "@id": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/#service",
       "name": "Cambio gomme e cerchi",
       "serviceType": "Cambio gomme e cerchi",
-      "description": "Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a Cologno Monzese, in Via G. Rossini 38. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.",
+      "description": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
       "url": "https://benfrost-20.github.io/car3001/servizi/cambio-gomme-cerchi/",
       "image": "https://benfrost-20.github.io/car3001/assets/img/gomma.webp",
       "provider": {
@@ -283,7 +295,7 @@ Le domande e le risposte derivano dalla stessa funzione che produce il contenuto
       "about": {
         "@id": "https://benfrost-20.github.io/car3001/#organization"
       },
-      "dateModified": "2026-10-15T09:09:51.240Z",
+      "dateModified": "2026-10-15T11:26:34.953Z",
       "breadcrumb": {
         "@id": "https://benfrost-20.github.io/car3001/faq/#breadcrumb"
       },
@@ -344,4 +356,8 @@ Le domande e le risposte derivano dalla stessa funzione che produce il contenuto
 
 ## Anteprima verificata
 
-![Home del sito dopo l'implementazione](seo/preview-desktop.jpg)
+![Home dopo la revisione grafica](seo/preview-desktop.jpg)
+
+![Schede fotografiche dei servizi](seo/preview-services.jpg)
+
+![Contatti su telefono](seo/preview-mobile.jpg)
