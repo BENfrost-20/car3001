@@ -69,7 +69,7 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible) { outline: none; b
 #mainNav .nav-link { color: var(--ink); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; padding: 0.75rem; }
 #mainNav .nav-link:hover, #mainNav .nav-link:focus-visible, #mainNav .nav-link.active { color: var(--brand); }
 #mainNav .navbar-toggler { padding: 0.75rem; color: #fff; border-color: var(--brand); background: var(--brand); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-.masthead { padding: 17rem 0 12rem; text-align: center; color: #fff; background: #353c36 url("../assets/img/header.png") center / cover no-repeat; }
+.masthead { padding: 17rem 0 12rem; text-align: center; color: #fff; background: #353c36 url("../assets/img/header.webp") center / cover no-repeat; }
 .masthead-heading { font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 2rem; }
 .service-card { display: block; max-width: 26rem; height: 100%; margin: auto; color: var(--ink); background: #fff; text-decoration: none; }
 .service-card-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #edf3ed; }
