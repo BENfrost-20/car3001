@@ -1,0 +1,192 @@
+{
+  "url": "https://car3001.it",
+  "language": "it",
+  "name": "Nuova Car 3001",
+  "telephone": "+390299200616",
+  "telephoneLabel": "+39 02 99200616",
+  "email": "car3001@car3001.it",
+  "address": {
+    "streetAddress": "Via G. Rossini 38",
+    "postalCode": "20093",
+    "addressLocality": "Cologno Monzese",
+    "addressRegion": "MI",
+    "addressCountry": "IT"
+  },
+  "pricing": {
+    "enabled": false,
+    "currency": "EUR",
+    "note": "Gli importi sono prezzi di partenza. Il costo dell'intervento va confermato con la carrozzeria in base al veicolo e alla lavorazione richiesta."
+  },
+  "socialProfiles": [],
+  "productBrands": [
+    "Standox",
+    "3M"
+  ],
+  "insurancePartners": [
+    "Unipol",
+    "Sara",
+    "Generali"
+  ],
+  "summary": "{{name}} è una carrozzeria a {{city}}, in {{streetAddress}}. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
+  "aboutSummary": "{{name}} opera a {{city}}, in {{streetAddress}}. I soci hanno un'esperienza nel settore automobilistico di oltre 50 anni. La carrozzeria presenta servizi per pneumatici, manutenzione, fari, pulizia, ammaccature e componenti elettrici, con contatto diretto per informazioni e preventivi relativi alla propria auto.",
+  "contactSummary": "Puoi contattare {{name}} al numero {{telephoneLabel}} oppure scrivere a {{email}}. La carrozzeria si trova in {{streetAddress}}, {{postalCode}} {{city}}. Indica il servizio che ti interessa e il veicolo per richiedere informazioni e concordare la valutazione dell'intervento.",
+  "serviceSummary": "{{name}} propone sei servizi a {{city}}: cambio gomme e cerchi, tagliandi, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Ogni scheda descrive la lavorazione e indica come richiedere un preventivo. La scelta dell'intervento e il costo finale vanno concordati direttamente con la carrozzeria.",
+  "services": [
+    {
+      "slug": "cambio-gomme-cerchi",
+      "name": "Cambio gomme e cerchi",
+      "title": "Cambio gomme a {{city}} | {{name}}",
+      "description": "Cambio gomme e cerchi con equilibratura da {{name}} a {{city}}. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.",
+      "image": "gomma",
+      "imageAlt": "Pneumatico sullo smontagomme nell'officina {{name}}",
+      "startingPrice": 40,
+      "priceScope": "Sostituzione pneumatici e/o cerchi con equilibratura",
+      "summary": "Il servizio di cambio gomme e cerchi di {{name}} comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a {{city}}, in {{streetAddress}}. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.",
+      "details": [
+        "Sostituzione di pneumatici stagionali, nuovi o usati.",
+        "Sostituzione dei cerchi secondo l'intervento concordato.",
+        "Equilibratura inclusa nel servizio presentato."
+      ],
+      "detailSummary": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi."
+    },
+    {
+      "slug": "tagliandi-auto",
+      "name": "Tagliandi auto",
+      "title": "Tagliandi auto a {{city}} | {{name}}",
+      "description": "Tagliandi auto con controllo diagnostico OBD incluso da {{name}} a {{city}}. Contattaci per informazioni e un preventivo per il tuo veicolo.",
+      "image": "carrozzeria",
+      "imageAlt": "Auto all'interno della carrozzeria {{name}}",
+      "startingPrice": 90,
+      "priceScope": "Tagliando con controllo diagnostico OBD",
+      "summary": "{{name}} propone tagliandi auto con controllo diagnostico OBD incluso a {{city}}. L'OBD è il sistema di diagnostica di bordo del veicolo. Per conoscere le lavorazioni previste per la tua auto e ricevere un preventivo, contatta la carrozzeria in {{streetAddress}} prima dell'intervento.",
+      "details": [
+        "Tagliando auto secondo le esigenze del veicolo.",
+        "Controllo diagnostico OBD incluso.",
+        "Lavorazioni e costo da concordare con la carrozzeria."
+      ],
+      "detailSummary": "Il tagliando presentato include un controllo diagnostico OBD, cioè della diagnostica di bordo del veicolo. Le altre lavorazioni previste per l'auto vanno concordate con la carrozzeria. Per conoscere cosa comprenderà il tuo tagliando e ricevere un preventivo, comunica il veicolo interessato e le esigenze di manutenzione."
+    },
+    {
+      "slug": "lucidatura-fari",
+      "name": "Verniciatura e lucidatura fari",
+      "title": "Lucidatura fari a {{city}} | {{name}}",
+      "description": "Verniciatura e lucidatura fari a {{city}} con {{name}}. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.",
+      "image": "fanale",
+      "imageAlt": "Confronto prima e dopo il trattamento di un faro ingiallito",
+      "startingPrice": 70,
+      "priceScope": "Verniciatura e/o lucidatura fari",
+      "summary": "Il trattamento fari di {{name}} prevede verniciatura e/o lucidatura dei fari anteriori o dei fanali per intervenire su piccoli graffi e ingiallimento delle plastiche. Il servizio è disponibile a {{city}}. Contatta la carrozzeria per valutare lo stato dei fari e concordare lavorazione e preventivo.",
+      "details": [
+        "Verniciatura e/o lucidatura di fari anteriori o fanali.",
+        "Trattamento di piccoli graffi e ingiallimento delle plastiche.",
+        "Valutazione dello stato dei fari prima di concordare l'intervento."
+      ],
+      "detailSummary": "La scheda riguarda piccoli graffi e ingiallimento delle plastiche di fari anteriori o fanali. Il trattamento può prevedere verniciatura, lucidatura o entrambe, secondo la lavorazione concordata. Una valutazione dello stato dei fari permette alla carrozzeria di definire l'intervento da proporre e il relativo preventivo per il veicolo."
+    },
+    {
+      "slug": "pulizia-lucidatura-auto",
+      "name": "Pulizia e lucidatura auto",
+      "title": "Pulizia e lucidatura auto | {{name}}",
+      "description": "Pulizia auto a {{city}}: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta {{name}}.",
+      "image": "pulizia",
+      "imageAlt": "Pulizia del sedile di un'auto con un aspiratore",
+      "startingPrice": 20,
+      "priceScope": "Lavaggio e aspirazione interna; lucidatura da preventivare separatamente",
+      "summary": "{{name}} propone lavaggio e aspirazione interna tramite un partner di fiducia, con igienizzazione su richiesta, e lucidatura professionale dell'auto. La carrozzeria si trova a {{city}}. Contattaci per specificare se ti interessa la pulizia degli interni, il lavaggio o la lucidatura e richiedere il relativo preventivo.",
+      "details": [
+        "Lavaggio e aspirazione interna tramite un partner di fiducia.",
+        "Igienizzazione su richiesta.",
+        "Lucidatura professionale da concordare e preventivare separatamente."
+      ],
+      "detailSummary": "Lavaggio e aspirazione interna vengono proposti tramite un partner di fiducia; l'igienizzazione va richiesta espressamente. La lucidatura professionale è una lavorazione da concordare in base alla richiesta. Quando contatti la carrozzeria, specifica quale di questi interventi ti interessa per ricevere le informazioni e il relativo preventivo."
+    },
+    {
+      "slug": "levabolli",
+      "name": "Levabolli",
+      "title": "Levabolli a {{city}} | {{name}}",
+      "description": "Levabolli a {{city}} per grandine e piccole ammaccature che non richiedono verniciatura. Contatta {{name}} per valutazione e preventivo.",
+      "image": "bolli",
+      "imageAlt": "Riflessi della luce sulla carrozzeria di un'auto",
+      "startingPrice": null,
+      "priceScope": "Intervento da valutare su preventivo",
+      "summary": "Il servizio levabolli di {{name}} riguarda danni da grandine e piccole ammaccature che non richiedono verniciatura. La possibilità di intervenire dipende dal danno da valutare. Per una valutazione della carrozzeria e un preventivo, contatta l'officina di {{streetAddress}} a {{city}}.",
+      "details": [
+        "Valutazione di danni da grandine.",
+        "Ripristino di piccole ammaccature che non richiedono verniciatura.",
+        "Intervento e costo definiti su preventivo."
+      ],
+      "detailSummary": "La lavorazione levabolli è presentata per danni da grandine e piccole ammaccature che non richiedono verniciatura. Il danno deve essere valutato prima di concordare l'intervento. Descrivi alla carrozzeria le parti interessate dell'auto per richiedere informazioni sulla possibilità di ripristino e ottenere un preventivo relativo al tuo caso."
+    },
+    {
+      "slug": "elettrauto",
+      "name": "Elettrauto",
+      "title": "Elettrauto a {{city}} | {{name}}",
+      "description": "Elettrauto a {{city}}: sensori di parcheggio, installazione dash cam e luci interne LED. Contatta {{name}} per informazioni e preventivi.",
+      "image": "elettrauto",
+      "imageAlt": "Quadro strumenti di un'auto con le spie accese",
+      "startingPrice": null,
+      "priceScope": "Intervento da valutare su preventivo",
+      "summary": "Il servizio elettrauto di {{name}} comprende riparazione dei sensori di parcheggio, installazione di dash cam e installazione di luci LED interne all'abitacolo. La carrozzeria opera a {{city}}. Descrivi il componente o l'accessorio che ti interessa per concordare la valutazione del veicolo e richiedere un preventivo.",
+      "details": [
+        "Riparazione dei sensori di parcheggio.",
+        "Installazione di dash cam.",
+        "Installazione di luci LED interne all'abitacolo."
+      ],
+      "detailSummary": "Gli interventi elettrauto elencati comprendono la riparazione dei sensori di parcheggio e l'installazione di accessori quali dash cam e luci LED interne all'abitacolo. Quando richiedi informazioni, specifica il componente da riparare oppure l'accessorio da installare, insieme al veicolo interessato, per concordare la valutazione e ricevere un preventivo."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Dove si trova {{name}}?",
+      "answer": "{{name}} si trova in {{streetAddress}}, {{postalCode}} {{city}} (MI). Nella pagina Contatti trovi il collegamento alle indicazioni stradali.",
+      "id": "address"
+    },
+    {
+      "question": "Quali servizi offre la carrozzeria?",
+      "answer": "I servizi presentati sono cambio gomme e cerchi, tagliandi auto, verniciatura e lucidatura fari, pulizia e lucidatura auto, levabolli ed elettrauto.",
+      "id": "services"
+    },
+    {
+      "question": "Il cambio gomme comprende l'equilibratura?",
+      "answer": "Sì. Il servizio di sostituzione pneumatici e/o cerchi presentato da {{name}} comprende l'equilibratura.",
+      "id": "tyres"
+    },
+    {
+      "question": "Il tagliando comprende un controllo diagnostico?",
+      "answer": "Sì. Il tagliando presentato da {{name}} include il controllo diagnostico OBD, il sistema di diagnostica di bordo del veicolo.",
+      "id": "obd"
+    },
+    {
+      "question": "Come posso richiedere un preventivo?",
+      "answer": "Puoi chiamare il numero {{telephoneLabel}} oppure scrivere a {{email}}, indicando il veicolo e il servizio desiderato. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria.",
+      "id": "quote"
+    },
+    {
+      "question": "Come viene svolta la pulizia dell'auto?",
+      "answer": "Il lavaggio e l'aspirazione interna sono proposti tramite un partner di fiducia. L'igienizzazione è disponibile su richiesta; per la lucidatura professionale occorre concordare il relativo intervento.",
+      "id": "cleaning"
+    }
+  ],
+  "pageMetadata": {
+    "home": {
+      "title": "Carrozzeria a {{city}} | {{name}}",
+      "description": "{{name}} a {{city}}: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto."
+    },
+    "services": {
+      "title": "Servizi auto a {{city}} | {{name}}",
+      "description": "I servizi di {{name}} a {{city}}: pneumatici, tagliandi OBD, fari, pulizia, levabolli ed elettrauto. Leggi i dettagli e chiedi un preventivo."
+    },
+    "about": {
+      "title": "Chi siamo: carrozzeria a Cologno | {{name}}",
+      "description": "Conosci {{name}}, carrozzeria a {{city}} in {{streetAddress}}. Esperienza nel settore auto, servizi e contatti per informazioni e preventivi."
+    },
+    "contact": {
+      "title": "Contatti e indirizzo a {{city}} | {{name}}",
+      "description": "Contatta {{name}}: telefono, email e indicazioni per {{streetAddress}} a {{city}}. Richiedi informazioni e un preventivo per i servizi auto."
+    },
+    "faq": {
+      "title": "Domande frequenti sui servizi auto | {{name}}",
+      "description": "Sede, servizi, cambio gomme, tagliandi OBD, pulizia auto e preventivi di {{name}} a {{city}}. Consulta le FAQ e contatta la carrozzeria."
+    }
+  }
+}

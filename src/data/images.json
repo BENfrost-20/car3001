@@ -1,0 +1,92 @@
+{
+  "header": {
+    "src": "/assets/img/header.webp",
+    "width": 1546,
+    "height": 1017,
+    "small": {
+      "src": "/assets/img/header-960.webp",
+      "width": 960,
+      "height": 632
+    }
+  },
+  "logo": {
+    "src": "/assets/img/logo.webp",
+    "width": 440,
+    "height": 325
+  },
+  "gomma": {
+    "src": "/assets/img/gomma.webp",
+    "width": 512,
+    "height": 512,
+    "small": {
+      "src": "/assets/img/gomma-320.webp",
+      "width": 320,
+      "height": 320
+    }
+  },
+  "carrozzeria": {
+    "src": "/assets/img/carrozzeria.webp",
+    "width": 512,
+    "height": 512,
+    "small": {
+      "src": "/assets/img/carrozzeria-320.webp",
+      "width": 320,
+      "height": 320
+    }
+  },
+  "fanale": {
+    "src": "/assets/img/fanale.webp",
+    "width": 512,
+    "height": 512,
+    "small": {
+      "src": "/assets/img/fanale-320.webp",
+      "width": 320,
+      "height": 320
+    }
+  },
+  "pulizia": {
+    "src": "/assets/img/pulizia.webp",
+    "width": 512,
+    "height": 512,
+    "small": {
+      "src": "/assets/img/pulizia-320.webp",
+      "width": 320,
+      "height": 320
+    }
+  },
+  "bolli": {
+    "src": "/assets/img/bolli.webp",
+    "width": 512,
+    "height": 512,
+    "small": {
+      "src": "/assets/img/bolli-320.webp",
+      "width": 320,
+      "height": 320
+    }
+  },
+  "elettrauto": {
+    "src": "/assets/img/elettrauto.webp",
+    "width": 512,
+    "height": 512,
+    "small": {
+      "src": "/assets/img/elettrauto-320.webp",
+      "width": 320,
+      "height": 320
+    }
+  },
+  "cerchio": {
+    "src": "/assets/img/cerchio.webp",
+    "width": 512,
+    "height": 512,
+    "small": {
+      "src": "/assets/img/cerchio-320.webp",
+      "width": 320,
+      "height": 320
+    }
+  },
+  "social": {
+    "src": "/assets/img/social-cover.jpg",
+    "width": 1200,
+    "height": 630
+  }
+}
