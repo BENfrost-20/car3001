@@ -23,9 +23,7 @@
     "3M"
   ],
   "insurancePartners": [
-    "Unipol",
-    "Sara",
-    "Generali"
+    "Sara"
   ],
   "summary": "{{name}} è una carrozzeria a {{city}}, in {{streetAddress}}. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
   "aboutSummary": "{{name}} opera a {{city}}, in {{streetAddress}}. I soci hanno un'esperienza nel settore automobilistico di oltre 50 anni. La carrozzeria presenta servizi per pneumatici, manutenzione, fari, pulizia, ammaccature e componenti elettrici, con contatto diretto per informazioni e preventivi relativi alla propria auto.",
