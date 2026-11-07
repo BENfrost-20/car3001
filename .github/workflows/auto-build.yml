@@ -1,0 +1,33 @@
+name: Compila e aggiorna docs
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'package.json'
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica repository
+        uses: actions/checkout@v4
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Compila il sito
+        run: npm run build
+
+      - name: Committa la cartella docs aggiornata
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-build: aggiornamento docs per Aruba"
+          file_pattern: 'docs/* seo/*'
