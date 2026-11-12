@@ -91,7 +91,7 @@ test('GitHub Pages e dominio proprio generano risorse, link e metadati nel perco
     run(directory,'scripts/check.js',environment);
     const html=fs.readFileSync(path.join(directory,'docs/index.html'),'utf8');
     const normalized=base.replace(/\/$/,'');
-    assert.ok(html.includes(`href="${prefix}/css/styles.css"`));
+    assert.ok(html.includes(`href="${prefix}/css/styles.css?v=`));
     assert.ok(html.includes(`href="${prefix}/servizi/"`));
     assert.ok(html.includes(`src="${prefix}/assets/img/logo.webp"`));
     assert.ok(html.includes(`srcset="${prefix}/assets/img/header-960.webp 960w`));
@@ -107,6 +107,33 @@ test('Il controllo rileva i collegamenti che escono dalla sottocartella GitHub P
   const environment={SITE_URL:'https://benfrost-20.github.io/car3001'};
   run(directory,'scripts/build.js',environment);
   const file=path.join(directory,'docs/index.html');
-  fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('href="/car3001/css/styles.css"','href="/css/styles.css"'));
+  fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('href="/car3001/css/styles.css','href="/css/styles.css'));
   assert.throws(()=>run(directory,'scripts/check.js',environment),/URL esterno al percorso del sito/);
+});
+
+
+test('CSS e JavaScript hanno versioni stabili che cambiano solo con il relativo file',t=>{
+  const directory=fixture(t);
+  const readHome = () => fs.readFileSync(path.join(directory,'docs/index.html'),'utf8');
+  const versions = html => Object.fromEntries([...html.matchAll(/(?:href|src)="\/(css|js)\/([^"?]+)\?v=([a-f0-9]{12})"/g)].map(match=>[`${match[1]}/${match[2]}`,match[3]]));
+  run(directory,'scripts/build.js');
+  const initialHtml=readHome();
+  const initial=versions(initialHtml);
+  assert.equal(Object.keys(initial).length,3);
+  run(directory,'scripts/build.js');
+  assert.deepEqual(versions(readHome()),initial);
+  for (const file of ['css/styles.css','css/seo.css','js/scripts.js']) {
+    const beforeHtml=readHome();
+    const before=versions(beforeHtml);
+    fs.appendFileSync(path.join(directory,'src',file),'\n/* Asset aggiornato. */\n');
+    run(directory,'scripts/build.js');
+    run(directory,'scripts/check.js');
+    const afterHtml=readHome();
+    const after=versions(afterHtml);
+    for (const other of Object.keys(before)) {
+      if (other===file) assert.notEqual(after[other],before[other]);
+      else assert.equal(after[other],before[other]);
+    }
+    assert.equal(afterHtml.match(/<body[\s\S]*<\/body>/)[0],beforeHtml.match(/<body[\s\S]*<\/body>/)[0]);
+  }
 });

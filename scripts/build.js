@@ -52,6 +52,10 @@ ${site.services.map(service=>`- [${service.name}](${url(`${servicePath(service)}
 `;
 }
 
+// A changed asset gets a new URL so browsers do not reuse an older cached copy.
+const assetVersions = Object.fromEntries(['css/styles.css','css/seo.css','js/scripts.js'].map(file=>[
+  file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'src',file))).digest('hex').slice(0,12)
+]));
 const routes = pages();
 const historyPath = path.join(root,'seo/page-history.json');
 const previous = fs.existsSync(historyPath) ? JSON.parse(fs.readFileSync(historyPath,'utf8')) : {};
@@ -62,7 +66,7 @@ for (const page of routes) {
     throw new Error(`${page.path}: title ${page.title.length}/60, description ${page.description.length}/140–155`);
   }
   // Ignore generated dateModified: rebuilding unchanged content must not advance lastmod.
-  const html = layout(page,'');
+  const html = layout(page,'',assetVersions);
   const assetHash = crypto.createHash('sha256');
   for (const match of html.matchAll(/(?:src|content)="([^\"]+)"/g)) {
     const assetPath = new URL(match[1],site.url).pathname;
@@ -74,7 +78,7 @@ for (const page of routes) {
   const prior = previous[page.path];
   const lastmod = prior?.hash === fingerprint ? prior.lastmod : new Date().toISOString();
   history[page.path] = {hash:fingerprint,lastmod};
-  rendered.set(page.path,layout(page,lastmod));
+  rendered.set(page.path,layout(page,lastmod,assetVersions));
 }
 
 const publicPath = path.join(root,'public');

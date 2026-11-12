@@ -88,7 +88,8 @@ function breadcrumbs(page) {
   return page.path==='/'?'':`<nav aria-label="Percorso di navigazione" class="breadcrumbs"><ol>${page.crumbs.map((crumb,index)=>`<li>${index===page.crumbs.length-1?`<span aria-current="page">${e(crumb.name)}</span>`:`<a href="${crumb.path}">${e(crumb.name)}</a>`}</li>`).join('')}</ol></nav>`;
 }
 
-function layout(page,lastmod) {
+function layout(page,lastmod,assetVersions={}) {
+  const assetPath = file => `/${file}${assetVersions[file]?`?v=${assetVersions[file]}`:''}`;
   const homePage=page.kind==='home';
   const links=homePage?[{name:'Servizi',path:'#portfolio'},{name:'Chi siamo',path:'#about'},{name:'Partner',path:'#brands-heading'},{name:'Contatti',path:'#contact'}]:[{name:'Servizi',path:'/servizi/'},{name:'Chi siamo',path:'/chi-siamo/'},{name:'Domande frequenti',path:'/faq/'},{name:'Contatti',path:'/contatti/'}];
   const json=JSON.stringify(schema(page,lastmod)).replace(/</g,'\\u003c');
@@ -123,10 +124,10 @@ function layout(page,lastmod) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap" rel="stylesheet">
-  <link href="/css/styles.css" rel="stylesheet">
-  <link href="/css/seo.css" rel="stylesheet">
+  <link href="${assetPath('css/styles.css')}" rel="stylesheet">
+  <link href="${assetPath('css/seo.css')}" rel="stylesheet">
   <script type="application/ld+json">${json}</script>
-  <script src="/js/scripts.js" defer></script>
+  <script src="${assetPath('js/scripts.js')}" defer></script>
 </head>
 <body id="page-top" class="page-${e(page.kind)}">
   <a class="skip-link" href="#main-content">Vai al contenuto</a>

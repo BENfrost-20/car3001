@@ -35,7 +35,7 @@ npm test
 npm start
 ```
 
-`npm start` genera il sito e avvia l'anteprima su `http://127.0.0.1:4173/car3001/` con la configurazione attuale. Il server locale riproduce la sottocartella della pubblicazione, così risorse e navigazione vengono verificate nello stesso contesto. Dopo una modifica ai sorgenti, eseguire nuovamente la build e ricaricare la pagina. La variabile `PORT` permette di scegliere un'altra porta.
+`npm start` genera il sito e avvia l'anteprima su `http://127.0.0.1:4173/car3001/` con la configurazione attuale. Il server locale riproduce la sottocartella della pubblicazione, così risorse e navigazione vengono verificate nello stesso contesto. Dopo una modifica ai sorgenti, eseguire nuovamente la build e ricaricare la pagina. CSS e JavaScript includono nell’URL una versione calcolata dal contenuto del file: quando cambia uno stile, il browser richiede la nuova versione senza riutilizzare quella precedente in cache. A parità di file la versione rimane stabile. La variabile `PORT` permette di scegliere un'altra porta.
 
 La variabile di ambiente `SITE_URL` può sostituire l'URL configurato per una build, senza modificare i dati aziendali. Esempio per verificare un dominio proprio: `SITE_URL=https://car3001.it npm start`. Usare lo stesso valore per build, controlli e server locale. URL di risorse, link interni, canonical, Open Graph, JSON-LD, sitemap e Markdown vengono generati coerentemente per il percorso scelto.
 
