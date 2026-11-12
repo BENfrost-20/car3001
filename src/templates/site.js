@@ -90,7 +90,7 @@ function breadcrumbs(page) {
 
 function layout(page,lastmod) {
   const homePage=page.kind==='home';
-  const links=homePage?[{name:'Servizi',path:'#portfolio'},{name:'Chi siamo',path:'#about'},{name:'Partner',path:'#brands-heading'},{name:'Contatti',path:'#contact'}]:[{name:'Servizi',path:'/servizi/'},{name:'Chi siamo',path:'/chi-siamo/'},{name:'FAQ',path:'/faq/'},{name:'Contatti',path:'/contatti/'}];
+  const links=homePage?[{name:'Servizi',path:'#portfolio'},{name:'Chi siamo',path:'#about'},{name:'Partner',path:'#brands-heading'},{name:'Contatti',path:'#contact'}]:[{name:'Servizi',path:'/servizi/'},{name:'Chi siamo',path:'/chi-siamo/'},{name:'Domande frequenti',path:'/faq/'},{name:'Contatti',path:'/contatti/'}];
   const json=JSON.stringify(schema(page,lastmod)).replace(/</g,'\\u003c');
   const og=images.social;
   return `<!doctype html>
