@@ -1,0 +1,26 @@
+name: Verifica sito statico
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v6
+      - name: Prepara Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Genera e verifica il sito per Aruba
+        run: |
+          npm run build
+          npm run check
+          npm test
