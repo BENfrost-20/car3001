@@ -1,48 +1,80 @@
-"""Optional asset maintenance: python3 -m pip install Pillow; python3 scripts/optimize-images.py.
-
-Originals are kept in src/assets/. The regular Node build uses committed WebP files.
-"""
-from pathlib import Path
+"""Rigenera gli asset WebP e la copertina social. Richiede Pillow."""
 import json
+from pathlib import Path
+
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
+SOURCES = ROOT / 'src/assets/img'
 OUT = ROOT / 'public/assets/img'
 OUT.mkdir(parents=True, exist_ok=True)
-sources = {
-    'header': ROOT / 'src/assets/img/header.png',
-    'logo': ROOT / 'src/assets/img/logo_car3001.png',
-    **{name: ROOT / f'src/assets/img/portfolio/{name}.{ext}' for name, ext in [
-        ('gomma','jpeg'), ('carrozzeria','jpeg'), ('fanale','jpeg'),
-        ('pulizia','jpeg'), ('bolli','jpeg'), ('elettrauto','jpg'), ('cerchio','jpeg')
-    ]}
-}
+RESAMPLE = Image.Resampling.LANCZOS
 manifest = {}
-original_bytes = optimized_bytes = 0
-for key, source in sources.items():
-    im = ImageOps.exif_transpose(Image.open(source)).convert('RGBA' if key == 'logo' else 'RGB')
-    im.thumbnail((440,440) if key == 'logo' else (1600,1600), Image.Resampling.LANCZOS)
-    destination = OUT / f'{key}.webp'
-    im.save(destination, 'WEBP', quality=85, method=6)
-    original_bytes += source.stat().st_size
-    optimized_bytes += destination.stat().st_size
-    manifest[key] = {'src':f'/assets/img/{key}.webp','width':im.width,'height':im.height}
-    if key != 'logo':
-        small = im.copy()
-        small.thumbnail((960,960) if key == 'header' else (320,320), Image.Resampling.LANCZOS)
-        small_name = f'{key}-{small.width}.webp'
-        small.save(OUT / small_name,'WEBP',quality=82,method=6)
-        manifest[key]['small'] = {'src':f'/assets/img/{small_name}','width':small.width,'height':small.height}
+original_bytes = 0
+optimized_bytes = 0
 
-# JPEG fallback for social clients, independent of the modern formats used on pages.
-social = ImageOps.fit(Image.open(sources['header']).convert('RGB'),(1200,630),method=Image.Resampling.LANCZOS)
-social.save(OUT / 'social-cover.jpg',quality=85,optimize=True)
-manifest['social'] = {'src':'/assets/img/social-cover.jpg','width':1200,'height':630}
-(ROOT / 'src/data/images.json').write_text(json.dumps(manifest,indent=2)+'\n')
-(ROOT / 'seo').mkdir(exist_ok=True)
+
+def read_image(source, mode='RGB'):
+    with Image.open(source) as original:
+        return ImageOps.exif_transpose(original).convert(mode)
+
+
+def write_webp(key, image, name=None, variant_width=None):
+    file = OUT / f'{name or key}.webp'
+    image.save(file, 'WEBP', quality=85, method=6)
+    entry = {'src': f'/assets/img/{file.name}', 'width': image.width, 'height': image.height}
+    if variant_width and variant_width < image.width:
+        variant = image.copy()
+        variant.thumbnail((variant_width, image.height), RESAMPLE)
+        small_file = OUT / f'{file.stem}-{variant.width}.webp'
+        variant.save(small_file, 'WEBP', quality=82, method=6)
+        entry['small'] = {
+            'src': f'/assets/img/{small_file.name}', 'width': variant.width, 'height': variant.height,
+        }
+    manifest[key] = entry
+    return file.stat().st_size
+
+
+logo_source = SOURCES / 'logo_car3001.png'
+logo = read_image(logo_source, 'RGBA')
+logo.thumbnail((440, 440), RESAMPLE)
+original_bytes += logo_source.stat().st_size
+optimized_bytes += write_webp('logo', logo)
+
+for key in ('fanale', 'bolli'):
+    source = SOURCES / 'portfolio' / f'{key}.jpeg'
+    image = read_image(source)
+    image.thumbnail((1600, 1600), RESAMPLE)
+    original_bytes += source.stat().st_size
+    optimized_bytes += write_webp(key, image, variant_width=320)
+
+cover_source = SOURCES / 'officina' / 'ingresso-nuova-car-3001.jpg'
+for source in sorted(cover_source.parent.glob('*.jpg')):
+    if source == cover_source:
+        continue
+    image = read_image(source)
+    image.thumbnail((1440, 1440), RESAMPLE)
+    original_bytes += source.stat().st_size
+    optimized_bytes += write_webp(source.stem, image, variant_width=480)
+
+entrance = read_image(cover_source)
+# Ritaglio panoramico sopra e sotto per il desktop. Il mobile stringe l'inquadratura
+# sull'ingresso, includendo tutta l'insegna, l'auto e un po' di spazio intorno.
+desktop = entrance.crop((0, 195, 1448, 905))
+mobile = entrance.crop((475, 337, 1275, 817))
+original_bytes += cover_source.stat().st_size
+optimized_bytes += write_webp('header', desktop, cover_source.stem, variant_width=960)
+write_webp('headerMobile', mobile, f'{cover_source.stem}-mobile', variant_width=480)
+
+social = ImageOps.fit(desktop, (1200, 630), method=RESAMPLE)
+social_name = f'{cover_source.stem}-condivisione.jpg'
+social.save(OUT / social_name, quality=85, optimize=True)
+manifest['social'] = {'src': f'/assets/img/{social_name}', 'width': 1200, 'height': 630}
+(ROOT / 'src/data/images.json').write_text(json.dumps(manifest, indent=2) + '\n')
 (ROOT / 'seo/asset-savings.json').write_text(json.dumps({
-    'originalBytes':original_bytes,'webpBytes':optimized_bytes,
-    'reductionPercent':round(100 * (1 - optimized_bytes / original_bytes),1),
-    'note':'Comparison of originals with largest WebP equivalents; excludes responsive variants and social JPEG.'
-},indent=2)+'\n')
-print(f'WebP: {original_bytes:,} -> {optimized_bytes:,} bytes ({100 * (1 - optimized_bytes / original_bytes):.1f}% in meno).')
+    'originalBytes': original_bytes,
+    'webpBytes': optimized_bytes,
+    'reductionPercent': round(100 * (1 - optimized_bytes / original_bytes), 1),
+    'note': 'Comparison of source images with main WebP equivalents; excludes responsive variants and social JPEG.',
+}, indent=2) + '\n')
+print(f'WebP: {original_bytes:,} -> {optimized_bytes:,} byte.')

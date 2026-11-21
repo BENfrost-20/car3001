@@ -1,6 +1,6 @@
 {
-  "originalBytes": 4061856,
-  "webpBytes": 461292,
-  "reductionPercent": 88.6,
-  "note": "Comparison of originals with largest WebP equivalents; excludes responsive variants and social JPEG."
+  "originalBytes": 11167481,
+  "webpBytes": 2478582,
+  "reductionPercent": 77.8,
+  "note": "Comparison of source images with main WebP equivalents; excludes responsive variants and social JPEG."
 }

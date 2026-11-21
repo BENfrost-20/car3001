@@ -94,7 +94,8 @@ test('GitHub Pages e dominio proprio generano risorse, link e metadati nel perco
     assert.ok(html.includes(`href="${prefix}/css/styles.css?v=`));
     assert.ok(html.includes(`href="${prefix}/servizi/"`));
     assert.ok(html.includes(`src="${prefix}/assets/img/logo.webp"`));
-    assert.ok(html.includes(`srcset="${prefix}/assets/img/header-960.webp 960w`));
+    assert.ok(html.includes(`srcset="${prefix}/assets/img/ingresso-nuova-car-3001-960.webp 960w`));
+    assert.ok(html.includes(`srcset="${prefix}/assets/img/ingresso-nuova-car-3001-mobile-480.webp 480w`));
     assert.ok(html.includes(`rel="canonical" href="${normalized}/"`));
     assert.equal(graph(directory,'')['@graph'][0].url,normalized+'/');
     assert.ok(fs.readFileSync(path.join(directory,'docs/llms.txt'),'utf8').includes(`${normalized}/servizi/index.md`));

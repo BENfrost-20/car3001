@@ -26,7 +26,7 @@
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/header.webp"
+      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp"
     },
     {
       "@type": "WebSite",
@@ -51,7 +51,7 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-12T13:34:31.826Z",
+      "dateModified": "2026-11-21T18:22:01.361Z",
       "breadcrumb": {
         "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#breadcrumb"
       },
@@ -90,7 +90,7 @@
       "serviceType": "Cambio gomme e cerchi",
       "description": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
       "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
-      "image": "https://car3001.it/assets/img/gomma.webp",
+      "image": "https://car3001.it/assets/img/cerchio-e-pneumatico-montati.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },

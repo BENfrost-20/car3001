@@ -26,7 +26,7 @@
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/header.webp"
+      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp"
     },
     {
       "@type": "WebSite",
@@ -51,7 +51,7 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-12T13:34:31.829Z",
+      "dateModified": "2026-11-21T18:20:56.086Z",
       "breadcrumb": {
         "@id": "https://car3001.it/faq/#breadcrumb"
       },

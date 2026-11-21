@@ -58,7 +58,7 @@ La sitemap viene generata dalle rotte HTML canoniche. La data cambia quando camb
 
 Le immagini usate sulle pagine sono WebP e hanno dimensioni esplicite. Le immagini principali hanno varianti responsive; le foto sotto la prima schermata usano caricamento differito. L'immagine social è JPEG 1200×630 per compatibilità con i client di condivisione.
 
-Per sostituire le foto: aggiornare gli originali in `src/assets/`, eseguire `python3 scripts/optimize-images.py` con Pillow installato, quindi ricostruire. Aggiornare anche i testi alternativi in `site.json` quando cambia il soggetto. Pillow serve solo per rigenerare gli asset; il sito usa gli asset già presenti e la build ordinaria richiede solo Node.
+Per sostituire le foto: aggiornare gli originali in `src/assets/`, eseguire `python3 scripts/optimize-images.py` con Pillow installato, quindi ricostruire. Le foto dell’officina si trovano in `src/assets/img/officina/`. Le gallerie e i testi alternativi si aggiornano in `site.json`. Pillow serve solo per rigenerare gli asset; il sito usa gli asset già presenti e la build ordinaria richiede solo Node.
 
 ## Pubblicazione e dati da completare
 
@@ -66,7 +66,7 @@ Plesk scarica il repository in `httpdocs/` su Aruba. Il `web.config` nella root 
 
 Il workflow `.github/workflows/ci.yml` esegue build, controlli e test usando il dominio configurato in `src/data/site.json`. Il workflow `.github/workflows/auto-build.yml` rigenera `docs/` quando cambiano i sorgenti su `master` e committa le differenze generate.
 
-Prima della pubblicazione confermare listino, marchi/collaborazioni, contatti e testo sull'esperienza dei soci. Aggiungere i profili social ufficiali, gli orari verificati, i dati societari e le pagine informative legali con i testi corretti. Servono ancora fotografie reali dedicate al team e alle lavorazioni; i vecchi riferimenti a foto inesistenti sono stati rimossi.
+Prima della pubblicazione confermare listino, marchi/collaborazioni, contatti e testo sull'esperienza dei soci. Aggiungere i profili social ufficiali, gli orari verificati, i dati societari e le pagine informative legali con i testi corretti.
 
 Sul servizio di hosting verificare HTTPS, redirect della variante www quando si usa un dominio proprio, gestione di `index.html`, risposte HTTP 200 per gli URL pubblici e 404 per quelli inesistenti, accesso dei bot consentito anche da CDN/WAF e corretti tipi MIME. Se le versioni Markdown vengono proposte come risultati duplicati, si può configurare `X-Robots-Tag: noindex` per `.md` mantenendole accessibili ai crawler. La sitemap pubblica è `https://car3001.it/sitemap.xml`. Queste operazioni dipendono dagli account e dalla configurazione di hosting.
 

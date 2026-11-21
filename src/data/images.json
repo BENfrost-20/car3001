@@ -1,38 +1,8 @@
 {
-  "header": {
-    "src": "/assets/img/header.webp",
-    "width": 1546,
-    "height": 1017,
-    "small": {
-      "src": "/assets/img/header-960.webp",
-      "width": 960,
-      "height": 632
-    }
-  },
   "logo": {
     "src": "/assets/img/logo.webp",
     "width": 440,
     "height": 325
-  },
-  "gomma": {
-    "src": "/assets/img/gomma.webp",
-    "width": 512,
-    "height": 512,
-    "small": {
-      "src": "/assets/img/gomma-320.webp",
-      "width": 320,
-      "height": 320
-    }
-  },
-  "carrozzeria": {
-    "src": "/assets/img/carrozzeria.webp",
-    "width": 512,
-    "height": 512,
-    "small": {
-      "src": "/assets/img/carrozzeria-320.webp",
-      "width": 320,
-      "height": 320
-    }
   },
   "fanale": {
     "src": "/assets/img/fanale.webp",
@@ -40,16 +10,6 @@
     "height": 512,
     "small": {
       "src": "/assets/img/fanale-320.webp",
-      "width": 320,
-      "height": 320
-    }
-  },
-  "pulizia": {
-    "src": "/assets/img/pulizia.webp",
-    "width": 512,
-    "height": 512,
-    "small": {
-      "src": "/assets/img/pulizia-320.webp",
       "width": 320,
       "height": 320
     }
@@ -64,28 +24,168 @@
       "height": 320
     }
   },
-  "elettrauto": {
-    "src": "/assets/img/elettrauto.webp",
-    "width": 512,
-    "height": 512,
+  "aspirazione-interni-auto": {
+    "src": "/assets/img/aspirazione-interni-auto.webp",
+    "width": 1440,
+    "height": 1174,
     "small": {
-      "src": "/assets/img/elettrauto-320.webp",
-      "width": 320,
-      "height": 320
+      "src": "/assets/img/aspirazione-interni-auto-480.webp",
+      "width": 480,
+      "height": 391
     }
   },
-  "cerchio": {
-    "src": "/assets/img/cerchio.webp",
-    "width": 512,
-    "height": 512,
+  "cerchio-e-pneumatico-montati": {
+    "src": "/assets/img/cerchio-e-pneumatico-montati.webp",
+    "width": 1440,
+    "height": 1080,
     "small": {
-      "src": "/assets/img/cerchio-320.webp",
-      "width": 320,
-      "height": 320
+      "src": "/assets/img/cerchio-e-pneumatico-montati-480.webp",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "controllo-vano-motore": {
+    "src": "/assets/img/controllo-vano-motore.webp",
+    "width": 1440,
+    "height": 1080,
+    "small": {
+      "src": "/assets/img/controllo-vano-motore-480.webp",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "diagnostica-elettronica-auto": {
+    "src": "/assets/img/diagnostica-elettronica-auto.webp",
+    "width": 1440,
+    "height": 1080,
+    "small": {
+      "src": "/assets/img/diagnostica-elettronica-auto-480.webp",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "interno-officina-nuova-car-3001": {
+    "src": "/assets/img/interno-officina-nuova-car-3001.webp",
+    "width": 1440,
+    "height": 1080,
+    "small": {
+      "src": "/assets/img/interno-officina-nuova-car-3001-480.webp",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "intervento-passaruota": {
+    "src": "/assets/img/intervento-passaruota.webp",
+    "width": 1080,
+    "height": 1440,
+    "small": {
+      "src": "/assets/img/intervento-passaruota-480.webp",
+      "width": 480,
+      "height": 640
+    }
+  },
+  "lavorazione-furgone-in-officina": {
+    "src": "/assets/img/lavorazione-furgone-in-officina.webp",
+    "width": 1080,
+    "height": 1440,
+    "small": {
+      "src": "/assets/img/lavorazione-furgone-in-officina-480.webp",
+      "width": 480,
+      "height": 640
+    }
+  },
+  "levigatura-cerchio-in-lega": {
+    "src": "/assets/img/levigatura-cerchio-in-lega.webp",
+    "width": 1440,
+    "height": 1080,
+    "small": {
+      "src": "/assets/img/levigatura-cerchio-in-lega-480.webp",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "lucidatura-carrozzeria": {
+    "src": "/assets/img/lucidatura-carrozzeria.webp",
+    "width": 1440,
+    "height": 1080,
+    "small": {
+      "src": "/assets/img/lucidatura-carrozzeria-480.webp",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "verniciatore-in-cabina": {
+    "src": "/assets/img/verniciatore-in-cabina.webp",
+    "width": 1080,
+    "height": 1440,
+    "small": {
+      "src": "/assets/img/verniciatore-in-cabina-480.webp",
+      "width": 480,
+      "height": 640
+    }
+  },
+  "verniciatura-cerchio-in-cabina": {
+    "src": "/assets/img/verniciatura-cerchio-in-cabina.webp",
+    "width": 1080,
+    "height": 1440,
+    "small": {
+      "src": "/assets/img/verniciatura-cerchio-in-cabina-480.webp",
+      "width": 480,
+      "height": 640
+    }
+  },
+  "verniciatura-cerchio-mascherato": {
+    "src": "/assets/img/verniciatura-cerchio-mascherato.webp",
+    "width": 1440,
+    "height": 1080,
+    "small": {
+      "src": "/assets/img/verniciatura-cerchio-mascherato-480.webp",
+      "width": 480,
+      "height": 360
+    }
+  },
+  "verniciatura-dettaglio-paraurti": {
+    "src": "/assets/img/verniciatura-dettaglio-paraurti.webp",
+    "width": 1080,
+    "height": 1440,
+    "small": {
+      "src": "/assets/img/verniciatura-dettaglio-paraurti-480.webp",
+      "width": 480,
+      "height": 640
+    }
+  },
+  "verniciatura-paraurti": {
+    "src": "/assets/img/verniciatura-paraurti.webp",
+    "width": 1080,
+    "height": 1440,
+    "small": {
+      "src": "/assets/img/verniciatura-paraurti-480.webp",
+      "width": 480,
+      "height": 640
+    }
+  },
+  "header": {
+    "src": "/assets/img/ingresso-nuova-car-3001.webp",
+    "width": 1448,
+    "height": 710,
+    "small": {
+      "src": "/assets/img/ingresso-nuova-car-3001-960.webp",
+      "width": 960,
+      "height": 471
+    }
+  },
+  "headerMobile": {
+    "src": "/assets/img/ingresso-nuova-car-3001-mobile.webp",
+    "width": 800,
+    "height": 480,
+    "small": {
+      "src": "/assets/img/ingresso-nuova-car-3001-mobile-480.webp",
+      "width": 480,
+      "height": 288
     }
   },
   "social": {
-    "src": "/assets/img/social-cover.jpg",
+    "src": "/assets/img/ingresso-nuova-car-3001-condivisione.jpg",
     "width": 1200,
     "height": 630
   }

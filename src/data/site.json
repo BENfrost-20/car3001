@@ -35,8 +35,8 @@
       "name": "Cambio gomme e cerchi",
       "title": "Cambio gomme a {{city}} | {{name}}",
       "description": "Cambio gomme e cerchi con equilibratura da {{name}} a {{city}}. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.",
-      "image": "gomma",
-      "imageAlt": "Pneumatico sullo smontagomme nell'officina {{name}}",
+      "image": "cerchio-e-pneumatico-montati",
+      "imageAlt": "Primo piano di un cerchio in lega con pneumatico montato",
       "startingPrice": 40,
       "priceScope": "Sostituzione pneumatici e/o cerchi con equilibratura",
       "summary": "Il servizio di cambio gomme e cerchi di {{name}} comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a {{city}}, in {{streetAddress}}. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.",
@@ -47,15 +47,29 @@
       ],
       "detailSummary": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
       "cardDescription": "Pneumatici e cerchi, con equilibratura inclusa.",
-      "displayName": "Cambio gomme e cerchi"
+      "displayName": "Cambio gomme e cerchi",
+      "gallery": [
+        {
+          "image": "levigatura-cerchio-in-lega",
+          "alt": "Levigatura di un cerchio in lega con una levigatrice orbitale"
+        },
+        {
+          "image": "verniciatura-cerchio-mascherato",
+          "alt": "Verniciatura di un cerchio in lega protetto con carta da mascheratura"
+        },
+        {
+          "image": "verniciatura-cerchio-in-cabina",
+          "alt": "Verniciatura di un cerchio nero in cabina"
+        }
+      ]
     },
     {
       "slug": "tagliandi-auto",
       "name": "Tagliandi auto",
       "title": "Tagliandi auto a {{city}} | {{name}}",
       "description": "Tagliandi auto con controllo diagnostico OBD incluso da {{name}} a {{city}}. Contattaci per informazioni e un preventivo per il tuo veicolo.",
-      "image": "carrozzeria",
-      "imageAlt": "Auto all'interno della carrozzeria {{name}}",
+      "image": "controllo-vano-motore",
+      "imageAlt": "Tecnico al lavoro nel vano motore di un’auto",
       "startingPrice": 90,
       "priceScope": "Tagliando con controllo diagnostico OBD",
       "summary": "{{name}} propone tagliandi auto con controllo diagnostico OBD incluso a {{city}}. L'OBD è il sistema di diagnostica di bordo del veicolo. Per conoscere le lavorazioni previste per la tua auto e ricevere un preventivo, contatta la carrozzeria in {{streetAddress}} prima dell'intervento.",
@@ -66,7 +80,13 @@
       ],
       "detailSummary": "Il tagliando presentato include un controllo diagnostico OBD, cioè della diagnostica di bordo del veicolo. Le altre lavorazioni previste per l'auto vanno concordate con la carrozzeria. Per conoscere cosa comprenderà il tuo tagliando e ricevere un preventivo, comunica il veicolo interessato e le esigenze di manutenzione.",
       "cardDescription": "Manutenzione dell’auto con controllo diagnostico OBD.",
-      "displayName": "Tagliandi auto"
+      "displayName": "Tagliandi auto",
+      "gallery": [
+        {
+          "image": "diagnostica-elettronica-auto",
+          "alt": "Controllo diagnostico con un tablet nell’abitacolo"
+        }
+      ]
     },
     {
       "slug": "lucidatura-fari",
@@ -92,8 +112,8 @@
       "name": "Pulizia e lucidatura auto",
       "title": "Pulizia e lucidatura auto | {{name}}",
       "description": "Pulizia auto a {{city}}: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta {{name}}.",
-      "image": "pulizia",
-      "imageAlt": "Pulizia del sedile di un'auto con un aspiratore",
+      "image": "lucidatura-carrozzeria",
+      "imageAlt": "Lucidatura della carrozzeria di un’auto con una lucidatrice orbitale",
       "startingPrice": 20,
       "priceScope": "Lavaggio e aspirazione interna; lucidatura da preventivare separatamente",
       "summary": "{{name}} propone lavaggio e aspirazione interna tramite un partner di fiducia, con igienizzazione su richiesta, e lucidatura professionale dell'auto. La carrozzeria si trova a {{city}}. Contattaci per specificare se ti interessa la pulizia degli interni, il lavaggio o la lucidatura e richiedere il relativo preventivo.",
@@ -104,7 +124,13 @@
       ],
       "detailSummary": "Lavaggio e aspirazione interna vengono proposti tramite un partner di fiducia; l'igienizzazione va richiesta espressamente. La lucidatura professionale è una lavorazione da concordare in base alla richiesta. Quando contatti la carrozzeria, specifica quale di questi interventi ti interessa per ricevere le informazioni e il relativo preventivo.",
       "cardDescription": "Lavaggio, cura degli interni e lucidatura professionale.",
-      "displayName": "Pulizia e lucidatura"
+      "displayName": "Pulizia e lucidatura",
+      "gallery": [
+        {
+          "image": "aspirazione-interni-auto",
+          "alt": "Tecnico con aspiratore accanto a un’auto bianca"
+        }
+      ]
     },
     {
       "slug": "levabolli",
@@ -130,8 +156,8 @@
       "name": "Elettrauto",
       "title": "Elettrauto a {{city}} | {{name}}",
       "description": "Elettrauto a {{city}}: sensori di parcheggio, installazione dash cam e luci interne LED. Contatta {{name}} per informazioni e preventivi.",
-      "image": "elettrauto",
-      "imageAlt": "Quadro strumenti di un'auto con le spie accese",
+      "image": "diagnostica-elettronica-auto",
+      "imageAlt": "Controllo dell’elettronica di bordo con un tablet diagnostico",
       "startingPrice": null,
       "priceScope": "Intervento da valutare su preventivo",
       "summary": "Il servizio elettrauto di {{name}} comprende riparazione dei sensori di parcheggio, installazione di dash cam e installazione di luci LED interne all'abitacolo. La carrozzeria opera a {{city}}. Descrivi il componente o l'accessorio che ti interessa per concordare la valutazione del veicolo e richiedere un preventivo.",
@@ -224,6 +250,28 @@
         "icon": "phone",
         "title": "Contatto diretto",
         "text": "Parliamone insieme, per scegliere l’intervento e concordare il preventivo."
+      }
+    ],
+    "aboutGallery": [
+      {
+        "image": "verniciatura-paraurti",
+        "alt": "Verniciatura di un paraurti in cabina"
+      },
+      {
+        "image": "verniciatura-dettaglio-paraurti",
+        "alt": "Dettaglio della verniciatura a spruzzo del paraurti"
+      },
+      {
+        "image": "verniciatore-in-cabina",
+        "alt": "Verniciatore con maschera protettiva all’interno della cabina"
+      },
+      {
+        "image": "intervento-passaruota",
+        "alt": "Tecnico al lavoro sul passaruota di un’auto"
+      },
+      {
+        "image": "lavorazione-furgone-in-officina",
+        "alt": "Tecnico al lavoro nella cabina di un furgone"
       }
     ]
   }

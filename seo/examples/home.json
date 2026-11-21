@@ -26,7 +26,7 @@
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/header.webp"
+      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp"
     },
     {
       "@type": "WebSite",
@@ -51,7 +51,7 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-12T13:34:31.824Z"
+      "dateModified": "2026-11-21T18:20:56.080Z"
     },
     {
       "@type": "Service",
@@ -60,7 +60,7 @@
       "serviceType": "Cambio gomme e cerchi",
       "description": "Pneumatici e cerchi, con equilibratura inclusa.",
       "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
-      "image": "https://car3001.it/assets/img/gomma.webp",
+      "image": "https://car3001.it/assets/img/cerchio-e-pneumatico-montati.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },
@@ -76,7 +76,7 @@
       "serviceType": "Tagliandi auto",
       "description": "Manutenzione dell’auto con controllo diagnostico OBD.",
       "url": "https://car3001.it/servizi/tagliandi-auto/",
-      "image": "https://car3001.it/assets/img/carrozzeria.webp",
+      "image": "https://car3001.it/assets/img/controllo-vano-motore.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },
@@ -108,7 +108,7 @@
       "serviceType": "Pulizia e lucidatura auto",
       "description": "Lavaggio, cura degli interni e lucidatura professionale.",
       "url": "https://car3001.it/servizi/pulizia-lucidatura-auto/",
-      "image": "https://car3001.it/assets/img/pulizia.webp",
+      "image": "https://car3001.it/assets/img/lucidatura-carrozzeria.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },
@@ -140,7 +140,7 @@
       "serviceType": "Elettrauto",
       "description": "Sensori di parcheggio, dash cam e luci interne LED.",
       "url": "https://car3001.it/servizi/elettrauto/",
-      "image": "https://car3001.it/assets/img/elettrauto.webp",
+      "image": "https://car3001.it/assets/img/diagnostica-elettronica-auto.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },
