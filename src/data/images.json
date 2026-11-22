@@ -24,6 +24,16 @@
       "height": 391
     }
   },
+  "cambio-gomme": {
+    "src": "/assets/img/cambio-gomme.webp",
+    "width": 1320,
+    "height": 1350,
+    "small": {
+      "src": "/assets/img/cambio-gomme-480.webp",
+      "width": 480,
+      "height": 491
+    }
+  },
   "cerchio-e-pneumatico-montati": {
     "src": "/assets/img/cerchio-e-pneumatico-montati.webp",
     "width": 1440,

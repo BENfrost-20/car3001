@@ -6,6 +6,18 @@ Fonte: https://car3001.it/
 
 ## Servizi
 
+### [Lavorazioni carrozzeria](https://car3001.it/servizi/lavorazioni-carrozzeria/)
+
+In Nuova Car 3001 ripariamo e verniciamo elementi di carrozzeria, dai paraurti ai cerchi in lega. Il lavoro parte dalla valutazione del danno e della finitura da ripristinare.
+
+### [Officina meccanica](https://car3001.it/servizi/officina-meccanica/)
+
+L’officina meccanica di Nuova Car 3001 si occupa di controlli, manutenzione e interventi da concordare in base alle condizioni della tua auto.
+
+### [Soccorso stradale](https://car3001.it/servizi/soccorso-stradale/)
+
+Nuova Car 3001 offre soccorso stradale con carro attrezzi. Se la tua auto è ferma, chiamaci e indicaci la posizione per verificare disponibilità e modalità di recupero.
+
 ### [Pneumatici e cerchi](https://car3001.it/servizi/cambio-gomme-cerchi/)
 
 Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a Cologno Monzese, in Via G. Rossini 38. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.
@@ -18,10 +30,6 @@ Nuova Car 3001 propone tagliandi auto con controllo diagnostico OBD incluso a Co
 
 Il trattamento fari di Nuova Car 3001 prevede verniciatura e/o lucidatura dei fari anteriori o dei fanali per intervenire su piccoli graffi e ingiallimento delle plastiche. Il servizio è disponibile a Cologno Monzese. Contatta la carrozzeria per valutare lo stato dei fari e concordare lavorazione e preventivo.
 
-### [Pulizia e lucidatura auto](https://car3001.it/servizi/pulizia-lucidatura-auto/)
-
-Nuova Car 3001 propone lavaggio e aspirazione interna tramite un partner di fiducia, con igienizzazione su richiesta, e lucidatura professionale dell'auto. La carrozzeria si trova a Cologno Monzese. Contattaci per specificare se ti interessa la pulizia degli interni, il lavaggio o la lucidatura e richiedere il relativo preventivo.
-
 ### [Levabolli](https://car3001.it/servizi/levabolli/)
 
 Il servizio levabolli di Nuova Car 3001 riguarda danni da grandine e piccole ammaccature che non richiedono verniciatura. La possibilità di intervenire dipende dal danno da valutare. Per una valutazione della carrozzeria e un preventivo, contatta l'officina di Via G. Rossini 38 a Cologno Monzese.
@@ -30,17 +38,9 @@ Il servizio levabolli di Nuova Car 3001 riguarda danni da grandine e piccole amm
 
 Il servizio elettrauto di Nuova Car 3001 comprende riparazione dei sensori di parcheggio, installazione di dash cam e installazione di luci LED interne all'abitacolo. La carrozzeria opera a Cologno Monzese. Descrivi il componente o l'accessorio che ti interessa per concordare la valutazione del veicolo e richiedere un preventivo.
 
-### [Soccorso stradale](https://car3001.it/servizi/soccorso-stradale/)
+### [Pulizia e lucidatura auto](https://car3001.it/servizi/pulizia-lucidatura-auto/)
 
-Nuova Car 3001 offre soccorso stradale con carro attrezzi. Se la tua auto è ferma, chiamaci e indicaci la posizione per verificare disponibilità e modalità di recupero.
-
-### [Lavorazioni carrozzeria](https://car3001.it/servizi/lavorazioni-carrozzeria/)
-
-In Nuova Car 3001 ripariamo e verniciamo elementi di carrozzeria, dai paraurti ai cerchi in lega. Il lavoro parte dalla valutazione del danno e della finitura da ripristinare.
-
-### [Officina meccanica](https://car3001.it/servizi/officina-meccanica/)
-
-L’officina meccanica di Nuova Car 3001 si occupa di controlli, manutenzione e interventi da concordare in base alle condizioni della tua auto.
+Nuova Car 3001 propone lavaggio e aspirazione interna tramite un partner di fiducia, con igienizzazione su richiesta, e lucidatura professionale dell'auto. La carrozzeria si trova a Cologno Monzese. Contattaci per specificare se ti interessa la pulizia degli interni, il lavaggio o la lucidatura e richiedere il relativo preventivo.
 
 ## Prodotti e collaborazioni
 

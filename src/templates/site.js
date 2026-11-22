@@ -64,7 +64,7 @@ function hoursPanel() {
 
 function cards(level=3) {
   return `<div class="service-grid">${site.services.map((service,index)=>`
-    <article class="service-tile" id="portfolioModal${index+1}">
+    <article class="service-tile" id="${e(service.cardAnchor)}">
       <a class="service-card" href="${servicePath(service)}" aria-labelledby="card-title-${index+1}">
         <figure class="service-card-media" data-image="${e(service.image)}">${image(service.image,service.imageAlt,{sizes:'(min-width: 992px) 360px, 45vw'})}</figure>
         <div class="portfolio-caption">

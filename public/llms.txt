@@ -18,15 +18,15 @@ Le risorse seguenti sono versioni Markdown delle pagine pubbliche, generate dagl
 
 ## Servizi
 
+- [Lavorazioni carrozzeria](https://car3001.it/servizi/lavorazioni-carrozzeria/index.md): Riparazione e verniciatura di carrozzeria a Cologno Monzese. Scopri le lavorazioni di Nuova Car 3001 su paraurti, cerchi e altri componenti.
+- [Officina meccanica](https://car3001.it/servizi/officina-meccanica/index.md): Officina meccanica a Cologno Monzese: controlli, manutenzione e interventi per la tua auto. Contatta Nuova Car 3001 per informazioni e preventivi gratuiti.
+- [Soccorso stradale](https://car3001.it/servizi/soccorso-stradale/index.md): Soccorso stradale con carro attrezzi a Cologno Monzese. Chiama Nuova Car 3001 per il recupero della tua auto e per verificare la disponibilità.
 - [Pneumatici e cerchi](https://car3001.it/servizi/cambio-gomme-cerchi/index.md): Cambio gomme e cerchi con equilibratura da Nuova Car 3001 a Cologno Monzese. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.
 - [Tagliandi auto](https://car3001.it/servizi/tagliandi-auto/index.md): Tagliandi auto con controllo diagnostico OBD incluso da Nuova Car 3001 a Cologno Monzese. Contattaci per informazioni e un preventivo per il tuo veicolo.
 - [Verniciatura e lucidatura fari](https://car3001.it/servizi/lucidatura-fari/index.md): Verniciatura e lucidatura fari a Cologno Monzese con Nuova Car 3001. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.
-- [Pulizia e lucidatura auto](https://car3001.it/servizi/pulizia-lucidatura-auto/index.md): Pulizia auto a Cologno Monzese: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta Nuova Car 3001.
 - [Levabolli](https://car3001.it/servizi/levabolli/index.md): Levabolli a Cologno Monzese per grandine e piccole ammaccature che non richiedono verniciatura. Contatta Nuova Car 3001 per valutazione e preventivo.
 - [Elettrauto](https://car3001.it/servizi/elettrauto/index.md): Elettrauto a Cologno Monzese: sensori di parcheggio, installazione dash cam e luci interne LED. Contatta Nuova Car 3001 per informazioni e preventivi.
-- [Soccorso stradale](https://car3001.it/servizi/soccorso-stradale/index.md): Soccorso stradale con carro attrezzi a Cologno Monzese. Chiama Nuova Car 3001 per il recupero della tua auto e per verificare la disponibilità.
-- [Lavorazioni carrozzeria](https://car3001.it/servizi/lavorazioni-carrozzeria/index.md): Riparazione e verniciatura di carrozzeria a Cologno Monzese. Scopri le lavorazioni di Nuova Car 3001 su paraurti, cerchi e altri componenti.
-- [Officina meccanica](https://car3001.it/servizi/officina-meccanica/index.md): Officina meccanica a Cologno Monzese: controlli, manutenzione e interventi per la tua auto. Contatta Nuova Car 3001 per informazioni e preventivi gratuiti.
+- [Pulizia e lucidatura auto](https://car3001.it/servizi/pulizia-lucidatura-auto/index.md): Pulizia auto a Cologno Monzese: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta Nuova Car 3001.
 
 ## Optional
 

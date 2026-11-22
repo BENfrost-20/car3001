@@ -66,10 +66,10 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#webpage",
-      "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
-      "name": "Cambio gomme a Cologno Monzese | Nuova Car 3001",
-      "description": "Cambio gomme e cerchi con equilibratura da Nuova Car 3001 a Cologno Monzese. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.",
+      "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#webpage",
+      "url": "https://car3001.it/servizi/lavorazioni-carrozzeria/",
+      "name": "Lavorazioni carrozzeria a Cologno Monzese | Nuova Car 3001",
+      "description": "Riparazione e verniciatura di carrozzeria a Cologno Monzese. Scopri le lavorazioni di Nuova Car 3001 su paraurti, cerchi e altri componenti.",
       "inLanguage": "it",
       "isPartOf": {
         "@id": "https://car3001.it/#website"
@@ -77,17 +77,17 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-22T10:28:01.739Z",
+      "dateModified": "2026-11-22T10:52:20.527Z",
       "breadcrumb": {
-        "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#breadcrumb"
+        "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service"
+        "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#breadcrumb",
+      "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -104,19 +104,19 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Pneumatici e cerchi",
-          "item": "https://car3001.it/servizi/cambio-gomme-cerchi/"
+          "name": "Lavorazioni carrozzeria",
+          "item": "https://car3001.it/servizi/lavorazioni-carrozzeria/"
         }
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service",
-      "name": "Pneumatici e cerchi",
-      "serviceType": "Pneumatici e cerchi",
-      "description": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
-      "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
-      "image": "https://car3001.it/assets/img/cerchio-e-pneumatico-montati.webp",
+      "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service",
+      "name": "Lavorazioni carrozzeria",
+      "serviceType": "Lavorazioni carrozzeria",
+      "description": "La preparazione cambia a seconda del componente e del tipo di danno. Mostraci il pezzo o l’auto: ti spieghiamo quali interventi possiamo eseguire e ti prepariamo un preventivo gratuito.",
+      "url": "https://car3001.it/servizi/lavorazioni-carrozzeria/",
+      "image": "https://car3001.it/assets/img/verniciatura-paraurti.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },

@@ -77,7 +77,55 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-22T10:28:11.057Z"
+      "dateModified": "2026-11-22T10:52:20.524Z"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service",
+      "name": "Lavorazioni carrozzeria",
+      "serviceType": "Lavorazioni carrozzeria",
+      "description": "Riparazione e verniciatura di carrozzeria, paraurti e cerchi.",
+      "url": "https://car3001.it/servizi/lavorazioni-carrozzeria/",
+      "image": "https://car3001.it/assets/img/verniciatura-paraurti.webp",
+      "provider": {
+        "@id": "https://car3001.it/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cologno Monzese"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://car3001.it/servizi/officina-meccanica/#service",
+      "name": "Officina meccanica",
+      "serviceType": "Officina meccanica",
+      "description": "Controlli e manutenzione meccanica per la tua auto.",
+      "url": "https://car3001.it/servizi/officina-meccanica/",
+      "image": "https://car3001.it/assets/img/intervento-passaruota.webp",
+      "provider": {
+        "@id": "https://car3001.it/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cologno Monzese"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://car3001.it/servizi/soccorso-stradale/#service",
+      "name": "Soccorso stradale",
+      "serviceType": "Soccorso stradale",
+      "description": "Chiamaci per verificare la disponibilità del carro attrezzi.",
+      "url": "https://car3001.it/servizi/soccorso-stradale/",
+      "image": "https://car3001.it/assets/img/soccorso-stradale-carro-attrezzi.webp",
+      "provider": {
+        "@id": "https://car3001.it/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cologno Monzese"
+      }
     },
     {
       "@type": "Service",
@@ -129,22 +177,6 @@
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/pulizia-lucidatura-auto/#service",
-      "name": "Pulizia e lucidatura auto",
-      "serviceType": "Pulizia e lucidatura auto",
-      "description": "Lavaggio, cura degli interni e lucidatura professionale.",
-      "url": "https://car3001.it/servizi/pulizia-lucidatura-auto/",
-      "image": "https://car3001.it/assets/img/lucidatura-carrozzeria.webp",
-      "provider": {
-        "@id": "https://car3001.it/#organization"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Cologno Monzese"
-      }
-    },
-    {
-      "@type": "Service",
       "@id": "https://car3001.it/servizi/levabolli/#service",
       "name": "Levabolli",
       "serviceType": "Levabolli",
@@ -177,44 +209,12 @@
     },
     {
       "@type": "Service",
-      "@id": "https://car3001.it/servizi/soccorso-stradale/#service",
-      "name": "Soccorso stradale",
-      "serviceType": "Soccorso stradale",
-      "description": "Chiamaci per verificare la disponibilità del carro attrezzi.",
-      "url": "https://car3001.it/servizi/soccorso-stradale/",
-      "image": "https://car3001.it/assets/img/soccorso-stradale-carro-attrezzi.webp",
-      "provider": {
-        "@id": "https://car3001.it/#organization"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Cologno Monzese"
-      }
-    },
-    {
-      "@type": "Service",
-      "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service",
-      "name": "Lavorazioni carrozzeria",
-      "serviceType": "Lavorazioni carrozzeria",
-      "description": "Riparazione e verniciatura di carrozzeria, paraurti e cerchi.",
-      "url": "https://car3001.it/servizi/lavorazioni-carrozzeria/",
-      "image": "https://car3001.it/assets/img/verniciatura-paraurti.webp",
-      "provider": {
-        "@id": "https://car3001.it/#organization"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Cologno Monzese"
-      }
-    },
-    {
-      "@type": "Service",
-      "@id": "https://car3001.it/servizi/officina-meccanica/#service",
-      "name": "Officina meccanica",
-      "serviceType": "Officina meccanica",
-      "description": "Controlli e manutenzione meccanica per la tua auto.",
-      "url": "https://car3001.it/servizi/officina-meccanica/",
-      "image": "https://car3001.it/assets/img/interno-officina-nuova-car-3001.webp",
+      "@id": "https://car3001.it/servizi/pulizia-lucidatura-auto/#service",
+      "name": "Pulizia e lucidatura auto",
+      "serviceType": "Pulizia e lucidatura auto",
+      "description": "Lavaggio, cura degli interni e lucidatura professionale.",
+      "url": "https://car3001.it/servizi/pulizia-lucidatura-auto/",
+      "image": "https://car3001.it/assets/img/lucidatura-carrozzeria.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },
@@ -232,63 +232,63 @@
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service"
+            "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://car3001.it/servizi/tagliandi-auto/#service"
+            "@id": "https://car3001.it/servizi/officina-meccanica/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://car3001.it/servizi/lucidatura-fari/#service"
+            "@id": "https://car3001.it/servizi/soccorso-stradale/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@id": "https://car3001.it/servizi/pulizia-lucidatura-auto/#service"
+            "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 5,
           "item": {
-            "@id": "https://car3001.it/servizi/levabolli/#service"
+            "@id": "https://car3001.it/servizi/tagliandi-auto/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 6,
           "item": {
-            "@id": "https://car3001.it/servizi/elettrauto/#service"
+            "@id": "https://car3001.it/servizi/lucidatura-fari/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 7,
           "item": {
-            "@id": "https://car3001.it/servizi/soccorso-stradale/#service"
+            "@id": "https://car3001.it/servizi/levabolli/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 8,
           "item": {
-            "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service"
+            "@id": "https://car3001.it/servizi/elettrauto/#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 9,
           "item": {
-            "@id": "https://car3001.it/servizi/officina-meccanica/#service"
+            "@id": "https://car3001.it/servizi/pulizia-lucidatura-auto/#service"
           }
         }
       ]

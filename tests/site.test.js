@@ -35,7 +35,7 @@ test('Le build senza modifiche conservano lastmod e producono output identico',t
   assert.equal(fs.readFileSync(path.join(directory,'seo/page-history.json'),'utf8'),initialHistory);
   assert.equal(fs.readFileSync(path.join(directory,'docs/sitemap.xml'),'utf8'),initialSitemap);
   assert.equal(fs.readFileSync(path.join(directory,'dist/index.html'),'utf8'),initialHome);
-  update(directory,data=>{data.services[0].details.push('Intervento concordato con il cliente.');});
+  update(directory,data=>{data.services.find(service=>service.slug==='cambio-gomme-cerchi').details.push('Intervento concordato con il cliente.');});
   run(directory,'scripts/build.js');
   const before = JSON.parse(initialHistory);
   const after = JSON.parse(fs.readFileSync(path.join(directory,'seo/page-history.json'),'utf8'));
@@ -49,7 +49,7 @@ test('Prezzi non confermati nascosti; prezzi abilitati coerenti con Offer',t=>{
   run(directory,'scripts/build.js');
   assert.ok(!JSON.stringify(graph(directory,'servizi/cambio-gomme-cerchi')).includes('PriceSpecification'));
   assert.ok(!fs.readFileSync(path.join(directory,'docs/llms-full.txt'),'utf8').includes('A partire da'));
-  update(directory,data=>{data.pricing.enabled=true;data.services[0].startingPrice=55;});
+  update(directory,data=>{data.pricing.enabled=true;data.services.find(service=>service.slug==='cambio-gomme-cerchi').startingPrice=55;});
   run(directory,'scripts/build.js');
   run(directory,'scripts/check.js');
   const service = graph(directory,'servizi/cambio-gomme-cerchi')['@graph'].find(node=>node['@type']==='Service');
