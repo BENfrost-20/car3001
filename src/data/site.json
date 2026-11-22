@@ -341,24 +341,6 @@
         "title": "Contatto diretto",
         "text": "Parliamone insieme, per scegliere l’intervento e concordare il preventivo."
       }
-    ],
-    "aboutGallery": [
-      {
-        "image": "verniciatura-paraurti",
-        "alt": "Verniciatura di un paraurti in cabina"
-      },
-      {
-        "image": "verniciatura-dettaglio-paraurti",
-        "alt": "Dettaglio della verniciatura a spruzzo del paraurti"
-      },
-      {
-        "image": "verniciatore-in-cabina",
-        "alt": "Verniciatore con maschera protettiva all’interno della cabina"
-      },
-      {
-        "image": "intervento-passaruota",
-        "alt": "Tecnico al lavoro sul passaruota di un’auto"
-      }
     ]
   },
   "openingHours": [
