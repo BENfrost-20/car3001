@@ -10,7 +10,7 @@ Nuova Car 3001 si trova in Via G. Rossini 38, 20093 Cologno Monzese (MI). Nella 
 
 ## Quali servizi offre la carrozzeria?
 
-I servizi presentati sono: Lavorazioni carrozzeria, Officina meccanica, Soccorso stradale, Pneumatici e cerchi, Tagliandi auto, Verniciatura e lucidatura fari, Levabolli, Elettrauto, Pulizia e lucidatura auto.
+I nostri servizi sono: Lavorazioni carrozzeria, Officina meccanica, Soccorso stradale, Pneumatici e cerchi, Tagliandi auto, Cura dei fari, Levabolli, Elettrauto e Pulizia e lucidatura.
 
 ## Il cambio gomme comprende l'equilibratura?
 

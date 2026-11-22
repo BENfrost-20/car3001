@@ -34,8 +34,8 @@
   "insurancePartners": [
     "Sara"
   ],
-  "summary": "{{name}} è una carrozzeria a {{city}}, in {{streetAddress}}. Ci occupiamo di riparazioni e verniciatura, meccanica, pneumatici e cerchi, tagliandi, cura dei fari, pulizia e lucidatura, levabolli, elettrauto e soccorso stradale. Contattaci per un preventivo gratuito.",
-  "aboutSummary": "{{name}} opera a {{city}}, in {{streetAddress}}. I soci hanno un'esperienza nel settore automobilistico di oltre 50 anni. La carrozzeria presenta servizi per pneumatici, manutenzione, fari, pulizia, ammaccature e componenti elettrici, con contatto diretto per informazioni e preventivi relativi alla propria auto.",
+  "summary": "{{name}} è una carrozzeria a {{city}}, in {{streetAddress}}. Dalle lavorazioni di carrozzeria e dall’officina meccanica al soccorso stradale, offriamo servizi per la riparazione, la manutenzione e la cura dell’auto. Contattaci per un preventivo gratuito.",
+  "aboutSummary": "{{name}} opera a {{city}}, in {{streetAddress}}. I soci hanno un’esperienza nel settore automobilistico di oltre 50 anni. Puoi contattarci per lavorazioni di carrozzeria, interventi di meccanica e soccorso stradale, oppure per un consiglio sulla cura dell’auto.",
   "contactSummary": "Puoi contattare {{name}} al numero {{telephoneLabel}} oppure scrivere a {{email}}. Ci trovi in {{streetAddress}}, {{postalCode}} {{city}}. Chiamaci o scrivici per informazioni, per un consiglio o per richiedere un preventivo gratuito.",
   "serviceSummary": "Scopri i servizi di {{name}} a {{city}}, dalle lavorazioni di carrozzeria e dall’officina meccanica al soccorso stradale. Ogni scheda descrive le lavorazioni e spiega come contattare la carrozzeria per informazioni o un preventivo gratuito.",
   "services": [
@@ -120,7 +120,7 @@
     {
       "slug": "cambio-gomme-cerchi",
       "name": "Pneumatici e cerchi",
-      "title": "Cambio gomme a {{city}} | {{name}}",
+      "title": "Pneumatici e cerchi a {{city}} | {{name}}",
       "description": "Cambio gomme e cerchi con equilibratura da {{name}} a {{city}}. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.",
       "image": "cerchio-e-pneumatico-montati",
       "imageAlt": "Primo piano di un cerchio in lega con pneumatico montato",
@@ -134,7 +134,6 @@
       ],
       "detailSummary": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
       "cardDescription": "Pneumatici e cerchi, con equilibratura inclusa.",
-      "displayName": "Pneumatici e cerchi",
       "cardAnchor": "portfolioModal1",
       "gallery": [
         {
@@ -160,13 +159,12 @@
       ],
       "detailSummary": "Il tagliando presentato include un controllo diagnostico OBD, cioè della diagnostica di bordo del veicolo. Le altre lavorazioni previste per l'auto vanno concordate con la carrozzeria. Per conoscere cosa comprenderà il tuo tagliando e ricevere un preventivo, comunica il veicolo interessato e le esigenze di manutenzione.",
       "cardDescription": "Manutenzione dell’auto con controllo diagnostico OBD.",
-      "displayName": "Tagliandi auto",
       "cardAnchor": "portfolioModal2"
     },
     {
       "slug": "lucidatura-fari",
-      "name": "Verniciatura e lucidatura fari",
-      "title": "Lucidatura fari a {{city}} | {{name}}",
+      "name": "Cura dei fari",
+      "title": "Cura dei fari a {{city}} | {{name}}",
       "description": "Verniciatura e lucidatura fari a {{city}} con {{name}}. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.",
       "image": "fari-confronto",
       "imageAlt": "Confronto tra una zona opaca e una più trasparente dello stesso faro",
@@ -180,7 +178,6 @@
       ],
       "detailSummary": "La scheda riguarda piccoli graffi e ingiallimento delle plastiche di fari anteriori o fanali. Il trattamento può prevedere verniciatura, lucidatura o entrambe, secondo la lavorazione concordata. Una valutazione dello stato dei fari permette alla carrozzeria di definire l'intervento da proporre e il relativo preventivo per il veicolo.",
       "cardDescription": "Trattamento di piccoli graffi e ingiallimento dei fari.",
-      "displayName": "Cura dei fari",
       "gallery": [
         {
           "image": "fari-prima",
@@ -211,7 +208,6 @@
       ],
       "detailSummary": "La lavorazione levabolli è presentata per danni da grandine e piccole ammaccature che non richiedono verniciatura. Il danno deve essere valutato prima di concordare l'intervento. Descrivi alla carrozzeria le parti interessate dell'auto per richiedere informazioni sulla possibilità di ripristino e ottenere un preventivo relativo al tuo caso.",
       "cardDescription": "Grandine e piccole ammaccature senza verniciatura.",
-      "displayName": "Levabolli",
       "cardAnchor": "portfolioModal5"
     },
     {
@@ -231,13 +227,12 @@
       ],
       "detailSummary": "Gli interventi elettrauto elencati comprendono la riparazione dei sensori di parcheggio e l'installazione di accessori quali dash cam e luci LED interne all'abitacolo. Quando richiedi informazioni, specifica il componente da riparare oppure l'accessorio da installare, insieme al veicolo interessato, per concordare la valutazione e ricevere un preventivo.",
       "cardDescription": "Sensori di parcheggio, dash cam e luci interne LED.",
-      "displayName": "Elettrauto",
       "cardAnchor": "portfolioModal6"
     },
     {
       "slug": "pulizia-lucidatura-auto",
-      "name": "Pulizia e lucidatura auto",
-      "title": "Pulizia e lucidatura auto | {{name}}",
+      "name": "Pulizia e lucidatura",
+      "title": "Pulizia e lucidatura a {{city}} | {{name}}",
       "description": "Pulizia auto a {{city}}: lavaggio e aspirazione tramite partner, igienizzazione su richiesta. Scopri il servizio e contatta {{name}}.",
       "image": "lucidatura-carrozzeria",
       "imageAlt": "Lucidatura della carrozzeria di un’auto con una lucidatrice orbitale",
@@ -251,7 +246,6 @@
       ],
       "detailSummary": "Lavaggio e aspirazione interna vengono proposti tramite un partner di fiducia; l'igienizzazione va richiesta espressamente. La lucidatura professionale è una lavorazione da concordare in base alla richiesta. Quando contatti la carrozzeria, specifica quale di questi interventi ti interessa per ricevere le informazioni e il relativo preventivo.",
       "cardDescription": "Lavaggio, cura degli interni e lucidatura professionale.",
-      "displayName": "Pulizia e lucidatura",
       "gallery": [
         {
           "image": "aspirazione-interni-auto",
@@ -264,12 +258,10 @@
   "faq": [
     {
       "question": "Dove si trova {{name}}?",
-      "answer": "{{name}} si trova in {{streetAddress}}, {{postalCode}} {{city}} (MI). Nella pagina Contatti trovi il collegamento alle indicazioni stradali.",
       "id": "address"
     },
     {
       "question": "Quali servizi offre la carrozzeria?",
-      "answer": "Contattaci per conoscere tutte le lavorazioni disponibili.",
       "id": "services"
     },
     {
@@ -284,7 +276,6 @@
     },
     {
       "question": "Come posso richiedere un preventivo?",
-      "answer": "Puoi chiamare il numero {{telephoneLabel}} oppure scrivere a {{email}}, indicando il veicolo e il servizio desiderato. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria.",
       "id": "quote"
     },
     {

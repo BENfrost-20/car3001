@@ -64,7 +64,10 @@ function faqItems() {
   return site.faq.map(item => {
     if (item.id === 'address') return {...item, answer:`${site.name} si trova in ${site.address.streetAddress}, ${site.address.postalCode} ${site.address.addressLocality} (${site.address.addressRegion}). Nella pagina Contatti trovi il collegamento alle indicazioni stradali.`};
     if (item.id === 'quote') return {...item, answer:`Puoi chiamare il numero ${site.telephoneLabel} oppure scrivere a ${site.email}, indicando il veicolo e il servizio desiderato. Il preventivo è gratuito. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria.`};
-    if (item.id === 'services') return {...item, answer:`I servizi presentati sono: ${site.services.map(service=>service.name).join(', ')}.`};
+    if (item.id === 'services') {
+      const names = new Intl.ListFormat(site.language).format(site.services.map(service=>service.name));
+      return {...item, answer:`I nostri servizi sono: ${names}.`};
+    }
     return item;
   });
 }

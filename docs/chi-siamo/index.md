@@ -1,6 +1,6 @@
 # Chi siamo
 
-Nuova Car 3001 opera a Cologno Monzese, in Via G. Rossini 38. I soci hanno un'esperienza nel settore automobilistico di oltre 50 anni. La carrozzeria presenta servizi per pneumatici, manutenzione, fari, pulizia, ammaccature e componenti elettrici, con contatto diretto per informazioni e preventivi relativi alla propria auto.
+Nuova Car 3001 opera a Cologno Monzese, in Via G. Rossini 38. I soci hanno un’esperienza nel settore automobilistico di oltre 50 anni. Puoi contattarci per lavorazioni di carrozzeria, interventi di meccanica e soccorso stradale, oppure per un consiglio sulla cura dell’auto.
 
 Fonte: https://car3001.it/chi-siamo/
 

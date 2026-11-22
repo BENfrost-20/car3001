@@ -2,6 +2,13 @@
 
 const {site,images,escape:e,url,sitePath,servicePath,priceLabel,priceVisible,mapsUrl,openingHoursText,faqItems,schema} = require('../../scripts/lib/site');
 const copy = site.presentation;
+const mainNavigation = [
+  {label:'Servizi', path:'/servizi/', homeTarget:'#portfolio'},
+  {label:'Chi siamo', path:'/chi-siamo/', homeTarget:'#about'},
+  {label:'Partner', path:'/#brands-heading', homeTarget:'#brands-heading'},
+  {label:'Orari', path:'/contatti/#orari', homeTarget:'#orari'},
+  {label:'Contattaci', path:'/contatti/', homeTarget:'#contact'}
+];
 const entranceAlt = 'Ingresso di Nuova Car 3001 con l’insegna e un’auto bianca';
 const workshopAlt = 'Tecnici al lavoro fra le auto all’interno di Nuova Car 3001';
 
@@ -68,7 +75,7 @@ function cards(level=3) {
       <a class="service-card" href="${servicePath(service)}" aria-labelledby="card-title-${index+1}">
         <figure class="service-card-media" data-image="${e(service.image)}">${image(service.image,service.imageAlt,{sizes:'(min-width: 992px) 360px, 45vw'})}</figure>
         <div class="portfolio-caption">
-          <h${level} class="portfolio-caption-heading" id="card-title-${index+1}">${e(service.displayName||service.name)}</h${level}>
+          <h${level} class="portfolio-caption-heading" id="card-title-${index+1}">${e(service.name)}</h${level}>
           <span class="service-card-action" aria-hidden="true">Scopri ${icon('arrow')}</span>
         </div>
       </a>
@@ -118,8 +125,8 @@ function servicePage(page) {
   const service=page.service;
   return `<article class="service-detail"><div class="service-hero">${intro(page,{title:service.name,lead:service.cardDescription,eyebrow:`I nostri servizi · ${site.address.addressLocality}`})}<figure class="service-page-image" data-image="${e(service.image)}">${image(service.image,service.imageAlt,{eager:true,sizes:'(min-width: 992px) 480px, 92vw'})}</figure></div>
   <div class="service-detail-grid"><section class="service-description" aria-labelledby="details-heading"><p class="eyebrow">Il servizio</p><h2 id="details-heading">Cosa comprende</h2><ul class="detail-list">${service.details.map(detail=>`<li>${e(detail)}</li>`).join('')}</ul><details class="service-more"><summary>Qualche dettaglio in più <span class="faq-toggle" aria-hidden="true">+</span></summary><p>${e(service.detailSummary)}</p></details></section>
-  <aside class="quote-panel" aria-labelledby="quote-heading"><p class="eyebrow">Per la tua auto</p><h2 id="quote-heading">${e(priceVisible(service) ? priceLabel(service) : 'Chiedi un preventivo gratuito')}</h2>${priceVisible(service)?`<p>${e(service.priceScope)}. ${e(site.pricing.note)}</p>`:'<p>Indicaci il veicolo e la lavorazione. Concordiamo insieme intervento e costo.</p>'}${contactActions()}<p class="quote-location">${icon('pin')}${e(site.address.streetAddress)}, ${e(site.address.addressLocality)}</p></aside></div></article>${photoGallery(service.gallery, service.galleryTitle || 'Foto del servizio')}
-  <nav class="related-services" aria-labelledby="related-heading"><h2 id="related-heading">Altri servizi</h2><ul>${site.services.filter(item=>item.slug!==service.slug).map(item=>`<li><a href="${servicePath(item)}">${e(item.displayName||item.name)} ${icon('arrow')}</a></li>`).join('')}</ul></nav>`;
+  <aside class="quote-panel" aria-labelledby="quote-heading"><p class="eyebrow">Per la tua auto</p><h2 id="quote-heading">${e(priceVisible(service) ? priceLabel(service) : 'Chiedi un preventivo gratuito')}</h2>${priceVisible(service)?`<p>${e(service.priceScope)}. ${e(site.pricing.note)}</p>`:`<p>${e(copy.contactLead)}</p>`}${contactActions()}<p class="quote-location">${icon('pin')}${e(site.address.streetAddress)}, ${e(site.address.addressLocality)}</p></aside></div></article>${photoGallery(service.gallery, service.galleryTitle || 'Foto del servizio')}
+  <nav class="related-services" aria-labelledby="related-heading"><h2 id="related-heading">Altri servizi</h2><ul>${site.services.filter(item=>item.slug!==service.slug).map(item=>`<li><a href="${servicePath(item)}">${e(item.name)} ${icon('arrow')}</a></li>`).join('')}</ul></nav>`;
 }
 
 function content(page) {
@@ -138,7 +145,12 @@ function breadcrumbs(page) {
 function layout(page,lastmod,assetVersions={}) {
   const assetPath = file => `/${file}${assetVersions[file]?`?v=${assetVersions[file]}`:''}`;
   const homePage=page.kind==='home';
-  const links=homePage?[{name:'Servizi',path:'#portfolio'},{name:'Chi siamo',path:'#about'},{name:'Partner',path:'#brands-heading'},{name:'Orari',path:'#orari'},{name:'Contatti',path:'#contact'}]:[{name:'Servizi',path:'/servizi/'},{name:'Chi siamo',path:'/chi-siamo/'},{name:'Domande frequenti',path:'/faq/'},{name:'Orari',path:'/contatti/#orari'},{name:'Contatti',path:'/contatti/'}];
+  const links = mainNavigation.map(({label,path,homeTarget})=>{
+    const href = homePage ? homeTarget : path;
+    const className = path === '/contatti/' ? 'nav-link nav-contact' : 'nav-link';
+    const current = page.path === href ? ' aria-current="page"' : '';
+    return `<li><a class="${className}" href="${href}"${current}>${e(label)}</a></li>`;
+  }).join('');
   const json=JSON.stringify(schema(page,lastmod)).replace(/</g,'\\u003c');
   const og=images.social;
   return `<!doctype html>
@@ -178,7 +190,7 @@ function layout(page,lastmod,assetVersions={}) {
 </head>
 <body id="page-top" class="page-${e(page.kind)}">
   <a class="skip-link" href="#main-content">Vai al contenuto</a>
-  <nav class="site-header" id="mainNav" aria-label="Navigazione principale"><div class="container header-layout"><a class="navbar-brand" href="/" aria-label="${e(site.name)}: home">${image('logo',`Logo ${site.name}`,{className:'brand-logo',eager:true,priority:false,sizes:'110px'})}</a><button class="navbar-toggler" id="menu-toggle" type="button" aria-controls="navbarResponsive" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button><div class="site-menu" id="navbarResponsive"><ul>${links.map(link=>`<li><a class="nav-link${link.name==='Contatti'?' nav-contact':''}" href="${link.path}"${page.path===link.path?' aria-current="page"':''}>${link.name==='Contatti'?'Contattaci':link.name}</a></li>`).join('')}</ul></div></div></nav>
+  <nav class="site-header" id="mainNav" aria-label="Navigazione principale"><div class="container header-layout"><a class="navbar-brand" href="/" aria-label="${e(site.name)}: home">${image('logo',`Logo ${site.name}`,{className:'brand-logo',eager:true,priority:false,sizes:'110px'})}</a><button class="navbar-toggler" id="menu-toggle" type="button" aria-controls="navbarResponsive" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button><div class="site-menu" id="navbarResponsive"><ul>${links}</ul></div></div></nav>
   <main id="main-content"${homePage?'':' class="inner-page container"'} tabindex="-1">${breadcrumbs(page)}${content(page)}</main>
   <footer class="footer"><div class="container footer-layout"><div><strong>${e(site.name)}</strong><p>${e(site.address.streetAddress)} · ${e(site.address.addressLocality)}</p></div><nav aria-label="Navigazione a piè di pagina"><ul class="footer-links"><li><a href="/servizi/">Servizi</a></li><li><a href="/contatti/">Contatti</a></li><li><a href="/faq/">Domande frequenti</a></li>${site.socialProfiles.map(profile=>`<li><a href="${e(profile.url)}" target="_blank" rel="noopener noreferrer">${e(profile.name)}</a></li>`).join('')}</ul></nav></div></footer>
 </body>

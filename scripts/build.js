@@ -35,6 +35,7 @@ function llms(routes) {
 
 Sede: ${site.address.streetAddress}, ${site.address.postalCode} ${site.address.addressLocality} (${site.address.addressRegion}), Italia.
 Telefono: ${site.telephoneLabel}. Email: ${site.email}.
+Orari: ${site.openingHours.map(group=>`${group.label}: ${openingHoursText(group)}`).join(" · ")}.
 Marchi dei prodotti indicati: ${site.productBrands.join(', ')}. Partner assicurativi indicati: ${site.insurancePartners.join(', ')}.
 ${site.pricing.enabled ? site.pricing.note : 'Contatta la carrozzeria per un preventivo gratuito.'}
 Le risorse seguenti sono versioni Markdown delle pagine pubbliche, generate dagli stessi dati del sito.

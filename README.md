@@ -20,7 +20,7 @@ Il file da mantenere è **`src/data/site.json`**:
 | `services` | Slug, nome, metadati, immagini, introduzione, descrizione dettagliata ed elenco delle lavorazioni. |
 | `pageMetadata` | Title e description delle pagine generali. |
 | `presentation` | Testi brevi della home: copertina, presentazione, punti di forza, servizi e contatti. |
-| `services[].displayName`, `services[].cardDescription` | Nome breve e descrizione sintetica delle schede fotografiche. Il nome completo e i metadati SEO restano nei campi dedicati. |
+| `services[].name`, `services[].cardDescription` | Nome condiviso fra scheda, pagina del servizio, FAQ e dati strutturati. Descrizione breve per l’introduzione alla pagina del servizio. |
 | `faq` | Domande e risposte visibili, riutilizzate nello schema FAQPage. Sede, elenco servizi e contatti vengono derivati dai campi condivisi. |
 
 I testi possono usare `{{name}}`, `{{city}}`, `{{streetAddress}}`, `{{postalCode}}`, `{{telephoneLabel}}` e `{{email}}`: la build sostituisce questi riferimenti automaticamente, evitando copie da aggiornare separatamente. Usare JSON valido, senza commenti o virgole finali. Non rinominare gli slug già pubblicati senza predisporre redirect sul servizio di hosting.

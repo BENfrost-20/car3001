@@ -26,7 +26,7 @@ Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione
 
 Nuova Car 3001 propone tagliandi auto con controllo diagnostico OBD incluso a Cologno Monzese. L'OBD è il sistema di diagnostica di bordo del veicolo. Per conoscere le lavorazioni previste per la tua auto e ricevere un preventivo, contatta la carrozzeria in Via G. Rossini 38 prima dell'intervento.
 
-### [Verniciatura e lucidatura fari](https://car3001.it/servizi/lucidatura-fari/)
+### [Cura dei fari](https://car3001.it/servizi/lucidatura-fari/)
 
 Il trattamento fari di Nuova Car 3001 prevede verniciatura e/o lucidatura dei fari anteriori o dei fanali per intervenire su piccoli graffi e ingiallimento delle plastiche. Il servizio è disponibile a Cologno Monzese. Contatta la carrozzeria per valutare lo stato dei fari e concordare lavorazione e preventivo.
 
@@ -38,7 +38,7 @@ Il servizio levabolli di Nuova Car 3001 riguarda danni da grandine e piccole amm
 
 Il servizio elettrauto di Nuova Car 3001 comprende riparazione dei sensori di parcheggio, installazione di dash cam e installazione di luci LED interne all'abitacolo. La carrozzeria opera a Cologno Monzese. Descrivi il componente o l'accessorio che ti interessa per concordare la valutazione del veicolo e richiedere un preventivo.
 
-### [Pulizia e lucidatura auto](https://car3001.it/servizi/pulizia-lucidatura-auto/)
+### [Pulizia e lucidatura](https://car3001.it/servizi/pulizia-lucidatura-auto/)
 
 Nuova Car 3001 propone lavaggio e aspirazione interna tramite un partner di fiducia, con igienizzazione su richiesta, e lucidatura professionale dell'auto. La carrozzeria si trova a Cologno Monzese. Contattaci per specificare se ti interessa la pulizia degli interni, il lavaggio o la lucidatura e richiedere il relativo preventivo.
 
