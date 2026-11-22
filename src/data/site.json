@@ -20,19 +20,28 @@
   "socialProfiles": [],
   "productBrands": [
     "Standox",
-    "3M"
+    "3M",
+    "RUPES",
+    "Glasurit",
+    "PPG",
+    "Carsystem",
+    "Gelson",
+    "Castrol",
+    "PETRONAS",
+    "LIQUI MOLY",
+    "Mobil 1"
   ],
   "insurancePartners": [
     "Sara"
   ],
-  "summary": "{{name}} è una carrozzeria a {{city}}, in {{streetAddress}}. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
+  "summary": "{{name}} è una carrozzeria a {{city}}, in {{streetAddress}}. Ci occupiamo di riparazioni e verniciatura, meccanica, pneumatici e cerchi, tagliandi, cura dei fari, pulizia e lucidatura, levabolli, elettrauto e soccorso stradale. Contattaci per un preventivo gratuito.",
   "aboutSummary": "{{name}} opera a {{city}}, in {{streetAddress}}. I soci hanno un'esperienza nel settore automobilistico di oltre 50 anni. La carrozzeria presenta servizi per pneumatici, manutenzione, fari, pulizia, ammaccature e componenti elettrici, con contatto diretto per informazioni e preventivi relativi alla propria auto.",
-  "contactSummary": "Puoi contattare {{name}} al numero {{telephoneLabel}} oppure scrivere a {{email}}. La carrozzeria si trova in {{streetAddress}}, {{postalCode}} {{city}}. Indica il servizio che ti interessa e il veicolo per richiedere informazioni e concordare la valutazione dell'intervento.",
-  "serviceSummary": "{{name}} propone sei servizi a {{city}}: cambio gomme e cerchi, tagliandi, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Ogni scheda descrive la lavorazione e indica come richiedere un preventivo. La scelta dell'intervento e il costo finale vanno concordati direttamente con la carrozzeria.",
+  "contactSummary": "Puoi contattare {{name}} al numero {{telephoneLabel}} oppure scrivere a {{email}}. Ci trovi in {{streetAddress}}, {{postalCode}} {{city}}. Chiamaci o scrivici per informazioni, per un consiglio o per richiedere un preventivo gratuito.",
+  "serviceSummary": "Scopri i servizi di {{name}} a {{city}}, dalle lavorazioni di carrozzeria e dall’officina meccanica al soccorso stradale. Ogni scheda descrive le lavorazioni e spiega come contattare la carrozzeria per informazioni o un preventivo gratuito.",
   "services": [
     {
       "slug": "cambio-gomme-cerchi",
-      "name": "Cambio gomme e cerchi",
+      "name": "Pneumatici e cerchi",
       "title": "Cambio gomme a {{city}} | {{name}}",
       "description": "Cambio gomme e cerchi con equilibratura da {{name}} a {{city}}. Scopri il servizio e contattaci per un preventivo per la tua auto in officina.",
       "image": "cerchio-e-pneumatico-montati",
@@ -47,21 +56,7 @@
       ],
       "detailSummary": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
       "cardDescription": "Pneumatici e cerchi, con equilibratura inclusa.",
-      "displayName": "Cambio gomme e cerchi",
-      "gallery": [
-        {
-          "image": "levigatura-cerchio-in-lega",
-          "alt": "Levigatura di un cerchio in lega con una levigatrice orbitale"
-        },
-        {
-          "image": "verniciatura-cerchio-mascherato",
-          "alt": "Verniciatura di un cerchio in lega protetto con carta da mascheratura"
-        },
-        {
-          "image": "verniciatura-cerchio-in-cabina",
-          "alt": "Verniciatura di un cerchio nero in cabina"
-        }
-      ]
+      "displayName": "Pneumatici e cerchi"
     },
     {
       "slug": "tagliandi-auto",
@@ -93,8 +88,8 @@
       "name": "Verniciatura e lucidatura fari",
       "title": "Lucidatura fari a {{city}} | {{name}}",
       "description": "Verniciatura e lucidatura fari a {{city}} con {{name}}. Trattamento per graffi e ingiallimento: scopri il servizio e richiedi un preventivo.",
-      "image": "fanale",
-      "imageAlt": "Confronto prima e dopo il trattamento di un faro ingiallito",
+      "image": "fari-confronto",
+      "imageAlt": "Confronto tra una zona opaca e una più trasparente dello stesso faro",
       "startingPrice": 70,
       "priceScope": "Verniciatura e/o lucidatura fari",
       "summary": "Il trattamento fari di {{name}} prevede verniciatura e/o lucidatura dei fari anteriori o dei fanali per intervenire su piccoli graffi e ingiallimento delle plastiche. Il servizio è disponibile a {{city}}. Contatta la carrozzeria per valutare lo stato dei fari e concordare lavorazione e preventivo.",
@@ -105,7 +100,18 @@
       ],
       "detailSummary": "La scheda riguarda piccoli graffi e ingiallimento delle plastiche di fari anteriori o fanali. Il trattamento può prevedere verniciatura, lucidatura o entrambe, secondo la lavorazione concordata. Una valutazione dello stato dei fari permette alla carrozzeria di definire l'intervento da proporre e il relativo preventivo per il veicolo.",
       "cardDescription": "Trattamento di piccoli graffi e ingiallimento dei fari.",
-      "displayName": "Cura dei fari"
+      "displayName": "Cura dei fari",
+      "gallery": [
+        {
+          "image": "fari-prima",
+          "alt": "Faro con protezioni di mascheratura intorno al bordo"
+        },
+        {
+          "image": "fari-dopo",
+          "alt": "Primo piano di un faro anteriore"
+        }
+      ],
+      "galleryTitle": "Dettagli del trattamento"
     },
     {
       "slug": "pulizia-lucidatura-auto",
@@ -169,6 +175,91 @@
       "detailSummary": "Gli interventi elettrauto elencati comprendono la riparazione dei sensori di parcheggio e l'installazione di accessori quali dash cam e luci LED interne all'abitacolo. Quando richiedi informazioni, specifica il componente da riparare oppure l'accessorio da installare, insieme al veicolo interessato, per concordare la valutazione e ricevere un preventivo.",
       "cardDescription": "Sensori di parcheggio, dash cam e luci interne LED.",
       "displayName": "Elettrauto"
+    },
+    {
+      "slug": "soccorso-stradale",
+      "name": "Soccorso stradale",
+      "title": "Soccorso stradale a {{city}} | {{name}}",
+      "description": "Soccorso stradale con carro attrezzi a {{city}}. Chiama {{name}} per il recupero della tua auto e per verificare la disponibilità.",
+      "image": "soccorso-stradale-carro-attrezzi",
+      "imageAlt": "Tecnico con giubbotto ad alta visibilità al carro attrezzi",
+      "startingPrice": null,
+      "priceScope": "Recupero dell’auto con carro attrezzi",
+      "summary": "{{name}} offre soccorso stradale con carro attrezzi. Se la tua auto è ferma, chiamaci e indicaci la posizione per verificare disponibilità e modalità di recupero.",
+      "details": [
+        "Recupero dell’auto con carro attrezzi.",
+        "Contatto telefonico per verificare la disponibilità e concordare il recupero."
+      ],
+      "detailSummary": "Quando ci chiami, indicaci dove si trova l’auto e che cosa è successo. Ti diremo se possiamo raggiungerti e come organizzare il recupero.",
+      "cardDescription": "Chiamaci per verificare la disponibilità del carro attrezzi."
+    },
+    {
+      "slug": "lavorazioni-carrozzeria",
+      "name": "Lavorazioni carrozzeria",
+      "title": "Lavorazioni carrozzeria a {{city}} | {{name}}",
+      "description": "Riparazione e verniciatura di carrozzeria a {{city}}. Scopri le lavorazioni di {{name}} su paraurti, cerchi e altri componenti.",
+      "image": "verniciatura-paraurti",
+      "imageAlt": "Tecnico che vernicia un paraurti in cabina",
+      "startingPrice": null,
+      "priceScope": "Riparazione e verniciatura di carrozzeria e componenti",
+      "summary": "In {{name}} ripariamo e verniciamo elementi di carrozzeria, dai paraurti ai cerchi in lega. Il lavoro parte dalla valutazione del danno e della finitura da ripristinare.",
+      "details": [
+        "Valutazione dei danni alla carrozzeria.",
+        "Preparazione delle superfici prima della verniciatura.",
+        "Verniciatura in cabina di paraurti, cerchi e altri componenti."
+      ],
+      "detailSummary": "La preparazione cambia a seconda del componente e del tipo di danno. Mostraci il pezzo o l’auto: ti spieghiamo quali interventi possiamo eseguire e ti prepariamo un preventivo gratuito.",
+      "cardDescription": "Riparazione e verniciatura di carrozzeria, paraurti e cerchi.",
+      "gallery": [
+        {
+          "image": "verniciatura-dettaglio-paraurti",
+          "alt": "Verniciatura a spruzzo di un paraurti"
+        },
+        {
+          "image": "levigatura-cerchio-in-lega",
+          "alt": "Levigatura di un cerchio in lega con una levigatrice orbitale"
+        },
+        {
+          "image": "verniciatura-cerchio-mascherato",
+          "alt": "Verniciatura di un cerchio in lega protetto con carta da mascheratura"
+        },
+        {
+          "image": "verniciatura-cerchio-in-lega",
+          "alt": "Verniciatura di un cerchio nero in cabina"
+        },
+        {
+          "image": "verniciatore-in-cabina",
+          "alt": "Verniciatore con maschera protettiva in cabina"
+        }
+      ]
+    },
+    {
+      "slug": "officina-meccanica",
+      "name": "Officina meccanica",
+      "title": "Officina meccanica a {{city}} | {{name}}",
+      "description": "Officina meccanica a {{city}}: controlli, manutenzione e interventi per la tua auto. Contatta {{name}} per informazioni e preventivi gratuiti.",
+      "image": "interno-officina-nuova-car-3001",
+      "imageAlt": "Auto in officina con un veicolo sollevato sul ponte",
+      "startingPrice": null,
+      "priceScope": "Controlli e manutenzione meccanica dell’auto",
+      "summary": "L’officina meccanica di {{name}} si occupa di controlli, manutenzione e interventi da concordare in base alle condizioni della tua auto.",
+      "details": [
+        "Controlli meccanici e valutazione del problema.",
+        "Manutenzione dell’auto secondo le esigenze del veicolo.",
+        "Interventi meccanici concordati dopo il controllo."
+      ],
+      "detailSummary": "Se noti un rumore, una vibrazione o un problema di funzionamento, descrivici quando succede. Possiamo concordare un controllo e spiegarti quali interventi servono.",
+      "cardDescription": "Controlli e manutenzione meccanica per la tua auto.",
+      "gallery": [
+        {
+          "image": "controllo-vano-motore",
+          "alt": "Tecnico al lavoro nel vano motore"
+        },
+        {
+          "image": "intervento-passaruota",
+          "alt": "Tecnico al lavoro sul passaruota di un’auto"
+        }
+      ]
     }
   ],
   "faq": [
@@ -179,7 +270,7 @@
     },
     {
       "question": "Quali servizi offre la carrozzeria?",
-      "answer": "I servizi presentati sono cambio gomme e cerchi, tagliandi auto, verniciatura e lucidatura fari, pulizia e lucidatura auto, levabolli ed elettrauto.",
+      "answer": "Contattaci per conoscere tutte le lavorazioni disponibili.",
       "id": "services"
     },
     {
@@ -206,11 +297,11 @@
   "pageMetadata": {
     "home": {
       "title": "Carrozzeria a {{city}} | {{name}}",
-      "description": "{{name}} a {{city}}: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto."
+      "description": "{{name}} a {{city}}: lavori di carrozzeria, officina meccanica, pneumatici, tagliandi e soccorso stradale. Chiedi un preventivo gratuito."
     },
     "services": {
       "title": "Servizi auto a {{city}} | {{name}}",
-      "description": "I servizi di {{name}} a {{city}}: pneumatici, tagliandi OBD, fari, pulizia, levabolli ed elettrauto. Leggi i dettagli e chiedi un preventivo."
+      "description": "I servizi di {{name}} a {{city}}: carrozzeria, officina, soccorso stradale, pneumatici, tagliandi. Chiedi un preventivo gratuito."
     },
     "about": {
       "title": "Chi siamo: carrozzeria a Cologno | {{name}}",
@@ -218,7 +309,7 @@
     },
     "contact": {
       "title": "Contatti e indirizzo a {{city}} | {{name}}",
-      "description": "Contatta {{name}}: telefono, email e indicazioni per {{streetAddress}} a {{city}}. Richiedi informazioni e un preventivo per i servizi auto."
+      "description": "Contatta {{name}} per un preventivo gratuito. Trovi orari, telefono, email e indicazioni per raggiungerci in {{streetAddress}} a {{city}}."
     },
     "faq": {
       "title": "Domande frequenti sui servizi auto | {{name}}",
@@ -234,7 +325,7 @@
     "aboutTitle": "Conosciamoci meglio.",
     "aboutLead": "Siamo a {{city}}, in {{streetAddress}}. I nostri soci hanno oltre 50 anni di esperienza nel settore automobilistico.",
     "contactTitle": "Parliamo della tua auto.",
-    "contactLead": "Chiamaci, scrivici o vieni a trovarci. Partiamo da quello di cui hai bisogno.",
+    "contactLead": "Chiedere non costa nulla! Contattaci per un preventivo gratuito o anche solo per un consiglio.",
     "strengths": [
       {
         "icon": "tools",
@@ -268,11 +359,37 @@
       {
         "image": "intervento-passaruota",
         "alt": "Tecnico al lavoro sul passaruota di un’auto"
-      },
-      {
-        "image": "lavorazione-furgone-in-officina",
-        "alt": "Tecnico al lavoro nella cabina di un furgone"
       }
     ]
-  }
+  },
+  "openingHours": [
+    {
+      "label": "Lunedì–venerdì",
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "periods": [
+        {
+          "opens": "08:30",
+          "closes": "12:00"
+        },
+        {
+          "opens": "14:00",
+          "closes": "18:00"
+        }
+      ]
+    },
+    {
+      "label": "Sabato e domenica",
+      "days": [
+        "Saturday",
+        "Sunday"
+      ],
+      "periods": []
+    }
+  ]
 }

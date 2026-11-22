@@ -1,4 +1,4 @@
-# Cambio gomme e cerchi
+# Pneumatici e cerchi
 
 Il servizio di cambio gomme e cerchi di Nuova Car 3001 comprende la sostituzione di pneumatici stagionali, nuovi o usati e l'equilibratura. La carrozzeria si trova a Cologno Monzese, in Via G. Rossini 38. Contattaci per indicare le esigenze del veicolo e richiedere un preventivo per la lavorazione.
 
@@ -14,7 +14,7 @@ La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o u
 
 ## Preventivo
 
-Preventivo su richiesta
+Chiedere non costa nulla! Contattaci per un preventivo gratuito o anche solo per un consiglio.
 
 ## Contatti
 

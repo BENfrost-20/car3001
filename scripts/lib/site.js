@@ -55,11 +55,15 @@ const priceLabel = service => priceVisible(service)
   : 'Preventivo su richiesta';
 const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${site.address.streetAddress}, ${site.address.postalCode} ${site.address.addressLocality}, Italia`)}`;
 
+function openingHoursText(group) {
+  return group.periods.map(period=>`${period.opens}–${period.closes}`).join(' e ') || 'Chiuso';
+}
+
 function faqItems() {
   // Contatti e servizi vengono derivati dal file di configurazione, senza duplicare dati variabili.
   return site.faq.map(item => {
     if (item.id === 'address') return {...item, answer:`${site.name} si trova in ${site.address.streetAddress}, ${site.address.postalCode} ${site.address.addressLocality} (${site.address.addressRegion}). Nella pagina Contatti trovi il collegamento alle indicazioni stradali.`};
-    if (item.id === 'quote') return {...item, answer:`Puoi chiamare il numero ${site.telephoneLabel} oppure scrivere a ${site.email}, indicando il veicolo e il servizio desiderato. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria.`};
+    if (item.id === 'quote') return {...item, answer:`Puoi chiamare il numero ${site.telephoneLabel} oppure scrivere a ${site.email}, indicando il veicolo e il servizio desiderato. Il preventivo è gratuito. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria.`};
     if (item.id === 'services') return {...item, answer:`I servizi presentati sono: ${site.services.map(service=>service.name).join(', ')}.`};
     return item;
   });
@@ -92,6 +96,9 @@ function schema(page, lastmod) {
     description:site.summary, address:{'@type':'PostalAddress',...site.address},
     logo:{'@type':'ImageObject',url:url(images.logo.src),width:images.logo.width,height:images.logo.height},
     image:url(images.header.src),
+    openingHoursSpecification:site.openingHours.flatMap(group=>group.periods.map(period=>({
+      '@type':'OpeningHoursSpecification', dayOfWeek:group.days, opens:period.opens, closes:period.closes
+    }))),
     ...(site.socialProfiles.length ? {sameAs:site.socialProfiles.map(profile=>profile.url)} : {})
   };
   const graph = [business, {
@@ -131,4 +138,4 @@ function pages() {
   ].map(page=>({...page,...(page.service ? {title:page.service.title,description:page.service.description} : site.pageMetadata[page.kind])}));
 }
 
-module.exports = {root,site,basePath,sitePath,relativeSitePath,images,escape,url,ref,businessId,websiteId,servicePath,priceVisible,priceLabel,mapsUrl,faqItems,schema,pages};
+module.exports = {root,site,basePath,sitePath,relativeSitePath,images,escape,url,ref,businessId,websiteId,servicePath,priceVisible,priceLabel,mapsUrl,openingHoursText,faqItems,schema,pages};

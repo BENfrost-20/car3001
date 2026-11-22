@@ -11,7 +11,7 @@
       "url": "https://car3001.it/",
       "telephone": "+390299200616",
       "email": "car3001@car3001.it",
-      "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
+      "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. Ci occupiamo di riparazioni e verniciatura, meccanica, pneumatici e cerchi, tagliandi, cura dei fari, pulizia e lucidatura, levabolli, elettrauto e soccorso stradale. Contattaci per un preventivo gratuito.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via G. Rossini 38",
@@ -26,7 +26,33 @@
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp"
+      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "14:00",
+          "closes": "18:00"
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -51,7 +77,7 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-21T18:22:01.361Z",
+      "dateModified": "2026-11-22T10:28:01.739Z",
       "breadcrumb": {
         "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#breadcrumb"
       },
@@ -78,7 +104,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Cambio gomme e cerchi",
+          "name": "Pneumatici e cerchi",
           "item": "https://car3001.it/servizi/cambio-gomme-cerchi/"
         }
       ]
@@ -86,8 +112,8 @@
     {
       "@type": "Service",
       "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service",
-      "name": "Cambio gomme e cerchi",
-      "serviceType": "Cambio gomme e cerchi",
+      "name": "Pneumatici e cerchi",
+      "serviceType": "Pneumatici e cerchi",
       "description": "La lavorazione può riguardare pneumatici stagionali oppure pneumatici nuovi o usati, con sostituzione dei cerchi quando prevista nell'intervento concordato. L'equilibratura è inclusa nel servizio presentato. Prima di richiedere il preventivo, specifica alla carrozzeria se ti interessa il cambio degli pneumatici, dei cerchi o di entrambi.",
       "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
       "image": "https://car3001.it/assets/img/cerchio-e-pneumatico-montati.webp",

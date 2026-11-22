@@ -41,12 +41,11 @@ logo.thumbnail((440, 440), RESAMPLE)
 original_bytes += logo_source.stat().st_size
 optimized_bytes += write_webp('logo', logo)
 
-for key in ('fanale', 'bolli'):
-    source = SOURCES / 'portfolio' / f'{key}.jpeg'
-    image = read_image(source)
-    image.thumbnail((1600, 1600), RESAMPLE)
-    original_bytes += source.stat().st_size
-    optimized_bytes += write_webp(key, image, variant_width=320)
+dent_source = SOURCES / 'portfolio' / 'bolli.jpeg'
+dents = read_image(dent_source)
+dents.thumbnail((1600, 1600), RESAMPLE)
+original_bytes += dent_source.stat().st_size
+optimized_bytes += write_webp('bolli', dents, variant_width=320)
 
 cover_source = SOURCES / 'officina' / 'ingresso-nuova-car-3001.jpg'
 for source in sorted(cover_source.parent.glob('*.jpg')):
@@ -61,7 +60,7 @@ entrance = read_image(cover_source)
 # Ritaglio panoramico sopra e sotto per il desktop. Il mobile stringe l'inquadratura
 # sull'ingresso, includendo tutta l'insegna, l'auto e un po' di spazio intorno.
 desktop = entrance.crop((0, 195, 1448, 905))
-mobile = entrance.crop((475, 337, 1275, 817))
+mobile = entrance.crop((475, 260, 1275, 1070))
 original_bytes += cover_source.stat().st_size
 optimized_bytes += write_webp('header', desktop, cover_source.stem, variant_width=960)
 write_webp('headerMobile', mobile, f'{cover_source.stem}-mobile', variant_width=480)

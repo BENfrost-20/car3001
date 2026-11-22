@@ -14,7 +14,7 @@ Il tagliando presentato include un controllo diagnostico OBD, cioè della diagno
 
 ## Preventivo
 
-Preventivo su richiesta
+Chiedere non costa nulla! Contattaci per un preventivo gratuito o anche solo per un consiglio.
 
 ## Contatti
 

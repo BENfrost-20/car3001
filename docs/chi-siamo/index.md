@@ -6,7 +6,7 @@ Fonte: https://car3001.it/chi-siamo/
 
 ## Prodotti e collaborazioni
 
-Marchi dei prodotti: Standox, 3M.
+Marchi dei prodotti: Standox, 3M, RUPES, Glasurit, PPG, Carsystem, Gelson, Castrol, PETRONAS, LIQUI MOLY, Mobil 1.
 Partner assicurativi indicati: Sara. Verifica direttamente con la carrozzeria la gestione del tuo caso.
 
 ## Contatti

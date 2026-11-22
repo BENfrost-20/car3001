@@ -11,7 +11,7 @@
       "url": "https://car3001.it/",
       "telephone": "+390299200616",
       "email": "car3001@car3001.it",
-      "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
+      "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. Ci occupiamo di riparazioni e verniciatura, meccanica, pneumatici e cerchi, tagliandi, cura dei fari, pulizia e lucidatura, levabolli, elettrauto e soccorso stradale. Contattaci per un preventivo gratuito.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via G. Rossini 38",
@@ -26,7 +26,33 @@
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp"
+      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "14:00",
+          "closes": "18:00"
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -51,7 +77,7 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-21T18:20:56.086Z",
+      "dateModified": "2026-11-22T10:28:01.745Z",
       "breadcrumb": {
         "@id": "https://car3001.it/faq/#breadcrumb"
       },
@@ -69,7 +95,7 @@
           "name": "Quali servizi offre la carrozzeria?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "I servizi presentati sono: Cambio gomme e cerchi, Tagliandi auto, Verniciatura e lucidatura fari, Pulizia e lucidatura auto, Levabolli, Elettrauto."
+            "text": "I servizi presentati sono: Pneumatici e cerchi, Tagliandi auto, Verniciatura e lucidatura fari, Pulizia e lucidatura auto, Levabolli, Elettrauto, Soccorso stradale, Lavorazioni carrozzeria, Officina meccanica."
           }
         },
         {
@@ -93,7 +119,7 @@
           "name": "Come posso richiedere un preventivo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Puoi chiamare il numero +39 02 99200616 oppure scrivere a car3001@car3001.it, indicando il veicolo e il servizio desiderato. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria."
+            "text": "Puoi chiamare il numero +39 02 99200616 oppure scrivere a car3001@car3001.it, indicando il veicolo e il servizio desiderato. Il preventivo è gratuito. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria."
           }
         },
         {

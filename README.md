@@ -10,9 +10,10 @@ Il file da mantenere è **`src/data/site.json`**:
 | --- | --- |
 | `url` | URL HTTPS del sito, compresa l'eventuale sottocartella. Il dominio definitivo è `https://car3001.it`. |
 | `name`, `telephone`, `telephoneLabel`, `email`, `address` | Identità, numero per i collegamenti, numero formattato, email e sede. |
-| `pricing.enabled` | `false`: mostra “Preventivo su richiesta” e omette le offerte con prezzo. Impostare `true` dopo aver confermato il listino. |
+| `pricing.enabled` | `false`: invita a chiedere un preventivo gratuito e omette le offerte con prezzo. Impostare `true` dopo aver confermato il listino. |
 | `services[].startingPrice` | Prezzo di partenza numerico; `null` per servizi solo su preventivo. Gli importi 40/90/70/20 sono conservati come provvisori. |
 | `services[].priceScope` | Lavorazione cui si riferisce l'importo. Verificare in particolare cosa comprende il prezzo della pulizia. |
+| `openingHours` | Giorni e fasce di apertura, riutilizzati in home, contatti e dati strutturati. |
 | `productBrands`, `insurancePartners` | Marchi e collaborazioni da verificare e aggiornare. |
 | `socialProfiles` | Solo profili ufficiali: oggetti con `name` e `url` HTTPS; alimentano footer e `sameAs`. Nessun segnaposto pubblico. |
 | `summary`, `aboutSummary`, `contactSummary`, `serviceSummary` | Introduzioni sintetiche condivise. |
@@ -66,7 +67,7 @@ Plesk scarica il repository in `httpdocs/` su Aruba. Il `web.config` nella root 
 
 Il workflow `.github/workflows/ci.yml` esegue build, controlli e test usando il dominio configurato in `src/data/site.json`. Il workflow `.github/workflows/auto-build.yml` rigenera `docs/` quando cambiano i sorgenti su `master` e committa le differenze generate.
 
-Prima della pubblicazione confermare listino, marchi/collaborazioni, contatti e testo sull'esperienza dei soci. Aggiungere i profili social ufficiali, gli orari verificati, i dati societari e le pagine informative legali con i testi corretti.
+Prima della pubblicazione confermare listino, marchi/collaborazioni, contatti e testo sull'esperienza dei soci. Aggiungere i profili social ufficiali, i dati societari e le pagine informative legali con i testi corretti.
 
 Sul servizio di hosting verificare HTTPS, redirect della variante www quando si usa un dominio proprio, gestione di `index.html`, risposte HTTP 200 per gli URL pubblici e 404 per quelli inesistenti, accesso dei bot consentito anche da CDN/WAF e corretti tipi MIME. Se le versioni Markdown vengono proposte come risultati duplicati, si può configurare `X-Robots-Tag: noindex` per `.md` mantenendole accessibili ai crawler. La sitemap pubblica è `https://car3001.it/sitemap.xml`. Queste operazioni dipendono dagli account e dalla configurazione di hosting.
 

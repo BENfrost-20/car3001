@@ -1,6 +1,6 @@
 'use strict';
 
-const {site,images,escape:e,url,sitePath,servicePath,priceLabel,priceVisible,mapsUrl,faqItems,schema} = require('../../scripts/lib/site');
+const {site,images,escape:e,url,sitePath,servicePath,priceLabel,priceVisible,mapsUrl,openingHoursText,faqItems,schema} = require('../../scripts/lib/site');
 const copy = site.presentation;
 const entranceAlt = 'Ingresso di Nuova Car 3001 con l’insegna e un’auto bianca';
 const workshopAlt = 'Tecnici al lavoro fra le auto all’interno di Nuova Car 3001';
@@ -11,6 +11,7 @@ function icon(name, className='') {
     phone:'<path d="m8 3 3 5-3 2a14 14 0 0 0 6 6l2-3 5 3-1 4c-1 3-9 0-13-4S0 4 3 3Z"/>',
     mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/>',
     pin:'<path d="M19 10c0 6-7 11-7 11S5 16 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+    clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     tools:'<path d="m14 6 4 4m-8 1-7 7 3 3 7-7M14 4a6 6 0 0 0-7 7l6 6a6 6 0 0 0 7-7l-4 4-6-6Z"/>',
     car:'<path d="m5 7 2-4h10l2 4 2 4v7H3v-7Zm-2 4h18M5 18v3m14-3v3M6 14h2m8 0h2"/>'
   };
@@ -52,12 +53,38 @@ function contacts() {
   </address>`;
 }
 
+function hoursPanel() {
+  return `<section class="hours-panel" id="orari" aria-labelledby="hours-heading">
+    <h2 id="hours-heading">${icon('clock')}Orari di apertura</h2>
+    <dl>${site.openingHours.map(group=>`
+      <div><dt>${e(group.label)}</dt><dd>${e(openingHoursText(group))}</dd></div>`).join('')}
+    </dl>
+  </section>`;
+}
+
 function cards(level=3) {
-  return `<div class="service-grid">${site.services.map((service,index)=>`<article class="service-tile" id="portfolioModal${index+1}"><a class="service-card" href="${servicePath(service)}" aria-labelledby="card-title-${index+1}"><figure class="service-card-media" data-image="${e(service.image)}">${image(service.image,service.imageAlt)}<span class="service-photo-arrow">${icon('arrow')}</span></figure><div class="portfolio-caption"><h${level} class="portfolio-caption-heading" id="card-title-${index+1}">${e(service.displayName||service.name)}</h${level}><p class="service-card-description">${e(service.cardDescription)}</p><div class="service-card-bottom"><span class="portfolio-caption-subheading">${e(priceLabel(service))}</span><span class="service-card-action">Scopri ${icon('arrow')}</span></div></div></a></article>`).join('')}</div>`;
+  return `<div class="service-grid">${site.services.map((service,index)=>`
+    <article class="service-tile" id="portfolioModal${index+1}">
+      <a class="service-card" href="${servicePath(service)}" aria-labelledby="card-title-${index+1}">
+        <figure class="service-card-media" data-image="${e(service.image)}">${image(service.image,service.imageAlt,{sizes:'(min-width: 992px) 360px, 45vw'})}</figure>
+        <div class="portfolio-caption">
+          <h${level} class="portfolio-caption-heading" id="card-title-${index+1}">${e(service.displayName||service.name)}</h${level}>
+          <span class="service-card-action" aria-hidden="true">Scopri ${icon('arrow')}</span>
+        </div>
+      </a>
+    </article>`).join('')}
+  </div>`;
 }
 
 function priceTable() {
-  return `<div class="table-responsive"><table class="service-table"><caption>Servizi e modalità di preventivo di ${e(site.name)}</caption><thead><tr><th scope="col">Servizio</th><th scope="col">Intervento</th><th scope="col">${site.pricing.enabled?'Da':'Preventivo'}</th></tr></thead><tbody>${site.services.map(service=>`<tr><th scope="row"><a href="${servicePath(service)}">${e(service.name)}</a></th><td>${e(service.priceScope)}</td><td>${e(priceLabel(service))}</td></tr>`).join('')}</tbody></table></div>${site.pricing.enabled?`<p class="price-note">${e(site.pricing.note)}</p>`:''}`;
+  const showPrices = site.pricing.enabled;
+  return `<div class="table-responsive">
+    <table class="service-table">
+      <caption>Lavorazioni di ${e(site.name)}</caption>
+      <thead><tr><th scope="col">Servizio</th><th scope="col">Intervento</th>${showPrices?'<th scope="col">Da</th>':''}</tr></thead>
+      <tbody>${site.services.map(service=>`<tr><th scope="row"><a href="${servicePath(service)}">${e(service.name)}</a></th><td>${e(service.priceScope)}</td>${showPrices?`<td>${e(priceLabel(service))}</td>`:''}</tr>`).join('')}</tbody>
+    </table>
+  </div>${showPrices?`<p class="price-note">${e(site.pricing.note)}</p>`:''}`;
 }
 
 function brands() {
@@ -69,7 +96,7 @@ function faqList(items,level=2) {
 }
 
 function invitation() {
-  return `<aside class="contact-invitation" aria-labelledby="invitation-heading"><div><p class="eyebrow">Siamo qui per aiutarti</p><h2 id="invitation-heading">Partiamo dalla tua auto.</h2><p>Raccontaci di cosa hai bisogno. Concordiamo insieme l'intervento e il preventivo.</p></div><a class="btn btn-primary" href="/contatti/">Contattaci ${icon('arrow')}</a></aside>`;
+  return `<aside class="contact-invitation" aria-labelledby="invitation-heading"><div><p class="eyebrow">Siamo qui per aiutarti</p><h2 id="invitation-heading">Partiamo dalla tua auto.</h2><p>${e(copy.contactLead)}</p></div><a class="btn btn-primary" href="/contatti/">Contattaci ${icon('arrow')}</a></aside>`;
 }
 
 function home() {
@@ -80,7 +107,7 @@ function home() {
   <section class="page-section story-section" id="about" aria-labelledby="about-heading"><div class="container story-layout"><figure class="story-photo">${image('interno-officina-nuova-car-3001',workshopAlt,{sizes:'(min-width: 992px) 520px, 92vw'})}</figure><div class="story-copy"><p class="eyebrow">${e(site.name)} · Chi siamo</p><h2 class="section-heading" id="about-heading">${e(copy.aboutTitle)}</h2><p class="story-lead">${e(copy.aboutLead)}</p><a class="text-link" href="/chi-siamo/">La nostra carrozzeria ${icon('arrow')}</a></div></div></section>
   ${brands()}
   <section class="page-section home-faq" id="faq" aria-labelledby="faq-heading"><div class="container faq-layout"><header><p class="eyebrow">Domande frequenti</p><h2 class="section-heading" id="faq-heading">Prima di passare<br> in officina.</h2><a class="text-link" href="/faq/">Tutte le risposte ${icon('arrow')}</a></header>${faqList(previewFaq,3)}</div></section>
-  <section class="page-section contact-section" id="contact" aria-labelledby="contact-heading"><div class="container"><header class="section-intro"><p class="eyebrow">Contatti</p><h2 class="section-heading" id="contact-heading">${e(copy.contactTitle)}</h2><p class="section-lead">${e(copy.contactLead)}</p></header>${contacts()}</div></section>`;
+  <section class="page-section contact-section" id="contact" aria-labelledby="contact-heading"><div class="container"><header class="section-intro"><p class="eyebrow">Contatti</p><h2 class="section-heading" id="contact-heading">${e(copy.contactTitle)}</h2><p class="section-lead">${e(copy.contactLead)}</p></header>${contacts()}${hoursPanel()}</div></section>`;
 }
 
 function intro(page,{title=page.label,lead=page.summary,eyebrow=site.name}={}) {
@@ -91,7 +118,7 @@ function servicePage(page) {
   const service=page.service;
   return `<article class="service-detail"><div class="service-hero">${intro(page,{title:service.name,lead:service.cardDescription,eyebrow:`I nostri servizi · ${site.address.addressLocality}`})}<figure class="service-page-image" data-image="${e(service.image)}">${image(service.image,service.imageAlt,{eager:true,sizes:'(min-width: 992px) 480px, 92vw'})}</figure></div>
   <div class="service-detail-grid"><section class="service-description" aria-labelledby="details-heading"><p class="eyebrow">Il servizio</p><h2 id="details-heading">Cosa comprende</h2><ul class="detail-list">${service.details.map(detail=>`<li>${e(detail)}</li>`).join('')}</ul><details class="service-more"><summary>Qualche dettaglio in più <span class="faq-toggle" aria-hidden="true">+</span></summary><p>${e(service.detailSummary)}</p></details></section>
-  <aside class="quote-panel" aria-labelledby="quote-heading"><p class="eyebrow">Per la tua auto</p><h2 id="quote-heading">${e(priceLabel(service))}</h2>${priceVisible(service)?`<p>${e(service.priceScope)}. ${e(site.pricing.note)}</p>`:'<p>Indicaci il veicolo e la lavorazione. Concordiamo insieme intervento e costo.</p>'}${contactActions()}<p class="quote-location">${icon('pin')}${e(site.address.streetAddress)}, ${e(site.address.addressLocality)}</p></aside></div></article>${photoGallery(service.gallery, 'Foto del servizio')}
+  <aside class="quote-panel" aria-labelledby="quote-heading"><p class="eyebrow">Per la tua auto</p><h2 id="quote-heading">${e(priceVisible(service) ? priceLabel(service) : 'Chiedi un preventivo gratuito')}</h2>${priceVisible(service)?`<p>${e(service.priceScope)}. ${e(site.pricing.note)}</p>`:'<p>Indicaci il veicolo e la lavorazione. Concordiamo insieme intervento e costo.</p>'}${contactActions()}<p class="quote-location">${icon('pin')}${e(site.address.streetAddress)}, ${e(site.address.addressLocality)}</p></aside></div></article>${photoGallery(service.gallery, service.galleryTitle || 'Foto del servizio')}
   <nav class="related-services" aria-labelledby="related-heading"><h2 id="related-heading">Altri servizi</h2><ul>${site.services.filter(item=>item.slug!==service.slug).map(item=>`<li><a href="${servicePath(item)}">${e(item.displayName||item.name)} ${icon('arrow')}</a></li>`).join('')}</ul></nav>`;
 }
 
@@ -100,7 +127,7 @@ function content(page) {
   if (page.kind==='service') return servicePage(page);
   if (page.kind==='services') return `${intro(page,{title:'I nostri servizi.',lead:copy.servicesLead})}<section aria-label="Servizi per la tua auto">${cards(2)}</section><details class="service-comparison"><summary><h2>Confronta i servizi</h2><span class="faq-toggle" aria-hidden="true">+</span></summary>${priceTable()}</details>${invitation()}`;
   if (page.kind==='about') return `<div class="about-intro-layout">${intro(page,{title:'La nostra carrozzeria.',lead:copy.aboutLead})}<figure class="service-page-image">${image('interno-officina-nuova-car-3001',workshopAlt,{eager:true,sizes:'(min-width: 992px) 480px, 92vw'})}</figure></div><section class="about-description" aria-labelledby="experience-heading"><h2 id="experience-heading">Esperienza, ogni giorno.</h2><p>${e(site.aboutSummary)}</p><a class="text-link" href="/servizi/">Esplora i servizi ${icon('arrow')}</a></section>${photoGallery(copy.aboutGallery, 'Lavorazioni in officina')}${brands()}${invitation()}`;
-  if (page.kind==='contact') return `${intro(page,{title:'Contattaci.',lead:copy.contactLead})}${contacts()}<section class="contact-help" aria-labelledby="request-heading"><div><p class="eyebrow">Il primo passo</p><h2 id="request-heading">Raccontaci di cosa hai bisogno.</h2></div><ul class="detail-list"><li>Indicaci il veicolo.</li><li>Descrivi il problema o il servizio che ti interessa.</li><li>Concordiamo insieme lavorazione e preventivo.</li></ul></section>`;
+  if (page.kind==='contact') return `${intro(page,{title:'Contattaci.',lead:copy.contactLead})}${contacts()}${hoursPanel()}<section class="contact-help" aria-labelledby="request-heading"><div><p class="eyebrow">Il primo passo</p><h2 id="request-heading">Raccontaci di cosa hai bisogno.</h2></div><ul class="detail-list"><li>Indicaci il veicolo.</li><li>Descrivi il problema o il servizio che ti interessa.</li><li>Concordiamo insieme lavorazione e preventivo.</li></ul></section>`;
   return `${intro(page,{title:'Domande frequenti.',lead:'Servizi, preventivi e informazioni utili. Se hai altre domande, ci trovi al telefono o in carrozzeria.'})}${faqList(faqItems())}${invitation()}`;
 }
 
@@ -111,7 +138,7 @@ function breadcrumbs(page) {
 function layout(page,lastmod,assetVersions={}) {
   const assetPath = file => `/${file}${assetVersions[file]?`?v=${assetVersions[file]}`:''}`;
   const homePage=page.kind==='home';
-  const links=homePage?[{name:'Servizi',path:'#portfolio'},{name:'Chi siamo',path:'#about'},{name:'Partner',path:'#brands-heading'},{name:'Contatti',path:'#contact'}]:[{name:'Servizi',path:'/servizi/'},{name:'Chi siamo',path:'/chi-siamo/'},{name:'Domande frequenti',path:'/faq/'},{name:'Contatti',path:'/contatti/'}];
+  const links=homePage?[{name:'Servizi',path:'#portfolio'},{name:'Chi siamo',path:'#about'},{name:'Partner',path:'#brands-heading'},{name:'Orari',path:'#orari'},{name:'Contatti',path:'#contact'}]:[{name:'Servizi',path:'/servizi/'},{name:'Chi siamo',path:'/chi-siamo/'},{name:'Domande frequenti',path:'/faq/'},{name:'Orari',path:'/contatti/#orari'},{name:'Contatti',path:'/contatti/'}];
   const json=JSON.stringify(schema(page,lastmod)).replace(/</g,'\\u003c');
   const og=images.social;
   return `<!doctype html>

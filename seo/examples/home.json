@@ -11,7 +11,7 @@
       "url": "https://car3001.it/",
       "telephone": "+390299200616",
       "email": "car3001@car3001.it",
-      "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. I servizi comprendono cambio gomme e cerchi, tagliandi con diagnostica OBD, trattamento fari, pulizia e lucidatura, levabolli ed elettrauto. Per valutare l'intervento sulla tua auto e richiedere un preventivo puoi contattare direttamente la carrozzeria.",
+      "description": "Nuova Car 3001 è una carrozzeria a Cologno Monzese, in Via G. Rossini 38. Ci occupiamo di riparazioni e verniciatura, meccanica, pneumatici e cerchi, tagliandi, cura dei fari, pulizia e lucidatura, levabolli, elettrauto e soccorso stradale. Contattaci per un preventivo gratuito.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via G. Rossini 38",
@@ -26,7 +26,33 @@
         "width": 440,
         "height": 325
       },
-      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp"
+      "image": "https://car3001.it/assets/img/ingresso-nuova-car-3001.webp",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "14:00",
+          "closes": "18:00"
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -43,7 +69,7 @@
       "@id": "https://car3001.it/#webpage",
       "url": "https://car3001.it/",
       "name": "Carrozzeria a Cologno Monzese | Nuova Car 3001",
-      "description": "Nuova Car 3001 a Cologno Monzese: cambio gomme, tagliandi, lucidatura fari, pulizia auto, levabolli ed elettrauto. Contattaci per un preventivo auto.",
+      "description": "Nuova Car 3001 a Cologno Monzese: lavori di carrozzeria, officina meccanica, pneumatici, tagliandi e soccorso stradale. Chiedi un preventivo gratuito.",
       "inLanguage": "it",
       "isPartOf": {
         "@id": "https://car3001.it/#website"
@@ -51,13 +77,13 @@
       "about": {
         "@id": "https://car3001.it/#organization"
       },
-      "dateModified": "2026-11-21T18:20:56.080Z"
+      "dateModified": "2026-11-22T10:28:11.057Z"
     },
     {
       "@type": "Service",
       "@id": "https://car3001.it/servizi/cambio-gomme-cerchi/#service",
-      "name": "Cambio gomme e cerchi",
-      "serviceType": "Cambio gomme e cerchi",
+      "name": "Pneumatici e cerchi",
+      "serviceType": "Pneumatici e cerchi",
       "description": "Pneumatici e cerchi, con equilibratura inclusa.",
       "url": "https://car3001.it/servizi/cambio-gomme-cerchi/",
       "image": "https://car3001.it/assets/img/cerchio-e-pneumatico-montati.webp",
@@ -92,7 +118,7 @@
       "serviceType": "Verniciatura e lucidatura fari",
       "description": "Trattamento di piccoli graffi e ingiallimento dei fari.",
       "url": "https://car3001.it/servizi/lucidatura-fari/",
-      "image": "https://car3001.it/assets/img/fanale.webp",
+      "image": "https://car3001.it/assets/img/fari-confronto.webp",
       "provider": {
         "@id": "https://car3001.it/#organization"
       },
@@ -150,6 +176,54 @@
       }
     },
     {
+      "@type": "Service",
+      "@id": "https://car3001.it/servizi/soccorso-stradale/#service",
+      "name": "Soccorso stradale",
+      "serviceType": "Soccorso stradale",
+      "description": "Chiamaci per verificare la disponibilità del carro attrezzi.",
+      "url": "https://car3001.it/servizi/soccorso-stradale/",
+      "image": "https://car3001.it/assets/img/soccorso-stradale-carro-attrezzi.webp",
+      "provider": {
+        "@id": "https://car3001.it/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cologno Monzese"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service",
+      "name": "Lavorazioni carrozzeria",
+      "serviceType": "Lavorazioni carrozzeria",
+      "description": "Riparazione e verniciatura di carrozzeria, paraurti e cerchi.",
+      "url": "https://car3001.it/servizi/lavorazioni-carrozzeria/",
+      "image": "https://car3001.it/assets/img/verniciatura-paraurti.webp",
+      "provider": {
+        "@id": "https://car3001.it/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cologno Monzese"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://car3001.it/servizi/officina-meccanica/#service",
+      "name": "Officina meccanica",
+      "serviceType": "Officina meccanica",
+      "description": "Controlli e manutenzione meccanica per la tua auto.",
+      "url": "https://car3001.it/servizi/officina-meccanica/",
+      "image": "https://car3001.it/assets/img/interno-officina-nuova-car-3001.webp",
+      "provider": {
+        "@id": "https://car3001.it/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cologno Monzese"
+      }
+    },
+    {
       "@type": "ItemList",
       "@id": "https://car3001.it/#services",
       "name": "Servizi di Nuova Car 3001",
@@ -194,6 +268,27 @@
           "position": 6,
           "item": {
             "@id": "https://car3001.it/servizi/elettrauto/#service"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@id": "https://car3001.it/servizi/soccorso-stradale/#service"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@id": "https://car3001.it/servizi/lavorazioni-carrozzeria/#service"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@id": "https://car3001.it/servizi/officina-meccanica/#service"
           }
         }
       ]

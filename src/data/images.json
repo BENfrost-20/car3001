@@ -4,16 +4,6 @@
     "width": 440,
     "height": 325
   },
-  "fanale": {
-    "src": "/assets/img/fanale.webp",
-    "width": 512,
-    "height": 512,
-    "small": {
-      "src": "/assets/img/fanale-320.webp",
-      "width": 320,
-      "height": 320
-    }
-  },
   "bolli": {
     "src": "/assets/img/bolli.webp",
     "width": 512,
@@ -64,6 +54,36 @@
       "height": 360
     }
   },
+  "fari-confronto": {
+    "src": "/assets/img/fari-confronto.webp",
+    "width": 1254,
+    "height": 1254,
+    "small": {
+      "src": "/assets/img/fari-confronto-480.webp",
+      "width": 480,
+      "height": 480
+    }
+  },
+  "fari-dopo": {
+    "src": "/assets/img/fari-dopo.webp",
+    "width": 1320,
+    "height": 986,
+    "small": {
+      "src": "/assets/img/fari-dopo-480.webp",
+      "width": 480,
+      "height": 359
+    }
+  },
+  "fari-prima": {
+    "src": "/assets/img/fari-prima.webp",
+    "width": 1320,
+    "height": 979,
+    "small": {
+      "src": "/assets/img/fari-prima-480.webp",
+      "width": 480,
+      "height": 356
+    }
+  },
   "interno-officina-nuova-car-3001": {
     "src": "/assets/img/interno-officina-nuova-car-3001.webp",
     "width": 1440,
@@ -80,16 +100,6 @@
     "height": 1440,
     "small": {
       "src": "/assets/img/intervento-passaruota-480.webp",
-      "width": 480,
-      "height": 640
-    }
-  },
-  "lavorazione-furgone-in-officina": {
-    "src": "/assets/img/lavorazione-furgone-in-officina.webp",
-    "width": 1080,
-    "height": 1440,
-    "small": {
-      "src": "/assets/img/lavorazione-furgone-in-officina-480.webp",
       "width": 480,
       "height": 640
     }
@@ -114,6 +124,16 @@
       "height": 360
     }
   },
+  "soccorso-stradale-carro-attrezzi": {
+    "src": "/assets/img/soccorso-stradale-carro-attrezzi.webp",
+    "width": 1080,
+    "height": 1440,
+    "small": {
+      "src": "/assets/img/soccorso-stradale-carro-attrezzi-480.webp",
+      "width": 480,
+      "height": 640
+    }
+  },
   "verniciatore-in-cabina": {
     "src": "/assets/img/verniciatore-in-cabina.webp",
     "width": 1080,
@@ -124,12 +144,12 @@
       "height": 640
     }
   },
-  "verniciatura-cerchio-in-cabina": {
-    "src": "/assets/img/verniciatura-cerchio-in-cabina.webp",
+  "verniciatura-cerchio-in-lega": {
+    "src": "/assets/img/verniciatura-cerchio-in-lega.webp",
     "width": 1080,
     "height": 1440,
     "small": {
-      "src": "/assets/img/verniciatura-cerchio-in-cabina-480.webp",
+      "src": "/assets/img/verniciatura-cerchio-in-lega-480.webp",
       "width": 480,
       "height": 640
     }
@@ -177,11 +197,11 @@
   "headerMobile": {
     "src": "/assets/img/ingresso-nuova-car-3001-mobile.webp",
     "width": 800,
-    "height": 480,
+    "height": 810,
     "small": {
       "src": "/assets/img/ingresso-nuova-car-3001-mobile-480.webp",
       "width": 480,
-      "height": 288
+      "height": 486
     }
   },
   "social": {

@@ -10,7 +10,7 @@ Nuova Car 3001 si trova in Via G. Rossini 38, 20093 Cologno Monzese (MI). Nella 
 
 ## Quali servizi offre la carrozzeria?
 
-I servizi presentati sono: Cambio gomme e cerchi, Tagliandi auto, Verniciatura e lucidatura fari, Pulizia e lucidatura auto, Levabolli, Elettrauto.
+I servizi presentati sono: Pneumatici e cerchi, Tagliandi auto, Verniciatura e lucidatura fari, Pulizia e lucidatura auto, Levabolli, Elettrauto, Soccorso stradale, Lavorazioni carrozzeria, Officina meccanica.
 
 ## Il cambio gomme comprende l'equilibratura?
 
@@ -22,7 +22,7 @@ Sì. Il tagliando presentato da Nuova Car 3001 include il controllo diagnostico 
 
 ## Come posso richiedere un preventivo?
 
-Puoi chiamare il numero +39 02 99200616 oppure scrivere a car3001@car3001.it, indicando il veicolo e il servizio desiderato. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria.
+Puoi chiamare il numero +39 02 99200616 oppure scrivere a car3001@car3001.it, indicando il veicolo e il servizio desiderato. Il preventivo è gratuito. Lavorazioni e costo finale vanno concordati direttamente con la carrozzeria.
 
 ## Come viene svolta la pulizia dell'auto?
 
