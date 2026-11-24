@@ -187,7 +187,7 @@ function layout(page,lastmod,assetVersions={}) {
   <link href="${assetPath('css/seo.css')}" rel="stylesheet">
   <script type="application/ld+json">${json}</script>
   <script src="${assetPath('js/scripts.js')}" defer></script>
-  <script data-goatcounter="https://benfrost-20.goatcounter.com/count"
+  <script data-goatcounter="https://car3001.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body id="page-top" class="page-${e(page.kind)}">
