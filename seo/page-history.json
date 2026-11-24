@@ -1,58 +1,58 @@
 {
   "/": {
-    "hash": "3378aa829adb6871354a51b0218ef17e515618537a9add9199fb1f7df213ac16",
-    "lastmod": "2026-11-24T11:34:12.742Z"
+    "hash": "91669b6d243ef6e65f891e057220534fc5c06d84b627016039532fc79b091803",
+    "lastmod": "2026-11-24T11:57:44.162Z"
   },
   "/servizi/": {
-    "hash": "cb390cd0f15ec4c2a155912049dba3bcc5e006ffc8b48fc3773cb235c54eead1",
-    "lastmod": "2026-11-24T11:34:12.745Z"
+    "hash": "3ff3212d617219c5f1d2ada3c032206f241245a0ab19b20588cab7a2bee4756b",
+    "lastmod": "2026-11-24T11:57:44.164Z"
   },
   "/servizi/lavorazioni-carrozzeria/": {
-    "hash": "46a2f3c8f19e0bef6dc7cc5baa339db56c8962065846deb0f5da35477990f24e",
-    "lastmod": "2026-11-24T11:34:12.747Z"
+    "hash": "816be6ba649220a1dbc8ab2e017541ddc934a9a974755c261fda971aa61cd9f6",
+    "lastmod": "2026-11-24T11:57:44.165Z"
   },
   "/servizi/officina-meccanica/": {
-    "hash": "42b5f8773bc4c5d57a363ac0e4d9a4d30de8c15a70d3f8436cd806a093d0c391",
-    "lastmod": "2026-11-24T11:34:12.748Z"
+    "hash": "083f0c34bde0c21790546772a9eddf02e0d2de4c517f473d1d03ad9b906fe2a1",
+    "lastmod": "2026-11-24T11:57:44.166Z"
   },
   "/servizi/soccorso-stradale/": {
-    "hash": "ca3fa138f287bb1fd64565a729f095684726b08c6e4b69e48f4844cc3709f89f",
-    "lastmod": "2026-11-24T11:34:12.750Z"
+    "hash": "f9fff034e403c8948368394df3b9f5f14811423e5c45a87b16c3e2d4bfd29204",
+    "lastmod": "2026-11-24T11:57:44.167Z"
   },
   "/servizi/cambio-gomme-cerchi/": {
-    "hash": "d9908f115f0cd105b4ba891bba8f3540132cfa1ac5ede5515b3e7fa0aca57079",
-    "lastmod": "2026-11-24T11:34:12.751Z"
+    "hash": "9f095ebda24cc21c3dca14bbe3041d00be69c880e6daf7a8426e0ce51f71b665",
+    "lastmod": "2026-11-24T11:57:44.168Z"
   },
   "/servizi/tagliandi-auto/": {
-    "hash": "bb645caa91e56cff0de2ce26e95c07333176b5d3fd660f90dc6c26d55ca21c78",
-    "lastmod": "2026-11-24T11:34:12.752Z"
+    "hash": "f93497d5822bae90e449aa8c00287f45769d10e9eee6235705c5f7aa1bdd4df5",
+    "lastmod": "2026-11-24T11:57:44.169Z"
   },
   "/servizi/lucidatura-fari/": {
-    "hash": "b140f7c0e82efef37c6dc56dfd642e1271cf366e27f3bc59570ba7eba5b602e4",
-    "lastmod": "2026-11-24T11:34:12.753Z"
+    "hash": "ad72097523378571a4d966f1bf492d2deee8d9e716367e078d16cd4af800567d",
+    "lastmod": "2026-11-24T11:57:44.170Z"
   },
   "/servizi/levabolli/": {
-    "hash": "1068b14162481a216a53de3e0588771e1edafec845703f482f9d198fbe97d069",
-    "lastmod": "2026-11-24T11:34:12.754Z"
+    "hash": "fac72de0d8943d2e180e53ceb3ef1b004cec8c77b9b7d2d18555551f7e2c754f",
+    "lastmod": "2026-11-24T11:57:44.171Z"
   },
   "/servizi/elettrauto/": {
-    "hash": "a0a6bdca4f50d537644d891ba92e080ba9853614691b5f5d7a0c632262343f7f",
-    "lastmod": "2026-11-24T11:34:12.755Z"
+    "hash": "0f62d10add178dc05b43a626f19f03e79592467b51c4fa55be5df68fac50802f",
+    "lastmod": "2026-11-24T11:57:44.171Z"
   },
   "/servizi/pulizia-lucidatura-auto/": {
-    "hash": "f1a5914ccd2ac094d555cae8ebe1bf9cee57767df397888840fa68c7332bf8f4",
-    "lastmod": "2026-11-24T11:34:12.757Z"
+    "hash": "09389538e6b5452bd2e70fd3c446857e1ca5e4d0e1553c670d682687eb1c99f6",
+    "lastmod": "2026-11-24T11:57:44.172Z"
   },
   "/chi-siamo/": {
-    "hash": "e102a1d96e76c3b18335b2d1c46821c868d1e4f951038ce90d5ab43a2939aa69",
-    "lastmod": "2026-11-24T11:34:12.757Z"
+    "hash": "c066d3ff6a627c1e389e1a27b21795e931ac8bfbe77d1e0e21b6afbec4d86627",
+    "lastmod": "2026-11-24T11:57:44.173Z"
   },
   "/contatti/": {
-    "hash": "a9d1c95e78bbdcd17bb37b9faaaee92db3270bfc2c213dd08d1b4ce0bf87f55f",
-    "lastmod": "2026-11-24T11:34:12.758Z"
+    "hash": "20b31a13d41dcd25b3254dc477b785e2dfdf0ef112c4c622ca36c114a6bc46a2",
+    "lastmod": "2026-11-24T11:57:44.173Z"
   },
   "/faq/": {
-    "hash": "eaa8eff1fa1cf1f609340314b1d65262d42e2ed10657b286c799ce60ad09ae73",
-    "lastmod": "2026-11-24T11:34:12.759Z"
+    "hash": "5f9692172ddcb78215a9fca3cc6e114f981044e7c61eee8bfcaa180afc945961",
+    "lastmod": "2026-11-24T11:57:44.174Z"
   }
 }
